@@ -54,7 +54,7 @@
             this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.metroLabel10 = new MetroFramework.Controls.MetroLabel();
-            this.metroTextBox1 = new MetroFramework.Controls.MetroTextBox();
+            this.tbId = new MetroFramework.Controls.MetroTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -382,6 +382,7 @@
             this.btnVolver.UseCustomBackColor = true;
             this.btnVolver.UseCustomForeColor = true;
             this.btnVolver.UseSelectable = true;
+            this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
             // 
             // btnCancelar
             // 
@@ -395,6 +396,7 @@
             this.btnCancelar.UseCustomBackColor = true;
             this.btnCancelar.UseCustomForeColor = true;
             this.btnCancelar.UseSelectable = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnGuardar
             // 
@@ -444,42 +446,42 @@
             this.metroLabel10.TabIndex = 27;
             this.metroLabel10.Text = "ID";
             // 
-            // metroTextBox1
+            // tbId
             // 
             // 
             // 
             // 
-            this.metroTextBox1.CustomButton.Image = null;
-            this.metroTextBox1.CustomButton.Location = new System.Drawing.Point(53, 1);
-            this.metroTextBox1.CustomButton.Name = "";
-            this.metroTextBox1.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.metroTextBox1.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.metroTextBox1.CustomButton.TabIndex = 1;
-            this.metroTextBox1.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.metroTextBox1.CustomButton.UseSelectable = true;
-            this.metroTextBox1.CustomButton.Visible = false;
-            this.metroTextBox1.Lines = new string[0];
-            this.metroTextBox1.Location = new System.Drawing.Point(179, 142);
-            this.metroTextBox1.MaxLength = 32767;
-            this.metroTextBox1.Name = "metroTextBox1";
-            this.metroTextBox1.PasswordChar = '\0';
-            this.metroTextBox1.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.metroTextBox1.SelectedText = "";
-            this.metroTextBox1.SelectionLength = 0;
-            this.metroTextBox1.SelectionStart = 0;
-            this.metroTextBox1.ShortcutsEnabled = true;
-            this.metroTextBox1.Size = new System.Drawing.Size(75, 23);
-            this.metroTextBox1.TabIndex = 28;
-            this.metroTextBox1.UseSelectable = true;
-            this.metroTextBox1.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.metroTextBox1.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.tbId.CustomButton.Image = null;
+            this.tbId.CustomButton.Location = new System.Drawing.Point(53, 1);
+            this.tbId.CustomButton.Name = "";
+            this.tbId.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.tbId.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.tbId.CustomButton.TabIndex = 1;
+            this.tbId.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.tbId.CustomButton.UseSelectable = true;
+            this.tbId.CustomButton.Visible = false;
+            this.tbId.Lines = new string[0];
+            this.tbId.Location = new System.Drawing.Point(179, 142);
+            this.tbId.MaxLength = 32767;
+            this.tbId.Name = "tbId";
+            this.tbId.PasswordChar = '\0';
+            this.tbId.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.tbId.SelectedText = "";
+            this.tbId.SelectionLength = 0;
+            this.tbId.SelectionStart = 0;
+            this.tbId.ShortcutsEnabled = true;
+            this.tbId.Size = new System.Drawing.Size(75, 23);
+            this.tbId.TabIndex = 28;
+            this.tbId.UseSelectable = true;
+            this.tbId.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.tbId.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
             // AggRegCita
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.metroTextBox1);
+            this.Controls.Add(this.tbId);
             this.Controls.Add(this.metroLabel10);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnGuardar);
@@ -505,6 +507,7 @@
             this.Controls.Add(this.metroLabel2);
             this.Controls.Add(this.metroLabel1);
             this.Controls.Add(this.metroPanel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "AggRegCita";
             this.Text = "Agregar y Agendar Cita";
@@ -541,6 +544,6 @@
         private MetroFramework.Controls.MetroPanel metroPanel1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private MetroFramework.Controls.MetroLabel metroLabel10;
-        private MetroFramework.Controls.MetroTextBox metroTextBox1;
+        private MetroFramework.Controls.MetroTextBox tbId;
     }
 }

@@ -18,10 +18,6 @@ namespace MedTech
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new InicioSesion());
-            Application.Run(new MenuMed());
-            Application.Run(new AggRegCita());
-            Application.Run(new AggPaciente());
-            Application.Run(new ExpedMed());
         }
     }
 }

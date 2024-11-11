@@ -209,6 +209,7 @@
             this.btnAñadir.TabIndex = 10;
             this.btnAñadir.Text = "Añadir";
             this.btnAñadir.UseSelectable = true;
+            this.btnAñadir.Click += new System.EventHandler(this.btnAñadir_Click);
             // 
             // metroLabel6
             // 
@@ -265,6 +266,7 @@
             this.btnCancelar.UseCustomBackColor = true;
             this.btnCancelar.UseCustomForeColor = true;
             this.btnCancelar.UseSelectable = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnVolver
             // 
@@ -278,6 +280,7 @@
             this.btnVolver.UseCustomBackColor = true;
             this.btnVolver.UseCustomForeColor = true;
             this.btnVolver.UseSelectable = true;
+            this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
             // 
             // metroLabel7
             // 
@@ -383,6 +386,7 @@
             this.Controls.Add(this.tbNombrePac);
             this.Controls.Add(this.metroLabel1);
             this.Controls.Add(this.metroPanel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "AggPaciente";
             this.Text = "Agregar Paciente";

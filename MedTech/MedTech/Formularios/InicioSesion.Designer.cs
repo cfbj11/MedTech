@@ -32,7 +32,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnSiguiente = new MetroFramework.Controls.MetroButton();
-            this.btnCrearU = new MetroFramework.Controls.MetroButton();
             this.tbContraseña = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
             this.tbUsuario = new MetroFramework.Controls.MetroTextBox();
@@ -58,7 +57,6 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.Controls.Add(this.btnSiguiente);
-            this.panel2.Controls.Add(this.btnCrearU);
             this.panel2.Controls.Add(this.tbContraseña);
             this.panel2.Controls.Add(this.metroLabel4);
             this.panel2.Controls.Add(this.tbUsuario);
@@ -79,15 +77,7 @@
             this.btnSiguiente.TabIndex = 8;
             this.btnSiguiente.Text = "Siguiente";
             this.btnSiguiente.UseSelectable = true;
-            // 
-            // btnCrearU
-            // 
-            this.btnCrearU.Location = new System.Drawing.Point(323, 268);
-            this.btnCrearU.Name = "btnCrearU";
-            this.btnCrearU.Size = new System.Drawing.Size(77, 20);
-            this.btnCrearU.TabIndex = 7;
-            this.btnCrearU.Text = "Crear Usuario";
-            this.btnCrearU.UseSelectable = true;
+            this.btnSiguiente.Click += new System.EventHandler(this.btnSiguiente_Click);
             // 
             // tbContraseña
             // 
@@ -205,6 +195,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.panel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "InicioSesion";
             this.Text = "Iniciar Sesión";
@@ -222,7 +213,6 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private MetroFramework.Controls.MetroLabel metroLabel1;
-        private MetroFramework.Controls.MetroButton btnCrearU;
         private MetroFramework.Controls.MetroTextBox tbContraseña;
         private MetroFramework.Controls.MetroLabel metroLabel4;
         private MetroFramework.Controls.MetroTextBox tbUsuario;

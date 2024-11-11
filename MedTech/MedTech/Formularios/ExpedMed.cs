@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MetroFramework;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,28 @@ namespace MedTech.Formularios
         public ExpedMed()
         {
             InitializeComponent();
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            var result = MetroMessageBox.Show(this, "¿Desea cancelar la creación/actualización de expediente?", "Confirmar", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes) LimpiarCampos();
+        }
+
+        private void btnVolver_Click(object sender, EventArgs e)
+        {
+            MenuMed menuMedForm = new MenuMed();
+            menuMedForm.Show();
+            this.Close();
+        }
+
+        private void LimpiarCampos()
+        {
+            tbIdExped.Clear();
+            tbNombrePac.Clear();
+            tbApellidoPac.Clear();
+            tbMotivoCon.Clear();
+            tbDiagnostico.Clear();
         }
     }
 }

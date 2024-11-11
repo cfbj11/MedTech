@@ -37,6 +37,7 @@
             this.btnPaciente = new MetroFramework.Controls.MetroButton();
             this.btnExpedMed = new MetroFramework.Controls.MetroButton();
             this.btnAyuda = new MetroFramework.Controls.MetroButton();
+            this.btnCerrSesion = new MetroFramework.Controls.MetroButton();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -94,6 +95,7 @@
             this.btnAggRegCita.Text = "Agregar y Agendar Cita";
             this.btnAggRegCita.UseCustomBackColor = true;
             this.btnAggRegCita.UseSelectable = true;
+            this.btnAggRegCita.Click += new System.EventHandler(this.btnAggRegCita_Click);
             // 
             // btnPaciente
             // 
@@ -105,6 +107,7 @@
             this.btnPaciente.Text = "Agregar Paciente";
             this.btnPaciente.UseCustomBackColor = true;
             this.btnPaciente.UseSelectable = true;
+            this.btnPaciente.Click += new System.EventHandler(this.btnPaciente_Click);
             // 
             // btnExpedMed
             // 
@@ -116,6 +119,7 @@
             this.btnExpedMed.Text = "Crear o Actualizar Expediente Médico";
             this.btnExpedMed.UseCustomBackColor = true;
             this.btnExpedMed.UseSelectable = true;
+            this.btnExpedMed.Click += new System.EventHandler(this.btnExpedMed_Click);
             // 
             // btnAyuda
             // 
@@ -125,18 +129,31 @@
             this.btnAyuda.TabIndex = 9;
             this.btnAyuda.Text = "Ayuda";
             this.btnAyuda.UseSelectable = true;
+            this.btnAyuda.Click += new System.EventHandler(this.btnAyuda_Click);
+            // 
+            // btnCerrSesion
+            // 
+            this.btnCerrSesion.Location = new System.Drawing.Point(611, 402);
+            this.btnCerrSesion.Name = "btnCerrSesion";
+            this.btnCerrSesion.Size = new System.Drawing.Size(80, 25);
+            this.btnCerrSesion.TabIndex = 10;
+            this.btnCerrSesion.Text = "Cerrar Sesión";
+            this.btnCerrSesion.UseSelectable = true;
+            this.btnCerrSesion.Click += new System.EventHandler(this.btnCerrSesion_Click);
             // 
             // MenuMed
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnCerrSesion);
             this.Controls.Add(this.btnAyuda);
             this.Controls.Add(this.btnExpedMed);
             this.Controls.Add(this.btnPaciente);
             this.Controls.Add(this.btnAggRegCita);
             this.Controls.Add(this.metroLabel2);
             this.Controls.Add(this.panel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "MenuMed";
             this.Text = "Menu";
@@ -158,5 +175,6 @@
         private MetroFramework.Controls.MetroButton btnPaciente;
         private MetroFramework.Controls.MetroButton btnExpedMed;
         private MetroFramework.Controls.MetroButton btnAyuda;
+        private MetroFramework.Controls.MetroButton btnCerrSesion;
     }
 }

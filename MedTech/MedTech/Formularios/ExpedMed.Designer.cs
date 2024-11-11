@@ -289,6 +289,7 @@
             this.btnCancelar.UseCustomBackColor = true;
             this.btnCancelar.UseCustomForeColor = true;
             this.btnCancelar.UseSelectable = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnVolver
             // 
@@ -302,6 +303,7 @@
             this.btnVolver.UseCustomBackColor = true;
             this.btnVolver.UseCustomForeColor = true;
             this.btnVolver.UseSelectable = true;
+            this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
             // 
             // metroPanel1
             // 
@@ -349,6 +351,7 @@
             this.Controls.Add(this.metroLabel2);
             this.Controls.Add(this.metroLabel1);
             this.Controls.Add(this.metroPanel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "ExpedMed";
             this.Text = "Crear o Actualizar Expediente Médico";
