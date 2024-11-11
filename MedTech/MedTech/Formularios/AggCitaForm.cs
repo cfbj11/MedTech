@@ -11,11 +11,13 @@ using System.Windows.Forms;
 
 namespace MedTech.Formularios
 {
-    public partial class AggRegCita : MetroFramework.Forms.MetroForm
+    public partial class AggCitaForm : MetroFramework.Forms.MetroForm
     {
-        public AggRegCita()
+        private bool flag = true;
+        public AggCitaForm()
         {
             InitializeComponent();
+            lblInstruccion.Select();
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
@@ -26,7 +28,8 @@ namespace MedTech.Formularios
 
         private void btnVolver_Click(object sender, EventArgs e)
         {
-            MenuMed menuMedForm = new MenuMed();
+            flag = false;
+            MenuForm menuMedForm = new MenuForm();
             menuMedForm.Show();
             this.Close();
         }
@@ -35,12 +38,20 @@ namespace MedTech.Formularios
         {
             tbNombre.Clear();
             tbApellido.Clear();
-            tbHora.Clear();
             dtFecha.Value = DateTime.Today;
+            tbHora.Clear();
+            tbIdPaciente.Clear();
             tbNombreDoc.Clear();
+            cbEspecialidad.SelectedIndex = -1;
             cbxTelefono.Checked = false;
             cbxCorreo.Checked = false;
+            tbContacto.Clear();
             tbCosto.Clear();
+        }
+
+        private void AggCitaForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (flag) Application.Exit();
         }
     }
 }

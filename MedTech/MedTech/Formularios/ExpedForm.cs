@@ -11,11 +11,13 @@ using System.Windows.Forms;
 
 namespace MedTech.Formularios
 {
-    public partial class ExpedMed : MetroFramework.Forms.MetroForm
+    public partial class ExpedForm : MetroFramework.Forms.MetroForm
     {
-        public ExpedMed()
+        private bool flag = true;
+        public ExpedForm()
         {
             InitializeComponent();
+            lblInstruccion.Select();
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
@@ -26,7 +28,8 @@ namespace MedTech.Formularios
 
         private void btnVolver_Click(object sender, EventArgs e)
         {
-            MenuMed menuMedForm = new MenuMed();
+            flag = false;
+            MenuForm menuMedForm = new MenuForm();
             menuMedForm.Show();
             this.Close();
         }
@@ -36,8 +39,14 @@ namespace MedTech.Formularios
             tbIdExped.Clear();
             tbNombrePac.Clear();
             tbApellidoPac.Clear();
+            dtFecCita.Value = DateTime.Today;
             tbMotivoCon.Clear();
             tbDiagnostico.Clear();
+        }
+
+        private void ExpedForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (flag) Application.Exit();
         }
     }
 }

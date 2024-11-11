@@ -12,12 +12,14 @@ using MedTech.Servicio;
 
 namespace MedTech.Formularios
 {
-    public partial class InicioSesion : MetroFramework.Forms.MetroForm
+    public partial class InSesForm : MetroFramework.Forms.MetroForm
     {
         private readonly Validar validar;
-        public InicioSesion()
+        private bool flag = true;
+        public InSesForm()
         {
             InitializeComponent();
+            lblBienvenida.Select();
             validar = new Validar("usuarios.txt");
         }
 
@@ -30,7 +32,8 @@ namespace MedTech.Formularios
             {
                 if (validar.ValidarCred(user, password))
                 {
-                    MenuMed menuForm = new MenuMed();
+                    flag = false;
+                    MenuForm menuForm = new MenuForm();
                     menuForm.Show();
                     this.Hide();
                 }
@@ -40,6 +43,11 @@ namespace MedTech.Formularios
             {
                 MetroMessageBox.Show(this, ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void InSesForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (flag) Application.Exit();
         }
     }
 }

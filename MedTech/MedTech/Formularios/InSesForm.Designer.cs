@@ -1,6 +1,6 @@
 ﻿namespace MedTech.Formularios
 {
-    partial class InicioSesion
+    partial class InSesForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,16 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(InicioSesion));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(InSesForm));
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnSiguiente = new MetroFramework.Controls.MetroButton();
             this.tbContraseña = new MetroFramework.Controls.MetroTextBox();
-            this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
+            this.lblContraseña = new MetroFramework.Controls.MetroLabel();
             this.tbUsuario = new MetroFramework.Controls.MetroTextBox();
-            this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
+            this.lblUsuario = new MetroFramework.Controls.MetroLabel();
+            this.lblDescripcion = new MetroFramework.Controls.MetroLabel();
+            this.lblBienvenida = new MetroFramework.Controls.MetroLabel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -58,11 +58,11 @@
             this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.Controls.Add(this.btnSiguiente);
             this.panel2.Controls.Add(this.tbContraseña);
-            this.panel2.Controls.Add(this.metroLabel4);
+            this.panel2.Controls.Add(this.lblContraseña);
             this.panel2.Controls.Add(this.tbUsuario);
-            this.panel2.Controls.Add(this.metroLabel3);
-            this.panel2.Controls.Add(this.metroLabel2);
-            this.panel2.Controls.Add(this.metroLabel1);
+            this.panel2.Controls.Add(this.lblUsuario);
+            this.panel2.Controls.Add(this.lblDescripcion);
+            this.panel2.Controls.Add(this.lblBienvenida);
             this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Location = new System.Drawing.Point(23, 23);
             this.panel2.Name = "panel2";
@@ -109,14 +109,14 @@
             this.tbContraseña.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.tbContraseña.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
-            // metroLabel4
+            // lblContraseña
             // 
-            this.metroLabel4.AutoSize = true;
-            this.metroLabel4.Location = new System.Drawing.Point(325, 195);
-            this.metroLabel4.Name = "metroLabel4";
-            this.metroLabel4.Size = new System.Drawing.Size(75, 19);
-            this.metroLabel4.TabIndex = 5;
-            this.metroLabel4.Text = "Contraseña";
+            this.lblContraseña.AutoSize = true;
+            this.lblContraseña.Location = new System.Drawing.Point(325, 195);
+            this.lblContraseña.Name = "lblContraseña";
+            this.lblContraseña.Size = new System.Drawing.Size(75, 19);
+            this.lblContraseña.TabIndex = 5;
+            this.lblContraseña.Text = "Contraseña";
             // 
             // tbUsuario
             // 
@@ -148,36 +148,36 @@
             this.tbUsuario.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.tbUsuario.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
-            // metroLabel3
+            // lblUsuario
             // 
-            this.metroLabel3.AutoSize = true;
-            this.metroLabel3.Location = new System.Drawing.Point(335, 125);
-            this.metroLabel3.Name = "metroLabel3";
-            this.metroLabel3.Size = new System.Drawing.Size(53, 19);
-            this.metroLabel3.TabIndex = 3;
-            this.metroLabel3.Text = "Usuario";
+            this.lblUsuario.AutoSize = true;
+            this.lblUsuario.Location = new System.Drawing.Point(335, 125);
+            this.lblUsuario.Name = "lblUsuario";
+            this.lblUsuario.Size = new System.Drawing.Size(53, 19);
+            this.lblUsuario.TabIndex = 3;
+            this.lblUsuario.Text = "Usuario";
             // 
-            // metroLabel2
+            // lblDescripcion
             // 
-            this.metroLabel2.AutoSize = true;
-            this.metroLabel2.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabel2.Location = new System.Drawing.Point(196, 75);
-            this.metroLabel2.Name = "metroLabel2";
-            this.metroLabel2.Size = new System.Drawing.Size(335, 25);
-            this.metroLabel2.TabIndex = 2;
-            this.metroLabel2.Text = "Aplicación para gestión de cita para clínica";
+            this.lblDescripcion.AutoSize = true;
+            this.lblDescripcion.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.lblDescripcion.Location = new System.Drawing.Point(196, 75);
+            this.lblDescripcion.Name = "lblDescripcion";
+            this.lblDescripcion.Size = new System.Drawing.Size(335, 25);
+            this.lblDescripcion.TabIndex = 2;
+            this.lblDescripcion.Text = "Aplicación para gestión de cita para clínica";
             // 
-            // metroLabel1
+            // lblBienvenida
             // 
-            this.metroLabel1.AutoSize = true;
-            this.metroLabel1.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabel1.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel1.Location = new System.Drawing.Point(260, 35);
-            this.metroLabel1.Name = "metroLabel1";
-            this.metroLabel1.Size = new System.Drawing.Size(205, 25);
-            this.metroLabel1.Style = MetroFramework.MetroColorStyle.Black;
-            this.metroLabel1.TabIndex = 1;
-            this.metroLabel1.Text = "Bienvenido a MedTech";
+            this.lblBienvenida.AutoSize = true;
+            this.lblBienvenida.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.lblBienvenida.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.lblBienvenida.Location = new System.Drawing.Point(260, 35);
+            this.lblBienvenida.Name = "lblBienvenida";
+            this.lblBienvenida.Size = new System.Drawing.Size(205, 25);
+            this.lblBienvenida.Style = MetroFramework.MetroColorStyle.Black;
+            this.lblBienvenida.TabIndex = 1;
+            this.lblBienvenida.Text = "Bienvenido a MedTech";
             // 
             // pictureBox1
             // 
@@ -189,7 +189,7 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // InicioSesion
+            // InSesForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -197,8 +197,9 @@
             this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
-            this.Name = "InicioSesion";
+            this.Name = "InSesForm";
             this.Text = "Iniciar Sesión";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.InSesForm_FormClosing);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
@@ -212,12 +213,12 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private MetroFramework.Controls.MetroLabel metroLabel1;
+        private MetroFramework.Controls.MetroLabel lblBienvenida;
         private MetroFramework.Controls.MetroTextBox tbContraseña;
-        private MetroFramework.Controls.MetroLabel metroLabel4;
+        private MetroFramework.Controls.MetroLabel lblContraseña;
         private MetroFramework.Controls.MetroTextBox tbUsuario;
-        private MetroFramework.Controls.MetroLabel metroLabel3;
-        private MetroFramework.Controls.MetroLabel metroLabel2;
+        private MetroFramework.Controls.MetroLabel lblUsuario;
+        private MetroFramework.Controls.MetroLabel lblDescripcion;
         private MetroFramework.Controls.MetroButton btnSiguiente;
     }
 }

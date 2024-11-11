@@ -11,11 +11,13 @@ using System.Windows.Forms;
 
 namespace MedTech.Formularios
 {
-    public partial class AggPaciente : MetroFramework.Forms.MetroForm
+    public partial class AggPacienteForm : MetroFramework.Forms.MetroForm
     {
-        public AggPaciente()
+        private bool flag = true;
+        public AggPacienteForm()
         {
             InitializeComponent();
+            lblInstruccion.Select();
         }
 
         private void btnAñadir_Click(object sender, EventArgs e)
@@ -37,7 +39,8 @@ namespace MedTech.Formularios
 
         private void btnVolver_Click(object sender, EventArgs e)
         {
-            MenuMed menuMedForm = new MenuMed();
+            flag = false;
+            MenuForm menuMedForm = new MenuForm();
             menuMedForm.Show();
             this.Close();
         }
@@ -52,6 +55,11 @@ namespace MedTech.Formularios
             lbEnfermedades.Items.Clear();
             cbxAlergias.Checked = false;
             cbxCirugias.Checked = false;
+        }
+
+        private void AggPacienteForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (flag) Application.Exit();
         }
     }
 }
