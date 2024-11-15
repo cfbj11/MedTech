@@ -13,6 +13,10 @@
     {
       "AbsoluteMoniker": "D:0:0:{58520D78-2D81-441B-9F31-3965499CFAC3}|MedTech\\MedTech.csproj|c:\\users\\carlo\\onedrive\\documentos\\uam\\iisemestre\\mype\\iiice\\medtech\\medtech\\medtech\\servicio\\validar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{58520D78-2D81-441B-9F31-3965499CFAC3}|MedTech\\MedTech.csproj|solutionrelative:medtech\\servicio\\validar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58520D78-2D81-441B-9F31-3965499CFAC3}|MedTech\\MedTech.csproj|c:\\users\\carlo\\onedrive\\documentos\\uam\\iisemestre\\mype\\iiice\\medtech\\medtech\\medtech\\formularios\\insesform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{58520D78-2D81-441B-9F31-3965499CFAC3}|MedTech\\MedTech.csproj|solutionrelative:medtech\\formularios\\insesform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,16 +42,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "usuarios.txt",
-              "DocumentMoniker": "C:\\Users\\carlo\\OneDrive\\Documentos\\UAM\\IISEMESTRE\\MYPE\\IIICE\\MedTech\\MedTech\\MedTech\\Archivos\\usuarios.txt",
-              "RelativeDocumentMoniker": "MedTech\\Archivos\\usuarios.txt",
-              "ToolTip": "C:\\Users\\carlo\\OneDrive\\Documentos\\UAM\\IISEMESTRE\\MYPE\\IIICE\\MedTech\\MedTech\\MedTech\\Archivos\\usuarios.txt",
-              "RelativeToolTip": "MedTech\\Archivos\\usuarios.txt",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAALAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
-              "WhenOpened": "2024-11-15T05:30:20.112Z",
-              "EditorCaption": ""
+              "DocumentIndex": 3,
+              "Title": "InSesForm.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\carlo\\OneDrive\\Documentos\\UAM\\IISEMESTRE\\MYPE\\IIICE\\MedTech\\MedTech\\MedTech\\Formularios\\InSesForm.cs",
+              "RelativeDocumentMoniker": "MedTech\\Formularios\\InSesForm.cs",
+              "ToolTip": "C:\\Users\\carlo\\OneDrive\\Documentos\\UAM\\IISEMESTRE\\MYPE\\IIICE\\MedTech\\MedTech\\MedTech\\Formularios\\InSesForm.cs [Dise\u00F1o]",
+              "RelativeToolTip": "MedTech\\Formularios\\InSesForm.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-15T06:29:54.583Z",
+              "EditorCaption": " [Dise\u00F1o]"
             },
             {
               "$type": "Document",
@@ -57,9 +60,9 @@
               "RelativeDocumentMoniker": "MedTech\\Servicio\\Validar.cs",
               "ToolTip": "C:\\Users\\carlo\\OneDrive\\Documentos\\UAM\\IISEMESTRE\\MYPE\\IIICE\\MedTech\\MedTech\\MedTech\\Servicio\\Validar.cs",
               "RelativeToolTip": "MedTech\\Servicio\\Validar.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACMAAABsAAAAAAAAAA==",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAowGEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-15T04:39:32.989Z",
+              "WhenOpened": "2024-11-15T06:29:49.39Z",
               "EditorCaption": ""
             },
             {
@@ -70,9 +73,22 @@
               "RelativeDocumentMoniker": "MedTech\\Servicio\\AccForms.cs",
               "ToolTip": "C:\\Users\\carlo\\OneDrive\\Documentos\\UAM\\IISEMESTRE\\MYPE\\IIICE\\MedTech\\MedTech\\MedTech\\Servicio\\AccForms.cs",
               "RelativeToolTip": "MedTech\\Servicio\\AccForms.cs",
-              "ViewState": "AgIAAHAAAAAAAAAAAAAkwBYAAAA6AAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAA6AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-15T04:01:19.968Z",
+              "WhenOpened": "2024-11-15T06:29:48.653Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "usuarios.txt",
+              "DocumentMoniker": "C:\\Users\\carlo\\OneDrive\\Documentos\\UAM\\IISEMESTRE\\MYPE\\IIICE\\MedTech\\MedTech\\MedTech\\Archivos\\usuarios.txt",
+              "RelativeDocumentMoniker": "MedTech\\Archivos\\usuarios.txt",
+              "ToolTip": "C:\\Users\\carlo\\OneDrive\\Documentos\\UAM\\IISEMESTRE\\MYPE\\IIICE\\MedTech\\MedTech\\MedTech\\Archivos\\usuarios.txt",
+              "RelativeToolTip": "MedTech\\Archivos\\usuarios.txt",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2024-11-15T06:30:01.98Z",
               "EditorCaption": ""
             }
           ]

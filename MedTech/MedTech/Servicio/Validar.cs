@@ -1,4 +1,5 @@
 ﻿using MedTech.Formularios;
+using MedTech.Modelos;
 using MetroFramework;
 using System;
 using System.Collections.Generic;
@@ -12,14 +13,14 @@ namespace MedTech.Servicio
 {
     public class Validar
     {
-        private readonly Dictionary<string,string> cred;    //  Diccionario que almacena las credenciales
+        private readonly List<Usuario> usuarios;    //  Lista para almacenar los datos de los usuarios
         private readonly Form form; //  Formulario de origen desde el cual se realiza el inicio de sesión
 
         //  Constructor de clase Validar
         public Validar(Form form, string filePath)
         {
             this.form = form;
-            cred = new Dictionary<string,string>();
+            usuarios = new List<Usuario>();
             CargarCred(filePath);   //  Cargar credenciales desde el archivo
         }
 
@@ -72,22 +73,25 @@ namespace MedTech.Servicio
             }
         }
 
-        //  Procesa una línea de texto para extraer el usuario y la contraseña y los almacena en el diccionario
+        //  Procesa una línea de texto para extraer el usuario y la contraseña
         private void ProcesarLinea(string linea)
         {
             string[] partes = linea.Split(':');
             if (partes.Length == 2)
             {
-                string user = partes[0].Trim();
-                string password = partes[1].Trim();
-                cred[user] = password;  //  Almacena el usuario y la contraseña en el diccionario
+                var usuario = new Usuario()
+                {
+                    IdUsuario = partes[0].Trim(),
+                    Contraseña = partes[1].Trim()
+                };
+                usuarios.Add(usuario);  //  Agrega el usuario a la lista
             }
         }
 
         //  Valida si las credenciales proporcionadas coinciden con las almacenadas
         public bool ValidarCred(string user, string password)
         {
-            return cred.TryGetValue(user, out string GPassword) && GPassword == password;
+            return usuarios.Exists(u => u.IdUsuario == user && u.Contraseña == password);
         }
     }
 }
