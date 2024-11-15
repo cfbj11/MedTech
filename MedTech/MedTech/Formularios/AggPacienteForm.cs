@@ -1,4 +1,5 @@
-﻿using MetroFramework;
+﻿using MedTech.Servicio;
+using MetroFramework;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,10 +14,13 @@ namespace MedTech.Formularios
 {
     public partial class AggPacienteForm : MetroFramework.Forms.MetroForm
     {
+        private readonly AccForms accForms;
         private bool flag = true;
+
         public AggPacienteForm()
         {
             InitializeComponent();
+            accForms = new AccForms(this);
             lblInstruccion.Select();
         }
 
@@ -31,30 +35,19 @@ namespace MedTech.Formularios
             else MetroMessageBox.Show(this, "No hay nada por agregar.", "¡!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
 
+        private void btnGuardar_Click(object sender, EventArgs e)
+        {
+            accForms.Guardar();
+        }
+
         private void btnCancelar_Click(object sender, EventArgs e)
         {
-            var result = MetroMessageBox.Show(this, "¿Desea cancelar el ingreso del paciente al sistema?", "Confirmar", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (result == DialogResult.Yes) LimpiarCampos();
+            accForms.Cancelar();
         }
 
         private void btnVolver_Click(object sender, EventArgs e)
         {
-            flag = false;
-            MenuForm menuMedForm = new MenuForm();
-            menuMedForm.Show();
-            this.Close();
-        }
-
-        private void LimpiarCampos()
-        {
-            tbNombrePac.Clear();
-            tbApellidoPac.Clear();
-            dtFechaNac.Value = DateTime.Today;
-            tbAntecedentes.Clear();
-            tbEnfermedades.Clear();
-            lbEnfermedades.Items.Clear();
-            cbxAlergias.Checked = false;
-            cbxCirugias.Checked = false;
+            accForms.Volver(ref flag);
         }
 
         private void AggPacienteForm_FormClosing(object sender, FormClosingEventArgs e)

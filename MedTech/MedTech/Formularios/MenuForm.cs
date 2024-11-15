@@ -8,60 +8,45 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MedTech.Servicio;
 
 namespace MedTech.Formularios
 {
     public partial class MenuForm : MetroFramework.Forms.MetroForm
     {
+        private readonly AccForms menu;
         private bool flag = true;
+
         public MenuForm()
         {
             InitializeComponent();
             lblMedTech.Select();
+            menu = new AccForms(this);
         }
 
         private void btnAggRegCita_Click(object sender, EventArgs e)
         {
-            flag = false;
-            AggCitaForm aggRegCitaForm = new AggCitaForm();
-            aggRegCitaForm.Show();
-            this.Hide();
+            menu.AgregarCita(ref flag);
         }
 
         private void btnPaciente_Click(object sender, EventArgs e)
         {
-            flag = false;
-            AggPacienteForm aggPacienteForm = new AggPacienteForm();
-            aggPacienteForm.Show();
-            this.Hide();
+            menu.AgregarPaciente(ref flag);
         }
 
         private void btnExpedMed_Click(object sender, EventArgs e)
         {
-            flag = false;
-            ExpedForm expedMedForm = new ExpedForm();
-            expedMedForm.Show();
-            this.Hide();
+            menu.ExpedMed(ref flag);
         }
 
         private void btnCerrSesion_Click(object sender, EventArgs e)
         {
-            var result = MetroMessageBox.Show(this, "Está seguro que quiere cerrar sesión", "Confirmar", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (result == DialogResult.Yes)
-            {
-                flag = false;
-                InSesForm inicioSesionForm = new InSesForm();
-                inicioSesionForm.Show();
-                this.Close();
-            }
+            menu.CerrarSesion(ref flag);
         }
 
         private void btnAyuda_Click(object sender, EventArgs e)
         {
-            string aggCita = "Se agrega los datos del paciente y se agenda la cita según la disponibilidad del doctor y paciente.";
-            string aggPac = "Se ingresan los datos de un nuevo paciente dentro del sistema.";
-            string expedMed = "Se ingresan los datos de la cita del paciente dentro del sistema.";
-            MetroMessageBox.Show(this, $"Agregar y Agendar Cita: {aggCita}\nAgregar Paciente: {aggPac}\nCrear o Actualizar Expediente Médico: {expedMed}", "Ayuda", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            menu.Ayuda();
         }
 
         private void MenuForm_FormClosing(object sender, FormClosingEventArgs e)

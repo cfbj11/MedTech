@@ -87,6 +87,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Servicio\AccForms.cs" />
     <Compile Include="Servicio\Validar.cs" />
     <EmbeddedResource Include="Formularios\AggCitaForm.resx">
       <DependentUpon>AggCitaForm.cs</DependentUpon>

@@ -46,7 +46,7 @@
             this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblFecCita = new MetroFramework.Controls.MetroLabel();
-            this.dtFecCita = new MetroFramework.Controls.MetroDateTime();
+            this.dtFechaCita = new MetroFramework.Controls.MetroDateTime();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -56,8 +56,7 @@
             this.lblInstruccion.BackColor = System.Drawing.Color.LightSeaGreen;
             this.lblInstruccion.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.lblInstruccion.ForeColor = System.Drawing.Color.White;
-            this.lblInstruccion.Location = new System.Drawing.Point(31, 86);
-            this.lblInstruccion.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblInstruccion.Location = new System.Drawing.Point(23, 70);
             this.lblInstruccion.Name = "lblInstruccion";
             this.lblInstruccion.Size = new System.Drawing.Size(139, 25);
             this.lblInstruccion.TabIndex = 0;
@@ -69,10 +68,9 @@
             // 
             this.lblIdExped.AutoSize = true;
             this.lblIdExped.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.lblIdExped.Location = new System.Drawing.Point(31, 154);
-            this.lblIdExped.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblIdExped.Location = new System.Drawing.Point(23, 125);
             this.lblIdExped.Name = "lblIdExped";
-            this.lblIdExped.Size = new System.Drawing.Size(106, 20);
+            this.lblIdExped.Size = new System.Drawing.Size(101, 19);
             this.lblIdExped.TabIndex = 1;
             this.lblIdExped.Text = "ID Expediente";
             // 
@@ -82,18 +80,16 @@
             // 
             // 
             this.tbIdExped.CustomButton.Image = null;
-            this.tbIdExped.CustomButton.Location = new System.Drawing.Point(143, 2);
-            this.tbIdExped.CustomButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbIdExped.CustomButton.Location = new System.Drawing.Point(78, 1);
             this.tbIdExped.CustomButton.Name = "";
-            this.tbIdExped.CustomButton.Size = new System.Drawing.Size(31, 28);
+            this.tbIdExped.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.tbIdExped.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.tbIdExped.CustomButton.TabIndex = 1;
             this.tbIdExped.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.tbIdExped.CustomButton.UseSelectable = true;
             this.tbIdExped.CustomButton.Visible = false;
             this.tbIdExped.Lines = new string[0];
-            this.tbIdExped.Location = new System.Drawing.Point(31, 181);
-            this.tbIdExped.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbIdExped.Location = new System.Drawing.Point(23, 147);
             this.tbIdExped.MaxLength = 32767;
             this.tbIdExped.Name = "tbIdExped";
             this.tbIdExped.PasswordChar = '\0';
@@ -102,7 +98,7 @@
             this.tbIdExped.SelectionLength = 0;
             this.tbIdExped.SelectionStart = 0;
             this.tbIdExped.ShortcutsEnabled = true;
-            this.tbIdExped.Size = new System.Drawing.Size(133, 28);
+            this.tbIdExped.Size = new System.Drawing.Size(100, 23);
             this.tbIdExped.TabIndex = 2;
             this.tbIdExped.UseSelectable = true;
             this.tbIdExped.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -112,10 +108,9 @@
             // 
             this.lblNombrePac.AutoSize = true;
             this.lblNombrePac.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.lblNombrePac.Location = new System.Drawing.Point(31, 246);
-            this.lblNombrePac.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblNombrePac.Location = new System.Drawing.Point(23, 200);
             this.lblNombrePac.Name = "lblNombrePac";
-            this.lblNombrePac.Size = new System.Drawing.Size(155, 20);
+            this.lblNombrePac.Size = new System.Drawing.Size(151, 19);
             this.lblNombrePac.TabIndex = 3;
             this.lblNombrePac.Text = "Nombre del Paciente";
             // 
@@ -125,18 +120,16 @@
             // 
             // 
             this.tbNombrePac.CustomButton.Image = null;
-            this.tbNombrePac.CustomButton.Location = new System.Drawing.Point(232, 2);
-            this.tbNombrePac.CustomButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbNombrePac.CustomButton.Location = new System.Drawing.Point(128, 1);
             this.tbNombrePac.CustomButton.Name = "";
-            this.tbNombrePac.CustomButton.Size = new System.Drawing.Size(31, 28);
+            this.tbNombrePac.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.tbNombrePac.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.tbNombrePac.CustomButton.TabIndex = 1;
             this.tbNombrePac.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.tbNombrePac.CustomButton.UseSelectable = true;
             this.tbNombrePac.CustomButton.Visible = false;
             this.tbNombrePac.Lines = new string[0];
-            this.tbNombrePac.Location = new System.Drawing.Point(31, 273);
-            this.tbNombrePac.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbNombrePac.Location = new System.Drawing.Point(23, 222);
             this.tbNombrePac.MaxLength = 32767;
             this.tbNombrePac.Name = "tbNombrePac";
             this.tbNombrePac.PasswordChar = '\0';
@@ -145,7 +138,7 @@
             this.tbNombrePac.SelectionLength = 0;
             this.tbNombrePac.SelectionStart = 0;
             this.tbNombrePac.ShortcutsEnabled = true;
-            this.tbNombrePac.Size = new System.Drawing.Size(200, 28);
+            this.tbNombrePac.Size = new System.Drawing.Size(150, 23);
             this.tbNombrePac.TabIndex = 4;
             this.tbNombrePac.UseSelectable = true;
             this.tbNombrePac.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -155,10 +148,9 @@
             // 
             this.lblApellidoPac.AutoSize = true;
             this.lblApellidoPac.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.lblApellidoPac.Location = new System.Drawing.Point(31, 338);
-            this.lblApellidoPac.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblApellidoPac.Location = new System.Drawing.Point(23, 275);
             this.lblApellidoPac.Name = "lblApellidoPac";
-            this.lblApellidoPac.Size = new System.Drawing.Size(155, 20);
+            this.lblApellidoPac.Size = new System.Drawing.Size(152, 19);
             this.lblApellidoPac.TabIndex = 5;
             this.lblApellidoPac.Text = "Apellido del Paciente";
             // 
@@ -168,18 +160,16 @@
             // 
             // 
             this.tbApellidoPac.CustomButton.Image = null;
-            this.tbApellidoPac.CustomButton.Location = new System.Drawing.Point(232, 2);
-            this.tbApellidoPac.CustomButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbApellidoPac.CustomButton.Location = new System.Drawing.Point(128, 1);
             this.tbApellidoPac.CustomButton.Name = "";
-            this.tbApellidoPac.CustomButton.Size = new System.Drawing.Size(31, 28);
+            this.tbApellidoPac.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.tbApellidoPac.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.tbApellidoPac.CustomButton.TabIndex = 1;
             this.tbApellidoPac.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.tbApellidoPac.CustomButton.UseSelectable = true;
             this.tbApellidoPac.CustomButton.Visible = false;
             this.tbApellidoPac.Lines = new string[0];
-            this.tbApellidoPac.Location = new System.Drawing.Point(31, 366);
-            this.tbApellidoPac.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbApellidoPac.Location = new System.Drawing.Point(23, 297);
             this.tbApellidoPac.MaxLength = 32767;
             this.tbApellidoPac.Name = "tbApellidoPac";
             this.tbApellidoPac.PasswordChar = '\0';
@@ -188,7 +178,7 @@
             this.tbApellidoPac.SelectionLength = 0;
             this.tbApellidoPac.SelectionStart = 0;
             this.tbApellidoPac.ShortcutsEnabled = true;
-            this.tbApellidoPac.Size = new System.Drawing.Size(200, 28);
+            this.tbApellidoPac.Size = new System.Drawing.Size(150, 23);
             this.tbApellidoPac.TabIndex = 6;
             this.tbApellidoPac.UseSelectable = true;
             this.tbApellidoPac.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -198,10 +188,9 @@
             // 
             this.lblMotivo.AutoSize = true;
             this.lblMotivo.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.lblMotivo.Location = new System.Drawing.Point(400, 277);
-            this.lblMotivo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblMotivo.Location = new System.Drawing.Point(300, 225);
             this.lblMotivo.Name = "lblMotivo";
-            this.lblMotivo.Size = new System.Drawing.Size(145, 20);
+            this.lblMotivo.Size = new System.Drawing.Size(139, 19);
             this.lblMotivo.TabIndex = 7;
             this.lblMotivo.Text = "Motivo de Consulta";
             // 
@@ -209,10 +198,9 @@
             // 
             this.lblDiagnostico.AutoSize = true;
             this.lblDiagnostico.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.lblDiagnostico.Location = new System.Drawing.Point(800, 154);
-            this.lblDiagnostico.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblDiagnostico.Location = new System.Drawing.Point(600, 125);
             this.lblDiagnostico.Name = "lblDiagnostico";
-            this.lblDiagnostico.Size = new System.Drawing.Size(92, 20);
+            this.lblDiagnostico.Size = new System.Drawing.Size(88, 19);
             this.lblDiagnostico.TabIndex = 8;
             this.lblDiagnostico.Text = "Diagnóstico";
             // 
@@ -222,18 +210,16 @@
             // 
             // 
             this.tbMotivoCon.CustomButton.Image = null;
-            this.tbMotivoCon.CustomButton.Location = new System.Drawing.Point(147, 2);
-            this.tbMotivoCon.CustomButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbMotivoCon.CustomButton.Location = new System.Drawing.Point(76, 1);
             this.tbMotivoCon.CustomButton.Name = "";
-            this.tbMotivoCon.CustomButton.Size = new System.Drawing.Size(116, 107);
+            this.tbMotivoCon.CustomButton.Size = new System.Drawing.Size(73, 73);
             this.tbMotivoCon.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.tbMotivoCon.CustomButton.TabIndex = 1;
             this.tbMotivoCon.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.tbMotivoCon.CustomButton.UseSelectable = true;
             this.tbMotivoCon.CustomButton.Visible = false;
             this.tbMotivoCon.Lines = new string[0];
-            this.tbMotivoCon.Location = new System.Drawing.Point(400, 302);
-            this.tbMotivoCon.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbMotivoCon.Location = new System.Drawing.Point(300, 245);
             this.tbMotivoCon.MaxLength = 32767;
             this.tbMotivoCon.Multiline = true;
             this.tbMotivoCon.Name = "tbMotivoCon";
@@ -243,7 +229,7 @@
             this.tbMotivoCon.SelectionLength = 0;
             this.tbMotivoCon.SelectionStart = 0;
             this.tbMotivoCon.ShortcutsEnabled = true;
-            this.tbMotivoCon.Size = new System.Drawing.Size(200, 92);
+            this.tbMotivoCon.Size = new System.Drawing.Size(150, 75);
             this.tbMotivoCon.TabIndex = 9;
             this.tbMotivoCon.UseSelectable = true;
             this.tbMotivoCon.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -255,18 +241,16 @@
             // 
             // 
             this.tbDiagnostico.CustomButton.Image = null;
-            this.tbDiagnostico.CustomButton.Location = new System.Drawing.Point(-16, 1);
-            this.tbDiagnostico.CustomButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbDiagnostico.CustomButton.Location = new System.Drawing.Point(-22, 1);
             this.tbDiagnostico.CustomButton.Name = "";
-            this.tbDiagnostico.CustomButton.Size = new System.Drawing.Size(281, 260);
+            this.tbDiagnostico.CustomButton.Size = new System.Drawing.Size(171, 171);
             this.tbDiagnostico.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.tbDiagnostico.CustomButton.TabIndex = 1;
             this.tbDiagnostico.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.tbDiagnostico.CustomButton.UseSelectable = true;
             this.tbDiagnostico.CustomButton.Visible = false;
             this.tbDiagnostico.Lines = new string[0];
-            this.tbDiagnostico.Location = new System.Drawing.Point(800, 181);
-            this.tbDiagnostico.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbDiagnostico.Location = new System.Drawing.Point(600, 147);
             this.tbDiagnostico.MaxLength = 32767;
             this.tbDiagnostico.Multiline = true;
             this.tbDiagnostico.Name = "tbDiagnostico";
@@ -276,7 +260,7 @@
             this.tbDiagnostico.SelectionLength = 0;
             this.tbDiagnostico.SelectionStart = 0;
             this.tbDiagnostico.ShortcutsEnabled = true;
-            this.tbDiagnostico.Size = new System.Drawing.Size(200, 213);
+            this.tbDiagnostico.Size = new System.Drawing.Size(150, 173);
             this.tbDiagnostico.TabIndex = 10;
             this.tbDiagnostico.UseSelectable = true;
             this.tbDiagnostico.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -286,24 +270,23 @@
             // 
             this.btnGuardar.BackColor = System.Drawing.Color.LightSeaGreen;
             this.btnGuardar.ForeColor = System.Drawing.Color.White;
-            this.btnGuardar.Location = new System.Drawing.Point(693, 473);
-            this.btnGuardar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnGuardar.Location = new System.Drawing.Point(520, 384);
             this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(100, 28);
+            this.btnGuardar.Size = new System.Drawing.Size(75, 23);
             this.btnGuardar.TabIndex = 11;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseCustomBackColor = true;
             this.btnGuardar.UseCustomForeColor = true;
             this.btnGuardar.UseSelectable = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // btnCancelar
             // 
             this.btnCancelar.BackColor = System.Drawing.Color.LightSeaGreen;
             this.btnCancelar.ForeColor = System.Drawing.Color.White;
-            this.btnCancelar.Location = new System.Drawing.Point(801, 473);
-            this.btnCancelar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCancelar.Location = new System.Drawing.Point(601, 384);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(100, 28);
+            this.btnCancelar.Size = new System.Drawing.Size(75, 23);
             this.btnCancelar.TabIndex = 12;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseCustomBackColor = true;
@@ -315,10 +298,9 @@
             // 
             this.btnVolver.BackColor = System.Drawing.Color.LightSeaGreen;
             this.btnVolver.ForeColor = System.Drawing.Color.White;
-            this.btnVolver.Location = new System.Drawing.Point(909, 473);
-            this.btnVolver.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnVolver.Location = new System.Drawing.Point(682, 384);
             this.btnVolver.Name = "btnVolver";
-            this.btnVolver.Size = new System.Drawing.Size(100, 28);
+            this.btnVolver.Size = new System.Drawing.Size(75, 23);
             this.btnVolver.TabIndex = 13;
             this.btnVolver.Text = "Volver";
             this.btnVolver.UseCustomBackColor = true;
@@ -331,24 +313,22 @@
             this.metroPanel1.BackColor = System.Drawing.Color.LightSeaGreen;
             this.metroPanel1.HorizontalScrollbarBarColor = true;
             this.metroPanel1.HorizontalScrollbarHighlightOnWheel = false;
-            this.metroPanel1.HorizontalScrollbarSize = 12;
-            this.metroPanel1.Location = new System.Drawing.Point(0, 80);
-            this.metroPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.metroPanel1.HorizontalScrollbarSize = 10;
+            this.metroPanel1.Location = new System.Drawing.Point(0, 65);
             this.metroPanel1.Name = "metroPanel1";
-            this.metroPanel1.Size = new System.Drawing.Size(1067, 43);
+            this.metroPanel1.Size = new System.Drawing.Size(800, 35);
             this.metroPanel1.TabIndex = 23;
             this.metroPanel1.UseCustomBackColor = true;
             this.metroPanel1.VerticalScrollbarBarColor = true;
             this.metroPanel1.VerticalScrollbarHighlightOnWheel = false;
-            this.metroPanel1.VerticalScrollbarSize = 13;
+            this.metroPanel1.VerticalScrollbarSize = 10;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(0, 480);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Location = new System.Drawing.Point(0, 390);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(80, 74);
+            this.pictureBox1.Size = new System.Drawing.Size(60, 60);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 26;
             this.pictureBox1.TabStop = false;
@@ -357,28 +337,26 @@
             // 
             this.lblFecCita.AutoSize = true;
             this.lblFecCita.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.lblFecCita.Location = new System.Drawing.Point(400, 154);
-            this.lblFecCita.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblFecCita.Location = new System.Drawing.Point(300, 125);
             this.lblFecCita.Name = "lblFecCita";
-            this.lblFecCita.Size = new System.Drawing.Size(101, 20);
+            this.lblFecCita.Size = new System.Drawing.Size(98, 19);
             this.lblFecCita.TabIndex = 29;
             this.lblFecCita.Text = "Fecha de Cita";
             // 
-            // dtFecCita
+            // dtFechaCita
             // 
-            this.dtFecCita.Location = new System.Drawing.Point(400, 181);
-            this.dtFecCita.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.dtFecCita.MinimumSize = new System.Drawing.Size(0, 30);
-            this.dtFecCita.Name = "dtFecCita";
-            this.dtFecCita.Size = new System.Drawing.Size(199, 30);
-            this.dtFecCita.TabIndex = 30;
+            this.dtFechaCita.Location = new System.Drawing.Point(300, 147);
+            this.dtFechaCita.MinimumSize = new System.Drawing.Size(0, 29);
+            this.dtFechaCita.Name = "dtFechaCita";
+            this.dtFechaCita.Size = new System.Drawing.Size(150, 29);
+            this.dtFechaCita.TabIndex = 30;
             // 
             // ExpedForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1067, 554);
-            this.Controls.Add(this.dtFecCita);
+            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.dtFechaCita);
             this.Controls.Add(this.lblFecCita);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnVolver);
@@ -397,10 +375,8 @@
             this.Controls.Add(this.lblInstruccion);
             this.Controls.Add(this.metroPanel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
             this.Name = "ExpedForm";
-            this.Padding = new System.Windows.Forms.Padding(27, 74, 27, 25);
             this.Text = "Crear o Actualizar Expediente Médico";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ExpedForm_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -413,21 +389,21 @@
 
         private MetroFramework.Controls.MetroLabel lblInstruccion;
         private MetroFramework.Controls.MetroLabel lblIdExped;
-        private MetroFramework.Controls.MetroTextBox tbIdExped;
         private MetroFramework.Controls.MetroLabel lblNombrePac;
-        private MetroFramework.Controls.MetroTextBox tbNombrePac;
         private MetroFramework.Controls.MetroLabel lblApellidoPac;
-        private MetroFramework.Controls.MetroTextBox tbApellidoPac;
         private MetroFramework.Controls.MetroLabel lblMotivo;
         private MetroFramework.Controls.MetroLabel lblDiagnostico;
-        private MetroFramework.Controls.MetroTextBox tbMotivoCon;
-        private MetroFramework.Controls.MetroTextBox tbDiagnostico;
         private MetroFramework.Controls.MetroButton btnGuardar;
         private MetroFramework.Controls.MetroButton btnCancelar;
         private MetroFramework.Controls.MetroButton btnVolver;
         private MetroFramework.Controls.MetroPanel metroPanel1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private MetroFramework.Controls.MetroLabel lblFecCita;
-        private MetroFramework.Controls.MetroDateTime dtFecCita;
+        internal MetroFramework.Controls.MetroTextBox tbIdExped;
+        internal MetroFramework.Controls.MetroTextBox tbNombrePac;
+        internal MetroFramework.Controls.MetroTextBox tbApellidoPac;
+        internal MetroFramework.Controls.MetroTextBox tbMotivoCon;
+        internal MetroFramework.Controls.MetroTextBox tbDiagnostico;
+        internal MetroFramework.Controls.MetroDateTime dtFechaCita;
     }
 }
