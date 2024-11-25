@@ -76,6 +76,11 @@
     <Compile Include="Dao\GuardarCita.cs" />
     <Compile Include="Dao\GuardarExpediente.cs" />
     <Compile Include="Dao\GuardarPaciente.cs" />
+    <Compile Include="DataSet\DsDato.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DsDato.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Registros\AggCitaFrm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -140,6 +145,20 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Reportes\RptCita.rdlc" />
+    <EmbeddedResource Include="Reportes\RptExpediente.rdlc" />
+    <EmbeddedResource Include="Reportes\RptPaciente.rdlc" />
+    <None Include="DataSet\DsDato.xsc">
+      <DependentUpon>DsDato.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet\DsDato.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DsDato.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSet\DsDato.xss">
+      <DependentUpon>DsDato.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
