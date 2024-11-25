@@ -1,6 +1,6 @@
 ﻿namespace MedTech.Formularios
 {
-    partial class AggPacienteForm
+    partial class AggPacienteFrm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AggPacienteForm));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AggPacienteFrm));
             this.lblNombrePac = new MetroFramework.Controls.MetroLabel();
             this.tbNombrePac = new MetroFramework.Controls.MetroTextBox();
             this.lblApellidoPac = new MetroFramework.Controls.MetroLabel();
@@ -345,7 +345,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Image = global::MedTech.Properties.Resources.Logotipo_medtech;
             this.pictureBox1.Location = new System.Drawing.Point(0, 390);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(60, 60);
@@ -361,7 +361,7 @@
             this.lbEnfermedades.Size = new System.Drawing.Size(231, 69);
             this.lbEnfermedades.TabIndex = 26;
             // 
-            // AggPacienteForm
+            // AggPacienteFrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -389,7 +389,7 @@
             this.Controls.Add(this.metroPanel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
-            this.Name = "AggPacienteForm";
+            this.Name = "AggPacienteFrm";
             this.Text = "Agregar Paciente";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.AggPacienteForm_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

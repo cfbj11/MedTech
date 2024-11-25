@@ -12,12 +12,12 @@ using MedTech.Servicio;
 
 namespace MedTech.Formularios
 {
-    public partial class InSesForm : MetroFramework.Forms.MetroForm
+    public partial class InicioFrm : MetroFramework.Forms.MetroForm
     {
         private readonly Validar validar;
         private bool flag = true;
 
-        public InSesForm()
+        public InicioFrm()
         {
             InitializeComponent();
             lblBienvenida.Select();

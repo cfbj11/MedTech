@@ -12,12 +12,12 @@ using MedTech.Servicio;
 
 namespace MedTech.Formularios
 {
-    public partial class MenuForm : MetroFramework.Forms.MetroForm
+    public partial class MenuFrm : MetroFramework.Forms.MetroForm
     {
         private readonly AccForms menu;
         private bool flag = true;
 
-        public MenuForm()
+        public MenuFrm()
         {
             InitializeComponent();
             lblMedTech.Select();

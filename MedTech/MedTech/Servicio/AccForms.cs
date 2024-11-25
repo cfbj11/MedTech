@@ -26,7 +26,7 @@ namespace MedTech.Servicio
         public void AgregarCita(ref bool flag)
         {
             flag = false;
-            AggCitaForm aggCitaForm = new AggCitaForm();
+            AggCitaFrm aggCitaForm = new AggCitaFrm();
             aggCitaForm.Show();
             form.Hide();
         }
@@ -35,7 +35,7 @@ namespace MedTech.Servicio
         public void AgregarPaciente(ref bool flag)
         {
             flag = false;
-            AggPacienteForm aggPacienteForm = new AggPacienteForm();
+            AggPacienteFrm aggPacienteForm = new AggPacienteFrm();
             aggPacienteForm.Show();
             form.Hide();
         }
@@ -44,7 +44,7 @@ namespace MedTech.Servicio
         public void ExpedMed(ref bool flag)
         {
             flag = false;
-            ExpedForm expedMedForm = new ExpedForm();
+            ExpedienteFrm expedMedForm = new ExpedienteFrm();
             expedMedForm.Show();
             form.Hide();
         }
@@ -56,7 +56,7 @@ namespace MedTech.Servicio
             if (result == DialogResult.Yes)
             {
                 flag = false;
-                InSesForm inSesForm = new InSesForm();
+                InicioFrm inSesForm = new InicioFrm();
                 inSesForm.Show();
                 form.Close();
             }
@@ -87,9 +87,9 @@ namespace MedTech.Servicio
             string msjCancelar = "¿Desea cancelar la operación?";
 
             //  Personaliza el mensaje según el formulario activo
-            if (form is AggCitaForm) msjCancelar = "¿Desea cancelar la agendación de cita?";
-            else if (form is AggPacienteForm) msjCancelar = "¿Desea cancelar el ingreso del paciente al sistema?";
-            else if (form is ExpedForm) msjCancelar = "¿Desea cancelar la creación/actualización de expediente?";
+            if (form is AggCitaFrm) msjCancelar = "¿Desea cancelar la agendación de cita?";
+            else if (form is AggPacienteFrm) msjCancelar = "¿Desea cancelar el ingreso del paciente al sistema?";
+            else if (form is ExpedienteFrm) msjCancelar = "¿Desea cancelar la creación/actualización de expediente?";
             var result = MetroMessageBox.Show(form, msjCancelar, "Confirmar", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (result == DialogResult.Yes) LimpiarCampos();
         }
@@ -98,7 +98,7 @@ namespace MedTech.Servicio
         public void Volver(ref bool flag)
         {
             flag = false;
-            MenuForm menuMedForm = new MenuForm();
+            MenuFrm menuMedForm = new MenuFrm();
             menuMedForm.Show();
             form.Close();
         }
@@ -106,7 +106,7 @@ namespace MedTech.Servicio
         //  Limpia los campos de los datos de los formularios
         private void LimpiarCampos()
         {
-            if (form is AggCitaForm aggCitaForm)    //  Limpia campos de AggCitaForm
+            if (form is AggCitaFrm aggCitaForm)    //  Limpia campos de AggCitaForm
             {
                 aggCitaForm.tbNombrePac.Clear();
                 aggCitaForm.tbApellidoPac.Clear();
@@ -121,7 +121,7 @@ namespace MedTech.Servicio
                 aggCitaForm.tbCosto.Clear();
             }
 
-            if (form is AggPacienteForm aggPacienteForm)    //  Limpia campos de AggPacienteForm
+            if (form is AggPacienteFrm aggPacienteForm)    //  Limpia campos de AggPacienteForm
             {
                 aggPacienteForm.tbNombrePac.Clear();
                 aggPacienteForm.tbApellidoPac.Clear();
@@ -133,7 +133,7 @@ namespace MedTech.Servicio
                 aggPacienteForm.cbxCirugias.Checked = false;
             }
 
-            if (form is ExpedForm expedForm)    //  Limpia campos de ExpedForm
+            if (form is ExpedienteFrm expedForm)    //  Limpia campos de ExpedForm
             {
                 expedForm.tbIdExped.Clear();
                 expedForm.tbNombrePac.Clear();

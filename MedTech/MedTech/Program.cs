@@ -17,7 +17,7 @@ namespace MedTech
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new InSesForm());
+            Application.Run(new InicioFrm());
         }
     }
 }

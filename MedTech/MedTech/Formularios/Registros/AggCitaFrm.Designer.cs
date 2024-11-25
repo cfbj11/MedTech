@@ -1,6 +1,6 @@
 ﻿namespace MedTech.Formularios
 {
-    partial class AggCitaForm
+    partial class AggCitaFrm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AggCitaForm));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AggCitaFrm));
             this.lblInstruccion = new MetroFramework.Controls.MetroLabel();
             this.lblNombre = new MetroFramework.Controls.MetroLabel();
             this.tbNombrePac = new MetroFramework.Controls.MetroTextBox();
@@ -450,7 +450,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Image = global::MedTech.Properties.Resources.Logotipo_medtech;
             this.pictureBox1.Location = new System.Drawing.Point(0, 390);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(60, 60);
@@ -498,7 +498,7 @@
             this.tbIdPaciente.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.tbIdPaciente.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
-            // AggCitaForm
+            // AggCitaFrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -531,7 +531,7 @@
             this.Controls.Add(this.metroPanel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
-            this.Name = "AggCitaForm";
+            this.Name = "AggCitaFrm";
             this.Text = "Agregar y Agendar Cita";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.AggCitaForm_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

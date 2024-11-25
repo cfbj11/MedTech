@@ -1,6 +1,6 @@
 ﻿namespace MedTech.Formularios
 {
-    partial class ExpedForm
+    partial class ExpedienteFrm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ExpedForm));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ExpedienteFrm));
             this.lblInstruccion = new MetroFramework.Controls.MetroLabel();
             this.lblIdExped = new MetroFramework.Controls.MetroLabel();
             this.tbIdExped = new MetroFramework.Controls.MetroTextBox();
@@ -325,7 +325,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Image = global::MedTech.Properties.Resources.Logotipo_medtech;
             this.pictureBox1.Location = new System.Drawing.Point(0, 390);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(60, 60);
@@ -351,7 +351,7 @@
             this.dtFechaCita.Size = new System.Drawing.Size(150, 29);
             this.dtFechaCita.TabIndex = 30;
             // 
-            // ExpedForm
+            // ExpedienteFrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -376,7 +376,7 @@
             this.Controls.Add(this.metroPanel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
-            this.Name = "ExpedForm";
+            this.Name = "ExpedienteFrm";
             this.Text = "Crear o Actualizar Expediente Médico";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ExpedForm_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

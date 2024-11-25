@@ -55,55 +55,55 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Formularios\AggCitaForm.cs">
+    <Compile Include="Formularios\Registros\AggCitaFrm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\AggCitaForm.Designer.cs">
-      <DependentUpon>AggCitaForm.cs</DependentUpon>
+    <Compile Include="Formularios\Registros\AggCitaFrm.Designer.cs">
+      <DependentUpon>AggCitaFrm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\AggPacienteForm.cs">
+    <Compile Include="Formularios\Registros\AggPacienteFrm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\AggPacienteForm.Designer.cs">
-      <DependentUpon>AggPacienteForm.cs</DependentUpon>
+    <Compile Include="Formularios\Registros\AggPacienteFrm.Designer.cs">
+      <DependentUpon>AggPacienteFrm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\ExpedForm.cs">
+    <Compile Include="Formularios\Registros\ExpedienteFrm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\ExpedForm.Designer.cs">
-      <DependentUpon>ExpedForm.cs</DependentUpon>
+    <Compile Include="Formularios\Registros\ExpedienteFrm.Designer.cs">
+      <DependentUpon>ExpedienteFrm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\InSesForm.cs">
+    <Compile Include="Formularios\InicioFrm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\InSesForm.Designer.cs">
-      <DependentUpon>InSesForm.cs</DependentUpon>
+    <Compile Include="Formularios\InicioFrm.Designer.cs">
+      <DependentUpon>InicioFrm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\MenuForm.cs">
+    <Compile Include="Formularios\MenuFrm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\MenuForm.Designer.cs">
-      <DependentUpon>MenuForm.cs</DependentUpon>
+    <Compile Include="Formularios\MenuFrm.Designer.cs">
+      <DependentUpon>MenuFrm.cs</DependentUpon>
     </Compile>
     <Compile Include="Modelos\Usuario.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Servicio\AccForms.cs" />
     <Compile Include="Servicio\Validar.cs" />
-    <EmbeddedResource Include="Formularios\AggCitaForm.resx">
-      <DependentUpon>AggCitaForm.cs</DependentUpon>
+    <EmbeddedResource Include="Formularios\Registros\AggCitaFrm.resx">
+      <DependentUpon>AggCitaFrm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\AggPacienteForm.resx">
-      <DependentUpon>AggPacienteForm.cs</DependentUpon>
+    <EmbeddedResource Include="Formularios\Registros\AggPacienteFrm.resx">
+      <DependentUpon>AggPacienteFrm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\ExpedForm.resx">
-      <DependentUpon>ExpedForm.cs</DependentUpon>
+    <EmbeddedResource Include="Formularios\Registros\ExpedienteFrm.resx">
+      <DependentUpon>ExpedienteFrm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\InSesForm.resx">
-      <DependentUpon>InSesForm.cs</DependentUpon>
+    <EmbeddedResource Include="Formularios\InicioFrm.resx">
+      <DependentUpon>InicioFrm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\MenuForm.resx">
-      <DependentUpon>MenuForm.cs</DependentUpon>
+    <EmbeddedResource Include="Formularios\MenuFrm.resx">
+      <DependentUpon>MenuFrm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -113,6 +113,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -130,6 +131,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Archivos\usuarios.txt" />
+    <None Include="Resources\Logotipo medtech.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

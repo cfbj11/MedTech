@@ -12,12 +12,12 @@ using System.Windows.Forms;
 
 namespace MedTech.Formularios
 {
-    public partial class AggCitaForm : MetroFramework.Forms.MetroForm
+    public partial class AggCitaFrm : MetroFramework.Forms.MetroForm
     {
         private readonly AccForms accForms;
         private bool flag = true;
 
-        public AggCitaForm()
+        public AggCitaFrm()
         {
             InitializeComponent();
             accForms = new AccForms(this);

@@ -45,7 +45,7 @@ namespace MedTech.Servicio
         //  Muestra el formulario del menú y oculta el formulario de inicio de sesión
         public void MostrarMenu()
         {
-            MenuForm menuForm = new MenuForm(); //  Instancia del formulario de menú
+            MenuFrm menuForm = new MenuFrm(); //  Instancia del formulario de menú
             menuForm.Show();
             form.Hide();
         }
