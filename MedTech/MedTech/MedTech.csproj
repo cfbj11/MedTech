@@ -111,6 +111,24 @@
     <Compile Include="Formularios\MenuFrm.Designer.cs">
       <DependentUpon>MenuFrm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\Rpv\RpvCita.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Rpv\RpvCita.Designer.cs">
+      <DependentUpon>RpvCita.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Rpv\RpvExpediente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Rpv\RpvExpediente.Designer.cs">
+      <DependentUpon>RpvExpediente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Rpv\RpvPaciente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Rpv\RpvPaciente.Designer.cs">
+      <DependentUpon>RpvPaciente.cs</DependentUpon>
+    </Compile>
     <Compile Include="Modelos\Cita.cs" />
     <Compile Include="Modelos\Expediente.cs" />
     <Compile Include="Modelos\Paciente.cs" />
@@ -134,6 +152,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\MenuFrm.resx">
       <DependentUpon>MenuFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Rpv\RpvCita.resx">
+      <DependentUpon>RpvCita.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Rpv\RpvExpediente.resx">
+      <DependentUpon>RpvExpediente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Rpv\RpvPaciente.resx">
+      <DependentUpon>RpvPaciente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -18,6 +18,7 @@ namespace MedTech.Formularios
     {
         private readonly AccForm accForms;
         private readonly GuardarExpediente guardarExpediente;
+        private List<Expediente> listaExpediente = new List<Expediente>();
         private bool flag = true;
 
         public ExpedienteFrm()
@@ -42,6 +43,9 @@ namespace MedTech.Formularios
                     Diagnostico = tbDiagnostico.Text
                 };
                 guardarExpediente.Expediente(expediente);
+                listaExpediente.Add(expediente);
+                dgvExpediente.DataSource = null;
+                dgvExpediente.DataSource = listaExpediente;
                 accForms.LimpiarCampos();
                 MetroMessageBox.Show(this, "Expediente creado/actualizado exitosamente", "Expediente Creado/Actualizado", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
@@ -64,6 +68,60 @@ namespace MedTech.Formularios
         private void ExpedForm_FormClosing(object sender, FormClosingEventArgs e)
         {
             if (flag) Application.Exit();
+        }
+
+        private void tbIdExped_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                e.Handled = true;
+                tbNombrePac.Focus();
+            }
+        }
+
+        private void tbNombrePac_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                e.Handled = true;
+                tbApellidoPac.Focus();
+            }
+        }
+
+        private void tbApellidoPac_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                e.Handled = true;
+                dtFechaCita.Focus();
+            }
+        }
+
+        private void dtFechaCita_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                e.Handled = true;
+                tbMotivoCon.Focus();
+            }
+        }
+
+        private void tbMotivoCon_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                e.Handled = true;
+                tbDiagnostico.Focus();
+            }
+        }
+
+        private void tbDiagnostico_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                e.Handled = true;
+                btnGuardar.Focus();
+            }
         }
     }
 }

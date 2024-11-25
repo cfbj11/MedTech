@@ -55,7 +55,10 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblIdPaciente = new MetroFramework.Controls.MetroLabel();
             this.tbIdPaciente = new MetroFramework.Controls.MetroTextBox();
+            this.dgvCita = new System.Windows.Forms.DataGridView();
+            this.btnReporte = new MetroFramework.Controls.MetroButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCita)).BeginInit();
             this.SuspendLayout();
             // 
             // lblInstruccion
@@ -111,6 +114,7 @@
             this.tbNombrePac.UseSelectable = true;
             this.tbNombrePac.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.tbNombrePac.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.tbNombrePac.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbNombrePac_KeyPress);
             // 
             // lblApellido
             // 
@@ -151,6 +155,7 @@
             this.tbApellidoPac.UseSelectable = true;
             this.tbApellidoPac.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.tbApellidoPac.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.tbApellidoPac.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbApellidoPac_KeyPress);
             // 
             // lblHoraCita
             // 
@@ -159,7 +164,7 @@
             this.lblHoraCita.Location = new System.Drawing.Point(23, 315);
             this.lblHoraCita.Name = "lblHoraCita";
             this.lblHoraCita.Size = new System.Drawing.Size(94, 19);
-            this.lblHoraCita.TabIndex = 5;
+            this.lblHoraCita.TabIndex = 7;
             this.lblHoraCita.Text = "Hora de Cita";
             // 
             // tbHoraCita
@@ -187,10 +192,11 @@
             this.tbHoraCita.SelectionStart = 0;
             this.tbHoraCita.ShortcutsEnabled = true;
             this.tbHoraCita.Size = new System.Drawing.Size(100, 23);
-            this.tbHoraCita.TabIndex = 6;
+            this.tbHoraCita.TabIndex = 8;
             this.tbHoraCita.UseSelectable = true;
             this.tbHoraCita.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.tbHoraCita.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.tbHoraCita.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbHoraCita_KeyPress);
             // 
             // lblFecCita
             // 
@@ -199,7 +205,7 @@
             this.lblFecCita.Location = new System.Drawing.Point(23, 247);
             this.lblFecCita.Name = "lblFecCita";
             this.lblFecCita.Size = new System.Drawing.Size(98, 19);
-            this.lblFecCita.TabIndex = 7;
+            this.lblFecCita.TabIndex = 5;
             this.lblFecCita.Text = "Fecha de Cita";
             // 
             // dtFechaCita
@@ -208,7 +214,8 @@
             this.dtFechaCita.MinimumSize = new System.Drawing.Size(0, 29);
             this.dtFechaCita.Name = "dtFechaCita";
             this.dtFechaCita.Size = new System.Drawing.Size(150, 29);
-            this.dtFechaCita.TabIndex = 8;
+            this.dtFechaCita.TabIndex = 6;
+            this.dtFechaCita.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.dtFechaCita_KeyPress);
             // 
             // lblDoctor
             // 
@@ -217,7 +224,7 @@
             this.lblDoctor.Location = new System.Drawing.Point(300, 180);
             this.lblDoctor.Name = "lblDoctor";
             this.lblDoctor.Size = new System.Drawing.Size(55, 19);
-            this.lblDoctor.TabIndex = 9;
+            this.lblDoctor.TabIndex = 11;
             this.lblDoctor.Text = "Doctor";
             // 
             // tbDoctor
@@ -245,10 +252,11 @@
             this.tbDoctor.SelectionStart = 0;
             this.tbDoctor.ShortcutsEnabled = true;
             this.tbDoctor.Size = new System.Drawing.Size(150, 23);
-            this.tbDoctor.TabIndex = 10;
+            this.tbDoctor.TabIndex = 12;
             this.tbDoctor.UseSelectable = true;
             this.tbDoctor.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.tbDoctor.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.tbDoctor.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbDoctor_KeyPress);
             // 
             // lblEspecialidad
             // 
@@ -257,7 +265,7 @@
             this.lblEspecialidad.Location = new System.Drawing.Point(300, 247);
             this.lblEspecialidad.Name = "lblEspecialidad";
             this.lblEspecialidad.Size = new System.Drawing.Size(92, 19);
-            this.lblEspecialidad.TabIndex = 11;
+            this.lblEspecialidad.TabIndex = 13;
             this.lblEspecialidad.Text = "Especialidad";
             // 
             // cbEspecialidad
@@ -288,8 +296,9 @@
             this.cbEspecialidad.Location = new System.Drawing.Point(300, 269);
             this.cbEspecialidad.Name = "cbEspecialidad";
             this.cbEspecialidad.Size = new System.Drawing.Size(150, 29);
-            this.cbEspecialidad.TabIndex = 12;
+            this.cbEspecialidad.TabIndex = 14;
             this.cbEspecialidad.UseSelectable = true;
+            this.cbEspecialidad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cbEspecialidad_KeyPress);
             // 
             // lblContacto
             // 
@@ -298,7 +307,7 @@
             this.lblContacto.Location = new System.Drawing.Point(600, 120);
             this.lblContacto.Name = "lblContacto";
             this.lblContacto.Size = new System.Drawing.Size(69, 19);
-            this.lblContacto.TabIndex = 13;
+            this.lblContacto.TabIndex = 15;
             this.lblContacto.Text = "Contacto";
             // 
             // cbxTelefono
@@ -307,9 +316,10 @@
             this.cbxTelefono.Location = new System.Drawing.Point(600, 142);
             this.cbxTelefono.Name = "cbxTelefono";
             this.cbxTelefono.Size = new System.Drawing.Size(68, 15);
-            this.cbxTelefono.TabIndex = 14;
+            this.cbxTelefono.TabIndex = 16;
             this.cbxTelefono.Text = "Teléfono";
             this.cbxTelefono.UseSelectable = true;
+            this.cbxTelefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cbxTelefono_KeyPress);
             // 
             // cbxCorreo
             // 
@@ -317,9 +327,10 @@
             this.cbxCorreo.Location = new System.Drawing.Point(600, 163);
             this.cbxCorreo.Name = "cbxCorreo";
             this.cbxCorreo.Size = new System.Drawing.Size(59, 15);
-            this.cbxCorreo.TabIndex = 15;
+            this.cbxCorreo.TabIndex = 17;
             this.cbxCorreo.Text = "Correo";
             this.cbxCorreo.UseSelectable = true;
+            this.cbxCorreo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cbxCorreo_KeyPress);
             // 
             // tbContacto
             // 
@@ -346,10 +357,11 @@
             this.tbContacto.SelectionStart = 0;
             this.tbContacto.ShortcutsEnabled = true;
             this.tbContacto.Size = new System.Drawing.Size(150, 23);
-            this.tbContacto.TabIndex = 16;
+            this.tbContacto.TabIndex = 18;
             this.tbContacto.UseSelectable = true;
             this.tbContacto.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.tbContacto.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.tbContacto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbContacto_KeyPress);
             // 
             // lblCosto
             // 
@@ -358,7 +370,7 @@
             this.lblCosto.Location = new System.Drawing.Point(600, 247);
             this.lblCosto.Name = "lblCosto";
             this.lblCosto.Size = new System.Drawing.Size(145, 19);
-            this.lblCosto.TabIndex = 17;
+            this.lblCosto.TabIndex = 19;
             this.lblCosto.Text = "Costo de la Consulta";
             // 
             // tbCosto
@@ -386,10 +398,11 @@
             this.tbCosto.SelectionStart = 0;
             this.tbCosto.ShortcutsEnabled = true;
             this.tbCosto.Size = new System.Drawing.Size(75, 23);
-            this.tbCosto.TabIndex = 18;
+            this.tbCosto.TabIndex = 20;
             this.tbCosto.UseSelectable = true;
             this.tbCosto.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.tbCosto.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.tbCosto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbCosto_KeyPress);
             // 
             // btnVolver
             // 
@@ -398,7 +411,7 @@
             this.btnVolver.Location = new System.Drawing.Point(682, 384);
             this.btnVolver.Name = "btnVolver";
             this.btnVolver.Size = new System.Drawing.Size(75, 23);
-            this.btnVolver.TabIndex = 19;
+            this.btnVolver.TabIndex = 24;
             this.btnVolver.Text = "Volver";
             this.btnVolver.UseCustomBackColor = true;
             this.btnVolver.UseCustomForeColor = true;
@@ -412,7 +425,7 @@
             this.btnCancelar.Location = new System.Drawing.Point(601, 384);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(75, 23);
-            this.btnCancelar.TabIndex = 20;
+            this.btnCancelar.TabIndex = 23;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseCustomBackColor = true;
             this.btnCancelar.UseCustomForeColor = true;
@@ -426,7 +439,7 @@
             this.btnGuardar.Location = new System.Drawing.Point(520, 384);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(75, 23);
-            this.btnGuardar.TabIndex = 21;
+            this.btnGuardar.TabIndex = 22;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseCustomBackColor = true;
             this.btnGuardar.UseCustomForeColor = true;
@@ -451,7 +464,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::MedTech.Properties.Resources.Logotipo_medtech;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 390);
+            this.pictureBox1.Location = new System.Drawing.Point(0, 5);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(60, 60);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -465,7 +478,7 @@
             this.lblIdPaciente.Location = new System.Drawing.Point(300, 120);
             this.lblIdPaciente.Name = "lblIdPaciente";
             this.lblIdPaciente.Size = new System.Drawing.Size(84, 19);
-            this.lblIdPaciente.TabIndex = 27;
+            this.lblIdPaciente.TabIndex = 9;
             this.lblIdPaciente.Text = "ID Paciente";
             // 
             // tbIdPaciente
@@ -493,16 +506,41 @@
             this.tbIdPaciente.SelectionStart = 0;
             this.tbIdPaciente.ShortcutsEnabled = true;
             this.tbIdPaciente.Size = new System.Drawing.Size(100, 23);
-            this.tbIdPaciente.TabIndex = 28;
+            this.tbIdPaciente.TabIndex = 10;
             this.tbIdPaciente.UseSelectable = true;
             this.tbIdPaciente.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.tbIdPaciente.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.tbIdPaciente.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbIdPaciente_KeyPress);
+            // 
+            // dgvCita
+            // 
+            this.dgvCita.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCita.Location = new System.Drawing.Point(23, 413);
+            this.dgvCita.Name = "dgvCita";
+            this.dgvCita.Size = new System.Drawing.Size(737, 164);
+            this.dgvCita.TabIndex = 25;
+            // 
+            // btnReporte
+            // 
+            this.btnReporte.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.btnReporte.ForeColor = System.Drawing.Color.White;
+            this.btnReporte.Location = new System.Drawing.Point(23, 384);
+            this.btnReporte.Name = "btnReporte";
+            this.btnReporte.Size = new System.Drawing.Size(75, 23);
+            this.btnReporte.TabIndex = 21;
+            this.btnReporte.Text = "Ver Reporte";
+            this.btnReporte.UseCustomBackColor = true;
+            this.btnReporte.UseCustomForeColor = true;
+            this.btnReporte.UseSelectable = true;
             // 
             // AggCitaFrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 600);
+            this.ControlBox = false;
+            this.Controls.Add(this.btnReporte);
+            this.Controls.Add(this.dgvCita);
             this.Controls.Add(this.tbIdPaciente);
             this.Controls.Add(this.lblIdPaciente);
             this.Controls.Add(this.pictureBox1);
@@ -532,9 +570,9 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "AggCitaFrm";
-            this.Text = "Agregar y Agendar Cita";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.AggCitaForm_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCita)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -568,5 +606,7 @@
         internal MetroFramework.Controls.MetroTextBox tbContacto;
         internal MetroFramework.Controls.MetroTextBox tbCosto;
         internal MetroFramework.Controls.MetroTextBox tbIdPaciente;
+        internal System.Windows.Forms.DataGridView dgvCita;
+        private MetroFramework.Controls.MetroButton btnReporte;
     }
 }

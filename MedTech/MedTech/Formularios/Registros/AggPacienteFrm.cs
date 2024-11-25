@@ -18,6 +18,7 @@ namespace MedTech.Formularios
     {
         private readonly AccForm accForms;
         private readonly GuardarPaciente guardarPaciente;
+        private List<Paciente> listaPaciente = new List<Paciente>();
         private bool flag = true;
 
         public AggPacienteFrm()
@@ -55,6 +56,9 @@ namespace MedTech.Formularios
                     Cirugias = cbxCirugias.Checked ? "Sí" : "No"
                 };
                 guardarPaciente.GuardarPac(paciente);
+                listaPaciente.Add(paciente);
+                dgvPaciente.DataSource = null;
+                dgvPaciente.DataSource = listaPaciente;
                 accForms.LimpiarCampos();
                 MetroMessageBox.Show(this, "Paciente registrado exitosamente", "Paciente ingresado", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
@@ -77,6 +81,86 @@ namespace MedTech.Formularios
         private void AggPacienteForm_FormClosing(object sender, FormClosingEventArgs e)
         {
             if (flag) Application.Exit();
+        }
+
+        private void tbNombrePac_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                e.Handled = true;
+                tbApellidoPac.Focus();
+            }
+        }
+
+        private void tbApellidoPac_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                e.Handled = true;
+                dtFechaNac.Focus();
+            }
+        }
+
+        private void dtFechaNac_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                e.Handled = true;
+                tbAntecedentes.Focus();
+            }
+        }
+
+        private void tbAntecedentes_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                e.Handled = true;
+                tbEnfermedades.Focus();
+            }
+        }
+
+        private void tbEnfermedades_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                e.Handled = true;
+                btnAñadir.Focus();
+            }
+        }
+
+        private void btnAñadir_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                e.Handled = true;
+                tbEnfermedades.Focus();
+            }
+        }
+
+        private void cbxAlergias_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                e.Handled = true;
+                if (cbxAlergias != null)
+                {
+                    cbxAlergias.Checked = !cbxAlergias.Checked;
+                    cbxCirugias.Focus();
+                }
+            }
+        }
+
+        private void cbxCirugias_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                e.Handled = true;
+                if (cbxCirugias != null)
+                {
+                    cbxCirugias.Checked = !cbxCirugias.Checked;
+                    btnGuardar.Focus();
+                }
+            }
         }
     }
 }

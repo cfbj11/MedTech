@@ -68,3 +68,6 @@ C:\Users\carlo\OneDrive\Documentos\UAM\IISEMESTRE\MYPE\IIICE\MedTech2\MedTech\Me
 C:\Users\carlo\OneDrive\Documentos\UAM\IISEMESTRE\MYPE\IIICE\MedTech2\MedTech\MedTech\MedTech\bin\Debug\ru\Microsoft.ReportViewer.WinForms.resources.dll
 C:\Users\carlo\OneDrive\Documentos\UAM\IISEMESTRE\MYPE\IIICE\MedTech2\MedTech\MedTech\MedTech\bin\Debug\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
 C:\Users\carlo\OneDrive\Documentos\UAM\IISEMESTRE\MYPE\IIICE\MedTech2\MedTech\MedTech\MedTech\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\carlo\OneDrive\Documentos\UAM\IISEMESTRE\MYPE\IIICE\MedTech2\MedTech\MedTech\MedTech\obj\Debug\MedTech.Formularios.RpvCita.resources
+C:\Users\carlo\OneDrive\Documentos\UAM\IISEMESTRE\MYPE\IIICE\MedTech2\MedTech\MedTech\MedTech\obj\Debug\MedTech.Formularios.RpvPaciente.resources
+C:\Users\carlo\OneDrive\Documentos\UAM\IISEMESTRE\MYPE\IIICE\MedTech2\MedTech\MedTech\MedTech\obj\Debug\MedTech.Formularios.RpvExpediente.resources

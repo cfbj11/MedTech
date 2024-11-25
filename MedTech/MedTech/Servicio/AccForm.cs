@@ -1,4 +1,5 @@
 ﻿using MedTech.Formularios;
+using MedTech.Modelos;
 using MetroFramework;
 using System;
 using System.Collections.Generic;
@@ -73,13 +74,6 @@ namespace MedTech.Servicio
 
         //****************************************************************
         //  MÉTODOS RELACIONADOS CON LOS FORMULARIOS AGREGAR CITA / AGREGAR PACIENTE / EXPEDIENTE MEDICO
-
-        //  Guarda los datos ingresados en el formulario actual y muestra un mensaje de confirmación
-        public void Guardar()
-        {
-            string msjGuardar = "Se han guardado los datos correctamente.";
-            MetroMessageBox.Show(form, msjGuardar, "Datos Guardados", MessageBoxButtons.OK, MessageBoxIcon.Information);
-        }
 
         //  Cancela la operación actual y se pregunta al usuario si desea continuar
         public void Cancelar()

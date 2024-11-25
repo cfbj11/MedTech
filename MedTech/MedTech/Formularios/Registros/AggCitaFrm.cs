@@ -2,6 +2,7 @@
 using MedTech.Modelos;
 using MedTech.Servicio;
 using MetroFramework;
+using Microsoft.Reporting.WinForms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -18,6 +19,7 @@ namespace MedTech.Formularios
     {
         private readonly AccForm accForms;
         private readonly GuardarCita guardarCita;
+        private List<Cita> listaCitas = new List<Cita>();
         private bool flag = true;
 
         public AggCitaFrm()
@@ -46,6 +48,9 @@ namespace MedTech.Formularios
                     CostoConsulta = tbCosto.Text,
                 };
                 guardarCita.Guardar(cita);
+                listaCitas.Add(cita);
+                dgvCita.DataSource = null;
+                dgvCita.DataSource = listaCitas;
                 accForms.LimpiarCampos();
                 MetroMessageBox.Show(this, "Cita registrada exitosamente", "Cita agregada", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
@@ -68,6 +73,113 @@ namespace MedTech.Formularios
         private void AggCitaForm_FormClosing(object sender, FormClosingEventArgs e)
         {
             if (flag) Application.Exit();
+        }
+
+        private void tbNombrePac_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                e.Handled = true;
+                tbApellidoPac.Focus();
+            }
+        }
+
+        private void tbApellidoPac_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                e.Handled = true;
+                dtFechaCita.Focus();
+            }
+        }
+
+        private void dtFechaCita_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                e.Handled = true;
+                tbHoraCita.Focus();
+            }
+        }
+
+        private void tbHoraCita_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                e.Handled = true;
+                tbIdPaciente.Focus();
+            }
+        }
+
+        private void tbIdPaciente_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                e.Handled = true;
+                tbDoctor.Focus();
+            }
+        }
+
+        private void tbDoctor_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                e.Handled = true;
+                cbEspecialidad.Focus();
+            }
+        }
+
+        private void cbEspecialidad_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                e.Handled = true;
+                cbxTelefono.Focus();
+            }
+        }
+
+        private void cbxTelefono_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                e.Handled = true;
+                if (cbxTelefono != null)
+                {
+                    cbxTelefono.Checked = !cbxTelefono.Checked;
+                    cbxCorreo.Focus();
+                }
+            }
+        }
+
+        private void cbxCorreo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                e.Handled = true;
+                if (cbxCorreo != null)
+                {
+                    cbxCorreo.Checked = !cbxCorreo.Checked;
+                    tbContacto.Focus();
+                }
+            }
+        }
+
+        private void tbContacto_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                e.Handled = true;
+                tbCosto.Focus();
+            }
+        }
+
+        private void tbCosto_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                e.Handled = true;
+                btnGuardar.Focus();
+            }
         }
     }
 }

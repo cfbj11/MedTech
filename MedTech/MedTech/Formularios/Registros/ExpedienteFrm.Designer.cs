@@ -47,7 +47,10 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblFecCita = new MetroFramework.Controls.MetroLabel();
             this.dtFechaCita = new MetroFramework.Controls.MetroDateTime();
+            this.dgvExpediente = new System.Windows.Forms.DataGridView();
+            this.btnReporte = new MetroFramework.Controls.MetroButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvExpediente)).BeginInit();
             this.SuspendLayout();
             // 
             // lblInstruccion
@@ -103,6 +106,7 @@
             this.tbIdExped.UseSelectable = true;
             this.tbIdExped.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.tbIdExped.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.tbIdExped.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbIdExped_KeyPress);
             // 
             // lblNombrePac
             // 
@@ -143,6 +147,7 @@
             this.tbNombrePac.UseSelectable = true;
             this.tbNombrePac.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.tbNombrePac.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.tbNombrePac.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbNombrePac_KeyPress);
             // 
             // lblApellidoPac
             // 
@@ -183,6 +188,7 @@
             this.tbApellidoPac.UseSelectable = true;
             this.tbApellidoPac.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.tbApellidoPac.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.tbApellidoPac.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbApellidoPac_KeyPress);
             // 
             // lblMotivo
             // 
@@ -191,7 +197,7 @@
             this.lblMotivo.Location = new System.Drawing.Point(300, 225);
             this.lblMotivo.Name = "lblMotivo";
             this.lblMotivo.Size = new System.Drawing.Size(139, 19);
-            this.lblMotivo.TabIndex = 7;
+            this.lblMotivo.TabIndex = 8;
             this.lblMotivo.Text = "Motivo de Consulta";
             // 
             // lblDiagnostico
@@ -201,7 +207,7 @@
             this.lblDiagnostico.Location = new System.Drawing.Point(600, 125);
             this.lblDiagnostico.Name = "lblDiagnostico";
             this.lblDiagnostico.Size = new System.Drawing.Size(88, 19);
-            this.lblDiagnostico.TabIndex = 8;
+            this.lblDiagnostico.TabIndex = 10;
             this.lblDiagnostico.Text = "Diagnóstico";
             // 
             // tbMotivoCon
@@ -234,6 +240,7 @@
             this.tbMotivoCon.UseSelectable = true;
             this.tbMotivoCon.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.tbMotivoCon.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.tbMotivoCon.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbMotivoCon_KeyPress);
             // 
             // tbDiagnostico
             // 
@@ -241,7 +248,7 @@
             // 
             // 
             this.tbDiagnostico.CustomButton.Image = null;
-            this.tbDiagnostico.CustomButton.Location = new System.Drawing.Point(-22, 1);
+            this.tbDiagnostico.CustomButton.Location = new System.Drawing.Point(-15, 1);
             this.tbDiagnostico.CustomButton.Name = "";
             this.tbDiagnostico.CustomButton.Size = new System.Drawing.Size(171, 171);
             this.tbDiagnostico.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -260,11 +267,12 @@
             this.tbDiagnostico.SelectionLength = 0;
             this.tbDiagnostico.SelectionStart = 0;
             this.tbDiagnostico.ShortcutsEnabled = true;
-            this.tbDiagnostico.Size = new System.Drawing.Size(150, 173);
-            this.tbDiagnostico.TabIndex = 10;
+            this.tbDiagnostico.Size = new System.Drawing.Size(157, 173);
+            this.tbDiagnostico.TabIndex = 11;
             this.tbDiagnostico.UseSelectable = true;
             this.tbDiagnostico.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.tbDiagnostico.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.tbDiagnostico.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbDiagnostico_KeyPress);
             // 
             // btnGuardar
             // 
@@ -273,7 +281,7 @@
             this.btnGuardar.Location = new System.Drawing.Point(520, 384);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(75, 23);
-            this.btnGuardar.TabIndex = 11;
+            this.btnGuardar.TabIndex = 13;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseCustomBackColor = true;
             this.btnGuardar.UseCustomForeColor = true;
@@ -287,7 +295,7 @@
             this.btnCancelar.Location = new System.Drawing.Point(601, 384);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(75, 23);
-            this.btnCancelar.TabIndex = 12;
+            this.btnCancelar.TabIndex = 14;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseCustomBackColor = true;
             this.btnCancelar.UseCustomForeColor = true;
@@ -301,7 +309,7 @@
             this.btnVolver.Location = new System.Drawing.Point(682, 384);
             this.btnVolver.Name = "btnVolver";
             this.btnVolver.Size = new System.Drawing.Size(75, 23);
-            this.btnVolver.TabIndex = 13;
+            this.btnVolver.TabIndex = 15;
             this.btnVolver.Text = "Volver";
             this.btnVolver.UseCustomBackColor = true;
             this.btnVolver.UseCustomForeColor = true;
@@ -326,7 +334,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::MedTech.Properties.Resources.Logotipo_medtech;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 390);
+            this.pictureBox1.Location = new System.Drawing.Point(0, 5);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(60, 60);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -340,7 +348,7 @@
             this.lblFecCita.Location = new System.Drawing.Point(300, 125);
             this.lblFecCita.Name = "lblFecCita";
             this.lblFecCita.Size = new System.Drawing.Size(98, 19);
-            this.lblFecCita.TabIndex = 29;
+            this.lblFecCita.TabIndex = 7;
             this.lblFecCita.Text = "Fecha de Cita";
             // 
             // dtFechaCita
@@ -349,13 +357,38 @@
             this.dtFechaCita.MinimumSize = new System.Drawing.Size(0, 29);
             this.dtFechaCita.Name = "dtFechaCita";
             this.dtFechaCita.Size = new System.Drawing.Size(150, 29);
-            this.dtFechaCita.TabIndex = 30;
+            this.dtFechaCita.TabIndex = 8;
+            this.dtFechaCita.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.dtFechaCita_KeyPress);
+            // 
+            // dgvExpediente
+            // 
+            this.dgvExpediente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvExpediente.Location = new System.Drawing.Point(23, 413);
+            this.dgvExpediente.Name = "dgvExpediente";
+            this.dgvExpediente.Size = new System.Drawing.Size(734, 164);
+            this.dgvExpediente.TabIndex = 16;
+            // 
+            // btnReporte
+            // 
+            this.btnReporte.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.btnReporte.ForeColor = System.Drawing.Color.White;
+            this.btnReporte.Location = new System.Drawing.Point(23, 384);
+            this.btnReporte.Name = "btnReporte";
+            this.btnReporte.Size = new System.Drawing.Size(75, 23);
+            this.btnReporte.TabIndex = 12;
+            this.btnReporte.Text = "Ver Reporte";
+            this.btnReporte.UseCustomBackColor = true;
+            this.btnReporte.UseCustomForeColor = true;
+            this.btnReporte.UseSelectable = true;
             // 
             // ExpedienteFrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 600);
+            this.ControlBox = false;
+            this.Controls.Add(this.btnReporte);
+            this.Controls.Add(this.dgvExpediente);
             this.Controls.Add(this.dtFechaCita);
             this.Controls.Add(this.lblFecCita);
             this.Controls.Add(this.pictureBox1);
@@ -377,9 +410,9 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "ExpedienteFrm";
-            this.Text = "Crear o Actualizar Expediente Médico";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ExpedForm_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvExpediente)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -405,5 +438,7 @@
         internal MetroFramework.Controls.MetroTextBox tbMotivoCon;
         internal MetroFramework.Controls.MetroTextBox tbDiagnostico;
         internal MetroFramework.Controls.MetroDateTime dtFechaCita;
+        internal System.Windows.Forms.DataGridView dgvExpediente;
+        private MetroFramework.Controls.MetroButton btnReporte;
     }
 }

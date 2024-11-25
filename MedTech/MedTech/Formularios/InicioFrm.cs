@@ -33,5 +33,23 @@ namespace MedTech.Formularios
         {
             if (flag) Application.Exit();
         }
+
+        private void tbUsuario_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                e.Handled = true;
+                tbContraseña.Focus();
+            }
+        }
+
+        private void tbContraseña_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                e.Handled = true;
+                btnSiguiente.Focus();
+            }
+        }
     }
 }

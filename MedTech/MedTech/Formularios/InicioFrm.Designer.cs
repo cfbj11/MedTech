@@ -48,9 +48,9 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.LightSeaGreen;
             this.panel1.Controls.Add(this.panel2);
-            this.panel1.Location = new System.Drawing.Point(0, 60);
+            this.panel1.Location = new System.Drawing.Point(0, 30);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(800, 390);
+            this.panel1.Size = new System.Drawing.Size(800, 420);
             this.panel1.TabIndex = 0;
             // 
             // panel2
@@ -64,7 +64,7 @@
             this.panel2.Controls.Add(this.lblDescripcion);
             this.panel2.Controls.Add(this.lblBienvenida);
             this.panel2.Controls.Add(this.pictureBox1);
-            this.panel2.Location = new System.Drawing.Point(23, 23);
+            this.panel2.Location = new System.Drawing.Point(23, 39);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(754, 341);
             this.panel2.TabIndex = 0;
@@ -108,6 +108,7 @@
             this.tbContraseña.UseSelectable = true;
             this.tbContraseña.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.tbContraseña.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.tbContraseña.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbContraseña_KeyPress);
             // 
             // lblContraseña
             // 
@@ -147,6 +148,7 @@
             this.tbUsuario.UseSelectable = true;
             this.tbUsuario.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.tbUsuario.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.tbUsuario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbUsuario_KeyPress);
             // 
             // lblUsuario
             // 
@@ -198,7 +200,6 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "InicioFrm";
-            this.Text = "Iniciar Sesión";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.InSesForm_FormClosing);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
