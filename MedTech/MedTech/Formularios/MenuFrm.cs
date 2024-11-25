@@ -14,14 +14,14 @@ namespace MedTech.Formularios
 {
     public partial class MenuFrm : MetroFramework.Forms.MetroForm
     {
-        private readonly AccForms menu;
+        private readonly AccForm menu;
         private bool flag = true;
 
         public MenuFrm()
         {
             InitializeComponent();
             lblMedTech.Select();
-            menu = new AccForms(this);
+            menu = new AccForm(this);
         }
 
         private void btnAggRegCita_Click(object sender, EventArgs e)

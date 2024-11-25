@@ -9,12 +9,12 @@ using System.Windows.Forms;
 
 namespace MedTech.Servicio
 {
-    internal class AccForms
+    internal class AccForm
     {
         private readonly Form form; //  Formulario de origen desde el cual se realizan las operaciones
 
         //  Constructor de clase AccForms
-        public AccForms(Form form)
+        public AccForm(Form form)
         {
             this.form = form;
         }

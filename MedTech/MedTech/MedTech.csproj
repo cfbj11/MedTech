@@ -55,6 +55,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Dao\GuardarCita.cs" />
+    <Compile Include="Dao\GuardarExpediente.cs" />
+    <Compile Include="Dao\GuardarPaciente.cs" />
     <Compile Include="Formularios\Registros\AggCitaFrm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -85,10 +88,13 @@
     <Compile Include="Formularios\MenuFrm.Designer.cs">
       <DependentUpon>MenuFrm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Modelos\Cita.cs" />
+    <Compile Include="Modelos\Expediente.cs" />
+    <Compile Include="Modelos\Paciente.cs" />
     <Compile Include="Modelos\Usuario.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Servicio\AccForms.cs" />
+    <Compile Include="Servicio\AccForm.cs" />
     <Compile Include="Servicio\Validar.cs" />
     <EmbeddedResource Include="Formularios\Registros\AggCitaFrm.resx">
       <DependentUpon>AggCitaFrm.cs</DependentUpon>

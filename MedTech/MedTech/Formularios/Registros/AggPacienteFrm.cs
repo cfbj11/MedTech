@@ -1,4 +1,5 @@
-﻿using MedTech.Servicio;
+﻿using MedTech.Dao;
+using MedTech.Servicio;
 using MetroFramework;
 using System;
 using System.Collections.Generic;
@@ -14,13 +15,15 @@ namespace MedTech.Formularios
 {
     public partial class AggPacienteFrm : MetroFramework.Forms.MetroForm
     {
-        private readonly AccForms accForms;
+        private readonly AccForm accForms;
+        private readonly GuardarPaciente guardarPaciente;
         private bool flag = true;
 
         public AggPacienteFrm()
         {
             InitializeComponent();
-            accForms = new AccForms(this);
+            accForms = new AccForm(this);
+            guardarPaciente = new GuardarPaciente("PacienteRegistrados");
             lblInstruccion.Select();
         }
 
