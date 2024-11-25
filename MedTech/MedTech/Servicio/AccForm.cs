@@ -104,7 +104,7 @@ namespace MedTech.Servicio
         }
 
         //  Limpia los campos de los datos de los formularios
-        private void LimpiarCampos()
+        public void LimpiarCampos()
         {
             if (form is AggCitaFrm aggCitaForm)    //  Limpia campos de AggCitaForm
             {

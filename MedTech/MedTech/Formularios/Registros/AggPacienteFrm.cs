@@ -1,4 +1,5 @@
 ﻿using MedTech.Dao;
+using MedTech.Modelos;
 using MedTech.Servicio;
 using MetroFramework;
 using System;
@@ -40,7 +41,27 @@ namespace MedTech.Formularios
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            accForms.Guardar();
+            try
+            {
+                string enfermedades = string.Join(", ", lbEnfermedades.Items.Cast<string>());
+                Paciente paciente = new Paciente()
+                {
+                    Nombre = tbNombrePac.Text,
+                    Apellido = tbApellidoPac.Text,
+                    FechaNac = dtFechaNac.Value.ToString("dd/MM/yyyy"),
+                    Antecedentes = tbAntecedentes.Text,
+                    Enfermedades = enfermedades,
+                    Alergias = cbxAlergias.Checked ? "Sí" : "No",
+                    Cirugias = cbxCirugias.Checked ? "Sí" : "No"
+                };
+                guardarPaciente.GuardarPac(paciente);
+                accForms.LimpiarCampos();
+                MetroMessageBox.Show(this, "Paciente registrado exitosamente", "Paciente ingresado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MetroMessageBox.Show(this, $"Error al registrar al paciente: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)

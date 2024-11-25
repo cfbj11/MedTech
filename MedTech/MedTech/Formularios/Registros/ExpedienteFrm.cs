@@ -1,4 +1,5 @@
 ﻿using MedTech.Dao;
+using MedTech.Modelos;
 using MedTech.Servicio;
 using MetroFramework;
 using System;
@@ -29,7 +30,25 @@ namespace MedTech.Formularios
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            accForms.Guardar();
+            try
+            {
+                Expediente expediente = new Expediente()
+                {
+                    IdExpediente = tbIdExped.Text,
+                    NombrePac = tbNombrePac.Text,
+                    ApellidoPac = tbApellidoPac.Text,
+                    FechaCita = dtFechaCita.Value.ToString("dd/MM/yyyy"),
+                    Motivo = tbMotivoCon.Text,
+                    Diagnostico = tbDiagnostico.Text
+                };
+                guardarExpediente.Expediente(expediente);
+                accForms.LimpiarCampos();
+                MetroMessageBox.Show(this, "Expediente creado/actualizado exitosamente", "Expediente Creado/Actualizado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MetroMessageBox.Show(this, $"Error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)

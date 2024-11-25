@@ -1,4 +1,5 @@
 ﻿using MedTech.Dao;
+using MedTech.Modelos;
 using MedTech.Servicio;
 using MetroFramework;
 using System;
@@ -29,7 +30,29 @@ namespace MedTech.Formularios
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            accForms.Guardar();
+            try
+            {
+                Cita cita = new Cita()
+                {
+                    Nombre = tbNombrePac.Text,
+                    Apellido = tbApellidoPac.Text,
+                    IdPaciente = tbIdPaciente.Text,
+                    Doctor = tbDoctor.Text,
+                    FechaCita = dtFechaCita.Value.ToString("dd/MM/yyyy"),
+                    HoraCita = tbHoraCita.Text,
+                    Especialidad = cbEspecialidad.SelectedItem?.ToString() ?? "",
+                    Contacto = tbContacto.Text,
+                    TipoContacto = cbxTelefono.Checked ? "Teléfono" : cbxCorreo.Checked ? "Correo" : null,
+                    CostoConsulta = tbCosto.Text,
+                };
+                guardarCita.Guardar(cita);
+                accForms.LimpiarCampos();
+                MetroMessageBox.Show(this, "Cita registrada exitosamente", "Cita agregada", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MetroMessageBox.Show(this, $"Error al guardar la cita: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
