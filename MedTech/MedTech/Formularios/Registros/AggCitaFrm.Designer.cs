@@ -532,6 +532,7 @@
             this.btnReporte.UseCustomBackColor = true;
             this.btnReporte.UseCustomForeColor = true;
             this.btnReporte.UseSelectable = true;
+            this.btnReporte.Click += new System.EventHandler(this.btnReporte_Click);
             // 
             // AggCitaFrm
             // 

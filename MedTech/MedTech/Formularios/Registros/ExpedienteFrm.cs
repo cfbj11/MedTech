@@ -29,6 +29,11 @@ namespace MedTech.Formularios
             lblInstruccion.Select();
         }
 
+        private void btnReporte_Click(object sender, EventArgs e)
+        {
+            accForms.VerReporte();
+        }
+
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             try

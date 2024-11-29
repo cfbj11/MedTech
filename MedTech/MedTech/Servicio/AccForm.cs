@@ -27,8 +27,8 @@ namespace MedTech.Servicio
         public void AgregarCita(ref bool flag)
         {
             flag = false;
-            AggCitaFrm aggCitaForm = new AggCitaFrm();
-            aggCitaForm.Show();
+            AggCitaFrm aggCitaFrm = new AggCitaFrm();
+            aggCitaFrm.Show();
             form.Hide();
         }
 
@@ -36,8 +36,8 @@ namespace MedTech.Servicio
         public void AgregarPaciente(ref bool flag)
         {
             flag = false;
-            AggPacienteFrm aggPacienteForm = new AggPacienteFrm();
-            aggPacienteForm.Show();
+            AggPacienteFrm aggPacienteFrm = new AggPacienteFrm();
+            aggPacienteFrm.Show();
             form.Hide();
         }
 
@@ -45,8 +45,8 @@ namespace MedTech.Servicio
         public void ExpedMed(ref bool flag)
         {
             flag = false;
-            ExpedienteFrm expedMedForm = new ExpedienteFrm();
-            expedMedForm.Show();
+            ExpedienteFrm expedienteFrm = new ExpedienteFrm();
+            expedienteFrm.Show();
             form.Hide();
         }
 
@@ -57,8 +57,8 @@ namespace MedTech.Servicio
             if (result == DialogResult.Yes)
             {
                 flag = false;
-                InicioFrm inSesForm = new InicioFrm();
-                inSesForm.Show();
+                InicioFrm inicioFrm = new InicioFrm();
+                inicioFrm.Show();
                 form.Close();
             }
         }
@@ -68,19 +68,38 @@ namespace MedTech.Servicio
         {
             string aggCita = "Se agrega los datos del paciente y se agenda la cita según la disponibilidad del doctor y paciente.";
             string aggPac = "Se ingresan los datos de un nuevo paciente dentro del sistema.";
-            string expedMed = "Se ingresan los datos de la cita del paciente dentro del sistema.";
-            MetroMessageBox.Show(form, $"Agregar y Agendar Cita: {aggCita}\nAgregar Paciente: {aggPac}\nCrear o Actualizar Expediente Médico: {expedMed}", "Ayuda", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            string expediente = "Se ingresan los datos de la cita del paciente dentro del sistema.";
+            MetroMessageBox.Show(form, $"Agregar y Agendar Cita: {aggCita}\nAgregar Paciente: {aggPac}\nCrear o Actualizar Expediente Médico: {expediente}", "Ayuda", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         //****************************************************************
         //  MÉTODOS RELACIONADOS CON LOS FORMULARIOS AGREGAR CITA / AGREGAR PACIENTE / EXPEDIENTE MEDICO
+
+        public void VerReporte()
+        {
+            if (form is AggCitaFrm)
+            {
+                RpvCita rpvCita = new RpvCita();
+                rpvCita.Show();
+            }
+            else if (form is AggPacienteFrm)
+            {
+                RpvPaciente rpvPaciente = new RpvPaciente();
+                rpvPaciente.Show();
+            }
+            else if (form is ExpedienteFrm)
+            {
+                RpvExpediente rpvExpediente = new RpvExpediente();
+                rpvExpediente.Show();
+            }
+        }
 
         //  Cancela la operación actual y se pregunta al usuario si desea continuar
         public void Cancelar()
         {
             string msjCancelar = "¿Desea cancelar la operación?";
 
-            //  Personaliza el mensaje según el formulario activo
+            //  Personalizar mensaje según el formulario activo
             if (form is AggCitaFrm) msjCancelar = "¿Desea cancelar la agendación de cita?";
             else if (form is AggPacienteFrm) msjCancelar = "¿Desea cancelar el ingreso del paciente al sistema?";
             else if (form is ExpedienteFrm) msjCancelar = "¿Desea cancelar la creación/actualización de expediente?";
@@ -92,49 +111,49 @@ namespace MedTech.Servicio
         public void Volver(ref bool flag)
         {
             flag = false;
-            MenuFrm menuMedForm = new MenuFrm();
-            menuMedForm.Show();
+            MenuFrm menuFrm = new MenuFrm();
+            menuFrm.Show();
             form.Close();
         }
 
         //  Limpia los campos de los datos de los formularios
         public void LimpiarCampos()
         {
-            if (form is AggCitaFrm aggCitaForm)    //  Limpia campos de AggCitaForm
+            if (form is AggCitaFrm aggCitaFrm)    //  Limpia campos de AggCitaForm
             {
-                aggCitaForm.tbNombrePac.Clear();
-                aggCitaForm.tbApellidoPac.Clear();
-                aggCitaForm.dtFechaCita.Value = DateTime.Today;
-                aggCitaForm.tbHoraCita.Clear();
-                aggCitaForm.tbIdPaciente.Clear();
-                aggCitaForm.tbDoctor.Clear();
-                aggCitaForm.cbEspecialidad.SelectedIndex = -1;
-                aggCitaForm.cbxTelefono.Checked = false;
-                aggCitaForm.cbxCorreo.Checked = false;
-                aggCitaForm.tbContacto.Clear();
-                aggCitaForm.tbCosto.Clear();
+                aggCitaFrm.tbNombrePac.Clear();
+                aggCitaFrm.tbApellidoPac.Clear();
+                aggCitaFrm.dtFechaCita.Value = DateTime.Today;
+                aggCitaFrm.tbHoraCita.Clear();
+                aggCitaFrm.tbIdPaciente.Clear();
+                aggCitaFrm.tbDoctor.Clear();
+                aggCitaFrm.cbEspecialidad.SelectedIndex = -1;
+                aggCitaFrm.cbxTelefono.Checked = false;
+                aggCitaFrm.cbxCorreo.Checked = false;
+                aggCitaFrm.tbContacto.Clear();
+                aggCitaFrm.tbCosto.Clear();
             }
 
-            if (form is AggPacienteFrm aggPacienteForm)    //  Limpia campos de AggPacienteForm
+            if (form is AggPacienteFrm aggPacienteFrm)    //  Limpia campos de AggPacienteForm
             {
-                aggPacienteForm.tbNombrePac.Clear();
-                aggPacienteForm.tbApellidoPac.Clear();
-                aggPacienteForm.dtFechaNac.Value = DateTime.Today;
-                aggPacienteForm.tbAntecedentes.Clear();
-                aggPacienteForm.tbEnfermedades.Clear();
-                aggPacienteForm.lbEnfermedades.Items.Clear();
-                aggPacienteForm.cbxAlergias.Checked = false;
-                aggPacienteForm.cbxCirugias.Checked = false;
+                aggPacienteFrm.tbNombrePac.Clear();
+                aggPacienteFrm.tbApellidoPac.Clear();
+                aggPacienteFrm.dtFechaNac.Value = DateTime.Today;
+                aggPacienteFrm.tbAntecedentes.Clear();
+                aggPacienteFrm.tbEnfermedades.Clear();
+                aggPacienteFrm.lbEnfermedades.Items.Clear();
+                aggPacienteFrm.cbxAlergias.Checked = false;
+                aggPacienteFrm.cbxCirugias.Checked = false;
             }
 
-            if (form is ExpedienteFrm expedForm)    //  Limpia campos de ExpedForm
+            if (form is ExpedienteFrm expedienteFrm)    //  Limpia campos de ExpedForm
             {
-                expedForm.tbIdExped.Clear();
-                expedForm.tbNombrePac.Clear();
-                expedForm.tbApellidoPac.Clear();
-                expedForm.dtFechaCita.Value = DateTime.Today;
-                expedForm.tbMotivoCon.Clear();
-                expedForm.tbDiagnostico.Clear();
+                expedienteFrm.tbIdExped.Clear();
+                expedienteFrm.tbNombrePac.Clear();
+                expedienteFrm.tbApellidoPac.Clear();
+                expedienteFrm.dtFechaCita.Value = DateTime.Today;
+                expedienteFrm.tbMotivoCon.Clear();
+                expedienteFrm.tbDiagnostico.Clear();
             }
         }
     }

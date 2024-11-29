@@ -29,6 +29,11 @@ namespace MedTech.Formularios
             lblInstruccion.Select();
         }
 
+        private void btnReporte_Click(object sender, EventArgs e)
+        {
+            accForms.VerReporte();
+        }
+
         private void btnAñadir_Click(object sender, EventArgs e)
         {
             if (!string.IsNullOrWhiteSpace(tbEnfermedades.Text))
