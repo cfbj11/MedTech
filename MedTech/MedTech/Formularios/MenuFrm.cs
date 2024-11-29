@@ -50,7 +50,17 @@ namespace MedTech.Formularios
             menu.CerrarSesion(ref flag);
         }
 
+        private void pbCerrar_Click(object sender, EventArgs e)
+        {
+            menu.CerrarSesion(ref flag);
+        }
+
         private void btnAyuda_Click(object sender, EventArgs e)
+        {
+            menu.Ayuda();
+        }
+
+        private void pbAyuda_Click(object sender, EventArgs e)
         {
             menu.Ayuda();
         }

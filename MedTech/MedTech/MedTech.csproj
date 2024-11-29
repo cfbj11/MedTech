@@ -209,6 +209,8 @@
     <None Include="Resources\paciente.png" />
     <None Include="Resources\historial-medico.png" />
     <None Include="Resources\hospitalizacion.png" />
+    <None Include="Resources\cerrar-sesion.png" />
+    <None Include="Resources\informacion.png" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
