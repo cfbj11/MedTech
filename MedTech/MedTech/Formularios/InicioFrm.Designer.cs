@@ -109,7 +109,7 @@
             this.tbContraseña.CustomButton.Visible = false;
             this.tbContraseña.Lines = new string[0];
             this.tbContraseña.Location = new System.Drawing.Point(260, 217);
-            this.tbContraseña.MaxLength = 32767;
+            this.tbContraseña.MaxLength = 6;
             this.tbContraseña.Name = "tbContraseña";
             this.tbContraseña.PasswordChar = '*';
             this.tbContraseña.ScrollBars = System.Windows.Forms.ScrollBars.None;
@@ -149,7 +149,7 @@
             this.tbUsuario.CustomButton.Visible = false;
             this.tbUsuario.Lines = new string[0];
             this.tbUsuario.Location = new System.Drawing.Point(260, 147);
-            this.tbUsuario.MaxLength = 32767;
+            this.tbUsuario.MaxLength = 4;
             this.tbUsuario.Name = "tbUsuario";
             this.tbUsuario.PasswordChar = '\0';
             this.tbUsuario.ScrollBars = System.Windows.Forms.ScrollBars.None;

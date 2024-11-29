@@ -22,6 +22,12 @@ namespace MedTech.Formularios
             InitializeComponent();
             lblMedTech.Select();
             menu = new AccForm(this);
+            timer1.Enabled = true;
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            lblFechaHora.Text = $"{DateTime.Now.ToShortDateString()}\n{DateTime.Now.ToString("hh:mm:ss")}";
         }
 
         private void btnAggRegCita_Click(object sender, EventArgs e)

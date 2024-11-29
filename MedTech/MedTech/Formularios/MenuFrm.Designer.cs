@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MenuFrm));
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblMedTech = new MetroFramework.Controls.MetroLabel();
@@ -38,6 +39,8 @@
             this.btnExped = new MetroFramework.Controls.MetroButton();
             this.btnAyuda = new MetroFramework.Controls.MetroButton();
             this.btnCerrSesion = new MetroFramework.Controls.MetroButton();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.lblFechaHora = new MetroFramework.Controls.MetroLabel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
             this.SuspendLayout();
@@ -45,6 +48,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.panel1.Controls.Add(this.lblFechaHora);
             this.panel1.Controls.Add(this.lblMedTech);
             this.panel1.Controls.Add(this.pbLogo);
             this.panel1.Location = new System.Drawing.Point(0, 30);
@@ -57,12 +61,14 @@
             this.lblMedTech.AutoSize = true;
             this.lblMedTech.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.lblMedTech.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.lblMedTech.ForeColor = System.Drawing.Color.White;
             this.lblMedTech.Location = new System.Drawing.Point(70, 15);
             this.lblMedTech.Name = "lblMedTech";
             this.lblMedTech.Size = new System.Drawing.Size(89, 25);
             this.lblMedTech.TabIndex = 1;
             this.lblMedTech.Text = "MedTech";
             this.lblMedTech.UseCustomBackColor = true;
+            this.lblMedTech.UseCustomForeColor = true;
             // 
             // pbLogo
             // 
@@ -78,68 +84,100 @@
             // 
             this.lblSeleccion.AutoSize = true;
             this.lblSeleccion.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.lblSeleccion.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.lblSeleccion.Location = new System.Drawing.Point(250, 150);
+            this.lblSeleccion.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.lblSeleccion.Location = new System.Drawing.Point(240, 150);
             this.lblSeleccion.Name = "lblSeleccion";
-            this.lblSeleccion.Size = new System.Drawing.Size(295, 25);
+            this.lblSeleccion.Size = new System.Drawing.Size(321, 25);
             this.lblSeleccion.TabIndex = 1;
             this.lblSeleccion.Text = "Seleccione que acción desea realizar";
             // 
             // btnAggCita
             // 
             this.btnAggCita.BackColor = System.Drawing.Color.LightSeaGreen;
-            this.btnAggCita.Location = new System.Drawing.Point(290, 200);
+            this.btnAggCita.ForeColor = System.Drawing.Color.White;
+            this.btnAggCita.Location = new System.Drawing.Point(240, 200);
             this.btnAggCita.Name = "btnAggCita";
-            this.btnAggCita.Size = new System.Drawing.Size(220, 40);
+            this.btnAggCita.Size = new System.Drawing.Size(321, 40);
             this.btnAggCita.TabIndex = 2;
             this.btnAggCita.Text = "Agregar y Agendar Cita";
             this.btnAggCita.UseCustomBackColor = true;
+            this.btnAggCita.UseCustomForeColor = true;
             this.btnAggCita.UseSelectable = true;
             this.btnAggCita.Click += new System.EventHandler(this.btnAggRegCita_Click);
             // 
             // btnAggPaciente
             // 
             this.btnAggPaciente.BackColor = System.Drawing.Color.LightSeaGreen;
-            this.btnAggPaciente.Location = new System.Drawing.Point(290, 246);
+            this.btnAggPaciente.ForeColor = System.Drawing.Color.White;
+            this.btnAggPaciente.Location = new System.Drawing.Point(240, 246);
             this.btnAggPaciente.Name = "btnAggPaciente";
-            this.btnAggPaciente.Size = new System.Drawing.Size(220, 40);
+            this.btnAggPaciente.Size = new System.Drawing.Size(321, 40);
             this.btnAggPaciente.TabIndex = 3;
             this.btnAggPaciente.Text = "Agregar Paciente";
             this.btnAggPaciente.UseCustomBackColor = true;
+            this.btnAggPaciente.UseCustomForeColor = true;
             this.btnAggPaciente.UseSelectable = true;
             this.btnAggPaciente.Click += new System.EventHandler(this.btnPaciente_Click);
             // 
             // btnExped
             // 
             this.btnExped.BackColor = System.Drawing.Color.LightSeaGreen;
-            this.btnExped.Location = new System.Drawing.Point(290, 292);
+            this.btnExped.ForeColor = System.Drawing.Color.White;
+            this.btnExped.Location = new System.Drawing.Point(240, 292);
             this.btnExped.Name = "btnExped";
-            this.btnExped.Size = new System.Drawing.Size(220, 40);
+            this.btnExped.Size = new System.Drawing.Size(321, 40);
             this.btnExped.TabIndex = 4;
             this.btnExped.Text = "Crear o Actualizar Expediente Médico";
             this.btnExped.UseCustomBackColor = true;
+            this.btnExped.UseCustomForeColor = true;
             this.btnExped.UseSelectable = true;
             this.btnExped.Click += new System.EventHandler(this.btnExpedMed_Click);
             // 
             // btnAyuda
             // 
+            this.btnAyuda.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.btnAyuda.ForeColor = System.Drawing.Color.White;
             this.btnAyuda.Location = new System.Drawing.Point(697, 402);
             this.btnAyuda.Name = "btnAyuda";
             this.btnAyuda.Size = new System.Drawing.Size(80, 25);
             this.btnAyuda.TabIndex = 9;
             this.btnAyuda.Text = "Ayuda";
+            this.btnAyuda.UseCustomBackColor = true;
+            this.btnAyuda.UseCustomForeColor = true;
             this.btnAyuda.UseSelectable = true;
             this.btnAyuda.Click += new System.EventHandler(this.btnAyuda_Click);
             // 
             // btnCerrSesion
             // 
+            this.btnCerrSesion.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.btnCerrSesion.ForeColor = System.Drawing.Color.White;
             this.btnCerrSesion.Location = new System.Drawing.Point(611, 402);
             this.btnCerrSesion.Name = "btnCerrSesion";
             this.btnCerrSesion.Size = new System.Drawing.Size(80, 25);
             this.btnCerrSesion.TabIndex = 10;
             this.btnCerrSesion.Text = "Cerrar Sesión";
+            this.btnCerrSesion.UseCustomBackColor = true;
+            this.btnCerrSesion.UseCustomForeColor = true;
             this.btnCerrSesion.UseSelectable = true;
             this.btnCerrSesion.Click += new System.EventHandler(this.btnCerrSesion_Click);
+            // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // lblFechaHora
+            // 
+            this.lblFechaHora.AutoSize = true;
+            this.lblFechaHora.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.lblFechaHora.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.lblFechaHora.ForeColor = System.Drawing.Color.White;
+            this.lblFechaHora.Location = new System.Drawing.Point(679, 5);
+            this.lblFechaHora.Name = "lblFechaHora";
+            this.lblFechaHora.Size = new System.Drawing.Size(118, 25);
+            this.lblFechaHora.TabIndex = 2;
+            this.lblFechaHora.Text = "Fecha: Hora:";
+            this.lblFechaHora.UseCustomBackColor = true;
+            this.lblFechaHora.UseCustomForeColor = true;
             // 
             // MenuFrm
             // 
@@ -176,5 +214,7 @@
         private MetroFramework.Controls.MetroButton btnExped;
         private MetroFramework.Controls.MetroButton btnAyuda;
         private MetroFramework.Controls.MetroButton btnCerrSesion;
+        private MetroFramework.Controls.MetroLabel lblFechaHora;
+        private System.Windows.Forms.Timer timer1;
     }
 }
