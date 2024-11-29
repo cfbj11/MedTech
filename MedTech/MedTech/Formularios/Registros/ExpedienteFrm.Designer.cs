@@ -93,7 +93,7 @@
             this.tbIdExped.CustomButton.Visible = false;
             this.tbIdExped.Lines = new string[0];
             this.tbIdExped.Location = new System.Drawing.Point(23, 147);
-            this.tbIdExped.MaxLength = 32767;
+            this.tbIdExped.MaxLength = 4;
             this.tbIdExped.Name = "tbIdExped";
             this.tbIdExped.PasswordChar = '\0';
             this.tbIdExped.ScrollBars = System.Windows.Forms.ScrollBars.None;
@@ -134,7 +134,7 @@
             this.tbNombrePac.CustomButton.Visible = false;
             this.tbNombrePac.Lines = new string[0];
             this.tbNombrePac.Location = new System.Drawing.Point(23, 222);
-            this.tbNombrePac.MaxLength = 32767;
+            this.tbNombrePac.MaxLength = 50;
             this.tbNombrePac.Name = "tbNombrePac";
             this.tbNombrePac.PasswordChar = '\0';
             this.tbNombrePac.ScrollBars = System.Windows.Forms.ScrollBars.None;
@@ -175,7 +175,7 @@
             this.tbApellidoPac.CustomButton.Visible = false;
             this.tbApellidoPac.Lines = new string[0];
             this.tbApellidoPac.Location = new System.Drawing.Point(23, 297);
-            this.tbApellidoPac.MaxLength = 32767;
+            this.tbApellidoPac.MaxLength = 50;
             this.tbApellidoPac.Name = "tbApellidoPac";
             this.tbApellidoPac.PasswordChar = '\0';
             this.tbApellidoPac.ScrollBars = System.Windows.Forms.ScrollBars.None;
@@ -226,7 +226,7 @@
             this.tbMotivoCon.CustomButton.Visible = false;
             this.tbMotivoCon.Lines = new string[0];
             this.tbMotivoCon.Location = new System.Drawing.Point(300, 245);
-            this.tbMotivoCon.MaxLength = 32767;
+            this.tbMotivoCon.MaxLength = 150;
             this.tbMotivoCon.Multiline = true;
             this.tbMotivoCon.Name = "tbMotivoCon";
             this.tbMotivoCon.PasswordChar = '\0';
@@ -258,7 +258,7 @@
             this.tbDiagnostico.CustomButton.Visible = false;
             this.tbDiagnostico.Lines = new string[0];
             this.tbDiagnostico.Location = new System.Drawing.Point(600, 147);
-            this.tbDiagnostico.MaxLength = 32767;
+            this.tbDiagnostico.MaxLength = 150;
             this.tbDiagnostico.Multiline = true;
             this.tbDiagnostico.Name = "tbDiagnostico";
             this.tbDiagnostico.PasswordChar = '\0';

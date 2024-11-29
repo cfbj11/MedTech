@@ -82,7 +82,7 @@
             this.tbNombrePac.CustomButton.Visible = false;
             this.tbNombrePac.Lines = new string[0];
             this.tbNombrePac.Location = new System.Drawing.Point(149, 142);
-            this.tbNombrePac.MaxLength = 32767;
+            this.tbNombrePac.MaxLength = 50;
             this.tbNombrePac.Name = "tbNombrePac";
             this.tbNombrePac.PasswordChar = '\0';
             this.tbNombrePac.ScrollBars = System.Windows.Forms.ScrollBars.None;
@@ -123,7 +123,7 @@
             this.tbApellidoPac.CustomButton.Visible = false;
             this.tbApellidoPac.Lines = new string[0];
             this.tbApellidoPac.Location = new System.Drawing.Point(149, 202);
-            this.tbApellidoPac.MaxLength = 32767;
+            this.tbApellidoPac.MaxLength = 50;
             this.tbApellidoPac.Name = "tbApellidoPac";
             this.tbApellidoPac.PasswordChar = '\0';
             this.tbApellidoPac.ScrollBars = System.Windows.Forms.ScrollBars.None;
@@ -193,7 +193,7 @@
             this.tbEnfermedades.CustomButton.Visible = false;
             this.tbEnfermedades.Lines = new string[0];
             this.tbEnfermedades.Location = new System.Drawing.Point(400, 142);
-            this.tbEnfermedades.MaxLength = 32767;
+            this.tbEnfermedades.MaxLength = 50;
             this.tbEnfermedades.Name = "tbEnfermedades";
             this.tbEnfermedades.PasswordChar = '\0';
             this.tbEnfermedades.ScrollBars = System.Windows.Forms.ScrollBars.None;
@@ -323,7 +323,7 @@
             this.tbAntecedentes.CustomButton.Visible = false;
             this.tbAntecedentes.Lines = new string[0];
             this.tbAntecedentes.Location = new System.Drawing.Point(149, 322);
-            this.tbAntecedentes.MaxLength = 32767;
+            this.tbAntecedentes.MaxLength = 150;
             this.tbAntecedentes.Multiline = true;
             this.tbAntecedentes.Name = "tbAntecedentes";
             this.tbAntecedentes.PasswordChar = '\0';

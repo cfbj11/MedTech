@@ -101,7 +101,7 @@
             this.tbNombrePac.CustomButton.Visible = false;
             this.tbNombrePac.Lines = new string[0];
             this.tbNombrePac.Location = new System.Drawing.Point(23, 142);
-            this.tbNombrePac.MaxLength = 32767;
+            this.tbNombrePac.MaxLength = 50;
             this.tbNombrePac.Name = "tbNombrePac";
             this.tbNombrePac.PasswordChar = '\0';
             this.tbNombrePac.ScrollBars = System.Windows.Forms.ScrollBars.None;
@@ -142,7 +142,7 @@
             this.tbApellidoPac.CustomButton.Visible = false;
             this.tbApellidoPac.Lines = new string[0];
             this.tbApellidoPac.Location = new System.Drawing.Point(23, 202);
-            this.tbApellidoPac.MaxLength = 32767;
+            this.tbApellidoPac.MaxLength = 50;
             this.tbApellidoPac.Name = "tbApellidoPac";
             this.tbApellidoPac.PasswordChar = '\0';
             this.tbApellidoPac.ScrollBars = System.Windows.Forms.ScrollBars.None;
@@ -183,7 +183,7 @@
             this.tbHoraCita.CustomButton.Visible = false;
             this.tbHoraCita.Lines = new string[0];
             this.tbHoraCita.Location = new System.Drawing.Point(23, 337);
-            this.tbHoraCita.MaxLength = 32767;
+            this.tbHoraCita.MaxLength = 5;
             this.tbHoraCita.Name = "tbHoraCita";
             this.tbHoraCita.PasswordChar = '\0';
             this.tbHoraCita.ScrollBars = System.Windows.Forms.ScrollBars.None;
@@ -243,7 +243,7 @@
             this.tbDoctor.CustomButton.Visible = false;
             this.tbDoctor.Lines = new string[0];
             this.tbDoctor.Location = new System.Drawing.Point(300, 202);
-            this.tbDoctor.MaxLength = 32767;
+            this.tbDoctor.MaxLength = 50;
             this.tbDoctor.Name = "tbDoctor";
             this.tbDoctor.PasswordChar = '\0';
             this.tbDoctor.ScrollBars = System.Windows.Forms.ScrollBars.None;
@@ -348,7 +348,7 @@
             this.tbContacto.CustomButton.Visible = false;
             this.tbContacto.Lines = new string[0];
             this.tbContacto.Location = new System.Drawing.Point(600, 184);
-            this.tbContacto.MaxLength = 32767;
+            this.tbContacto.MaxLength = 50;
             this.tbContacto.Name = "tbContacto";
             this.tbContacto.PasswordChar = '\0';
             this.tbContacto.ScrollBars = System.Windows.Forms.ScrollBars.None;
@@ -389,7 +389,7 @@
             this.tbCosto.CustomButton.Visible = false;
             this.tbCosto.Lines = new string[0];
             this.tbCosto.Location = new System.Drawing.Point(600, 269);
-            this.tbCosto.MaxLength = 32767;
+            this.tbCosto.MaxLength = 4;
             this.tbCosto.Name = "tbCosto";
             this.tbCosto.PasswordChar = '\0';
             this.tbCosto.ScrollBars = System.Windows.Forms.ScrollBars.None;
@@ -497,7 +497,7 @@
             this.tbIdPaciente.CustomButton.Visible = false;
             this.tbIdPaciente.Lines = new string[0];
             this.tbIdPaciente.Location = new System.Drawing.Point(300, 142);
-            this.tbIdPaciente.MaxLength = 32767;
+            this.tbIdPaciente.MaxLength = 6;
             this.tbIdPaciente.Name = "tbIdPaciente";
             this.tbIdPaciente.PasswordChar = '\0';
             this.tbIdPaciente.ScrollBars = System.Windows.Forms.ScrollBars.None;

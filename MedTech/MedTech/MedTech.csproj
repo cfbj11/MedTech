@@ -204,6 +204,11 @@
     <Content Include="Archivos\usuarios.txt" />
     <None Include="Resources\show.png" />
     <None Include="Resources\hide.png" />
+    <Content Include="Link\iconos.txt" />
+    <None Include="Resources\cita.png" />
+    <None Include="Resources\paciente.png" />
+    <None Include="Resources\historial-medico.png" />
+    <None Include="Resources\hospitalizacion.png" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
