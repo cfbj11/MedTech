@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(InicioFrm));
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.pbContraseña = new System.Windows.Forms.PictureBox();
             this.btnSiguiente = new MetroFramework.Controls.MetroButton();
             this.tbContraseña = new MetroFramework.Controls.MetroTextBox();
             this.lblContraseña = new MetroFramework.Controls.MetroLabel();
@@ -38,10 +39,11 @@
             this.lblUsuario = new MetroFramework.Controls.MetroLabel();
             this.lblDescripcion = new MetroFramework.Controls.MetroLabel();
             this.lblBienvenida = new MetroFramework.Controls.MetroLabel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pbLogo = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbContraseña)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -56,6 +58,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.Controls.Add(this.pbContraseña);
             this.panel2.Controls.Add(this.btnSiguiente);
             this.panel2.Controls.Add(this.tbContraseña);
             this.panel2.Controls.Add(this.lblContraseña);
@@ -63,11 +66,22 @@
             this.panel2.Controls.Add(this.lblUsuario);
             this.panel2.Controls.Add(this.lblDescripcion);
             this.panel2.Controls.Add(this.lblBienvenida);
-            this.panel2.Controls.Add(this.pictureBox1);
+            this.panel2.Controls.Add(this.pbLogo);
             this.panel2.Location = new System.Drawing.Point(23, 39);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(754, 341);
             this.panel2.TabIndex = 0;
+            // 
+            // pbContraseña
+            // 
+            this.pbContraseña.Image = global::MedTech.Properties.Resources.show;
+            this.pbContraseña.Location = new System.Drawing.Point(471, 217);
+            this.pbContraseña.Name = "pbContraseña";
+            this.pbContraseña.Size = new System.Drawing.Size(23, 23);
+            this.pbContraseña.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbContraseña.TabIndex = 9;
+            this.pbContraseña.TabStop = false;
+            this.pbContraseña.Click += new System.EventHandler(this.pbContraseña_Click);
             // 
             // btnSiguiente
             // 
@@ -97,7 +111,7 @@
             this.tbContraseña.Location = new System.Drawing.Point(260, 217);
             this.tbContraseña.MaxLength = 32767;
             this.tbContraseña.Name = "tbContraseña";
-            this.tbContraseña.PasswordChar = '\0';
+            this.tbContraseña.PasswordChar = '*';
             this.tbContraseña.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.tbContraseña.SelectedText = "";
             this.tbContraseña.SelectionLength = 0;
@@ -181,15 +195,15 @@
             this.lblBienvenida.TabIndex = 1;
             this.lblBienvenida.Text = "Bienvenido a MedTech";
             // 
-            // pictureBox1
+            // pbLogo
             // 
-            this.pictureBox1.Image = global::MedTech.Properties.Resources.Logotipo_medtech;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(60, 60);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.pbLogo.Image = global::MedTech.Properties.Resources.Logotipo_medtech;
+            this.pbLogo.Location = new System.Drawing.Point(0, 0);
+            this.pbLogo.Name = "pbLogo";
+            this.pbLogo.Size = new System.Drawing.Size(60, 60);
+            this.pbLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbLogo.TabIndex = 0;
+            this.pbLogo.TabStop = false;
             // 
             // InicioFrm
             // 
@@ -204,7 +218,8 @@
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbContraseña)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -213,7 +228,7 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pbLogo;
         private MetroFramework.Controls.MetroLabel lblBienvenida;
         private MetroFramework.Controls.MetroTextBox tbContraseña;
         private MetroFramework.Controls.MetroLabel lblContraseña;
@@ -221,5 +236,6 @@
         private MetroFramework.Controls.MetroLabel lblUsuario;
         private MetroFramework.Controls.MetroLabel lblDescripcion;
         private MetroFramework.Controls.MetroButton btnSiguiente;
+        private System.Windows.Forms.PictureBox pbContraseña;
     }
 }

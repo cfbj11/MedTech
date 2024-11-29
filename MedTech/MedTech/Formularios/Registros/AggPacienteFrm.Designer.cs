@@ -48,11 +48,11 @@
             this.lblInstruccion = new MetroFramework.Controls.MetroLabel();
             this.tbAntecedentes = new MetroFramework.Controls.MetroTextBox();
             this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pbLogo = new System.Windows.Forms.PictureBox();
             this.lbEnfermedades = new System.Windows.Forms.ListBox();
             this.dgvPaciente = new System.Windows.Forms.DataGridView();
             this.btnReporte = new MetroFramework.Controls.MetroButton();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPaciente)).BeginInit();
             this.SuspendLayout();
             // 
@@ -354,15 +354,15 @@
             this.metroPanel1.VerticalScrollbarHighlightOnWheel = false;
             this.metroPanel1.VerticalScrollbarSize = 10;
             // 
-            // pictureBox1
+            // pbLogo
             // 
-            this.pictureBox1.Image = global::MedTech.Properties.Resources.Logotipo_medtech;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 5);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(60, 60);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 25;
-            this.pictureBox1.TabStop = false;
+            this.pbLogo.Image = global::MedTech.Properties.Resources.Logotipo_medtech;
+            this.pbLogo.Location = new System.Drawing.Point(0, 5);
+            this.pbLogo.Name = "pbLogo";
+            this.pbLogo.Size = new System.Drawing.Size(60, 60);
+            this.pbLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbLogo.TabIndex = 25;
+            this.pbLogo.TabStop = false;
             // 
             // lbEnfermedades
             // 
@@ -403,7 +403,7 @@
             this.Controls.Add(this.btnReporte);
             this.Controls.Add(this.dgvPaciente);
             this.Controls.Add(this.lbEnfermedades);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.pbLogo);
             this.Controls.Add(this.tbAntecedentes);
             this.Controls.Add(this.lblInstruccion);
             this.Controls.Add(this.btnVolver);
@@ -427,7 +427,7 @@
             this.MaximizeBox = false;
             this.Name = "AggPacienteFrm";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.AggPacienteForm_FormClosing);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPaciente)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -448,7 +448,7 @@
         private MetroFramework.Controls.MetroButton btnVolver;
         private MetroFramework.Controls.MetroLabel lblInstruccion;
         private MetroFramework.Controls.MetroPanel metroPanel1;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pbLogo;
         internal MetroFramework.Controls.MetroTextBox tbNombrePac;
         internal MetroFramework.Controls.MetroTextBox tbApellidoPac;
         internal MetroFramework.Controls.MetroDateTime dtFechaNac;

@@ -202,6 +202,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Archivos\usuarios.txt" />
+    <None Include="Resources\show.png" />
+    <None Include="Resources\hide.png" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

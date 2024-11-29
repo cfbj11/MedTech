@@ -16,12 +16,28 @@ namespace MedTech.Formularios
     {
         private readonly Validar validar;
         private bool flag = true;
+        private bool enseñar = false;
 
         public InicioFrm()
         {
             InitializeComponent();
             lblBienvenida.Select();
             validar = new Validar(this, "usuarios.txt");
+        }
+
+        private void pbContraseña_Click(object sender, EventArgs e)
+        {
+            enseñar = !enseñar;
+            if (enseñar)
+            {
+                tbContraseña.PasswordChar = '\0';
+                pbContraseña.Image = Properties.Resources.hide;
+            }
+            else
+            {
+                tbContraseña.PasswordChar = '*';
+                pbContraseña.Image = Properties.Resources.show;
+            }
         }
 
         private void btnSiguiente_Click(object sender, EventArgs e)

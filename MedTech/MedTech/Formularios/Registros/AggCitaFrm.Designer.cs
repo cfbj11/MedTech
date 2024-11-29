@@ -52,12 +52,12 @@
             this.btnCancelar = new MetroFramework.Controls.MetroButton();
             this.btnGuardar = new MetroFramework.Controls.MetroButton();
             this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pbLogo = new System.Windows.Forms.PictureBox();
             this.lblIdPaciente = new MetroFramework.Controls.MetroLabel();
             this.tbIdPaciente = new MetroFramework.Controls.MetroTextBox();
             this.dgvCita = new System.Windows.Forms.DataGridView();
             this.btnReporte = new MetroFramework.Controls.MetroButton();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCita)).BeginInit();
             this.SuspendLayout();
             // 
@@ -461,15 +461,15 @@
             this.metroPanel1.VerticalScrollbarHighlightOnWheel = false;
             this.metroPanel1.VerticalScrollbarSize = 10;
             // 
-            // pictureBox1
+            // pbLogo
             // 
-            this.pictureBox1.Image = global::MedTech.Properties.Resources.Logotipo_medtech;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 5);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(60, 60);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 26;
-            this.pictureBox1.TabStop = false;
+            this.pbLogo.Image = global::MedTech.Properties.Resources.Logotipo_medtech;
+            this.pbLogo.Location = new System.Drawing.Point(0, 5);
+            this.pbLogo.Name = "pbLogo";
+            this.pbLogo.Size = new System.Drawing.Size(60, 60);
+            this.pbLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbLogo.TabIndex = 26;
+            this.pbLogo.TabStop = false;
             // 
             // lblIdPaciente
             // 
@@ -544,7 +544,7 @@
             this.Controls.Add(this.dgvCita);
             this.Controls.Add(this.tbIdPaciente);
             this.Controls.Add(this.lblIdPaciente);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.pbLogo);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnVolver);
@@ -572,7 +572,7 @@
             this.MaximizeBox = false;
             this.Name = "AggCitaFrm";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.AggCitaForm_FormClosing);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCita)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -594,7 +594,7 @@
         private MetroFramework.Controls.MetroButton btnCancelar;
         private MetroFramework.Controls.MetroButton btnGuardar;
         private MetroFramework.Controls.MetroPanel metroPanel1;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pbLogo;
         private MetroFramework.Controls.MetroLabel lblIdPaciente;
         internal MetroFramework.Controls.MetroTextBox tbNombrePac;
         internal MetroFramework.Controls.MetroTextBox tbApellidoPac;
