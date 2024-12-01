@@ -40,27 +40,27 @@
             this.btnCerrSesion = new MetroFramework.Controls.MetroButton();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel2 = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.pbLogo = new System.Windows.Forms.PictureBox();
             this.pbAyuda = new System.Windows.Forms.PictureBox();
             this.pbCerrar = new System.Windows.Forms.PictureBox();
             this.pbExpediente = new System.Windows.Forms.PictureBox();
             this.pbAggPaciente = new System.Windows.Forms.PictureBox();
             this.pbAggCita = new System.Windows.Forms.PictureBox();
-            this.pbLogo = new System.Windows.Forms.PictureBox();
             this.panel2.SuspendLayout();
+            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbAyuda)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbCerrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbExpediente)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbAggPaciente)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbAggCita)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
             this.SuspendLayout();
             // 
             // lblFechaHora
@@ -115,7 +115,7 @@
             this.btnAggCita.Location = new System.Drawing.Point(240, 200);
             this.btnAggCita.Name = "btnAggCita";
             this.btnAggCita.Size = new System.Drawing.Size(275, 40);
-            this.btnAggCita.TabIndex = 2;
+            this.btnAggCita.TabIndex = 1;
             this.btnAggCita.Text = "Agregar y Agendar Cita";
             this.btnAggCita.UseCustomBackColor = true;
             this.btnAggCita.UseCustomForeColor = true;
@@ -129,7 +129,7 @@
             this.btnAggPaciente.Location = new System.Drawing.Point(240, 156);
             this.btnAggPaciente.Name = "btnAggPaciente";
             this.btnAggPaciente.Size = new System.Drawing.Size(275, 40);
-            this.btnAggPaciente.TabIndex = 3;
+            this.btnAggPaciente.TabIndex = 2;
             this.btnAggPaciente.Text = "Agregar Paciente";
             this.btnAggPaciente.UseCustomBackColor = true;
             this.btnAggPaciente.UseCustomForeColor = true;
@@ -143,7 +143,7 @@
             this.btnExped.Location = new System.Drawing.Point(240, 292);
             this.btnExped.Name = "btnExped";
             this.btnExped.Size = new System.Drawing.Size(275, 40);
-            this.btnExped.TabIndex = 4;
+            this.btnExped.TabIndex = 3;
             this.btnExped.Text = "Crear o Actualizar Expediente Médico";
             this.btnExped.UseCustomBackColor = true;
             this.btnExped.UseCustomForeColor = true;
@@ -157,7 +157,7 @@
             this.btnAyuda.Location = new System.Drawing.Point(677, 281);
             this.btnAyuda.Name = "btnAyuda";
             this.btnAyuda.Size = new System.Drawing.Size(100, 25);
-            this.btnAyuda.TabIndex = 9;
+            this.btnAyuda.TabIndex = 4;
             this.btnAyuda.Text = "Ayuda";
             this.btnAyuda.UseCustomBackColor = true;
             this.btnAyuda.UseCustomForeColor = true;
@@ -171,7 +171,7 @@
             this.btnCerrSesion.Location = new System.Drawing.Point(677, 312);
             this.btnCerrSesion.Name = "btnCerrSesion";
             this.btnCerrSesion.Size = new System.Drawing.Size(100, 25);
-            this.btnCerrSesion.TabIndex = 10;
+            this.btnCerrSesion.TabIndex = 5;
             this.btnCerrSesion.Text = "Cerrar Sesión";
             this.btnCerrSesion.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnCerrSesion.UseCustomBackColor = true;
@@ -193,6 +193,22 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(740, 30);
             this.panel2.TabIndex = 6;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.panel1.Controls.Add(this.pbAyuda);
+            this.panel1.Controls.Add(this.btnAyuda);
+            this.panel1.Controls.Add(this.pbCerrar);
+            this.panel1.Controls.Add(this.pbExpediente);
+            this.panel1.Controls.Add(this.btnCerrSesion);
+            this.panel1.Controls.Add(this.pbAggPaciente);
+            this.panel1.Controls.Add(this.btnAggPaciente);
+            this.panel1.Controls.Add(this.pbAggCita);
+            this.panel1.Location = new System.Drawing.Point(0, 90);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(800, 360);
+            this.panel1.TabIndex = 0;
             // 
             // pictureBox4
             // 
@@ -224,21 +240,15 @@
             this.pictureBox6.TabIndex = 3;
             this.pictureBox6.TabStop = false;
             // 
-            // panel1
+            // pbLogo
             // 
-            this.panel1.BackColor = System.Drawing.Color.LightSeaGreen;
-            this.panel1.Controls.Add(this.pbAyuda);
-            this.panel1.Controls.Add(this.btnAyuda);
-            this.panel1.Controls.Add(this.pbCerrar);
-            this.panel1.Controls.Add(this.pbExpediente);
-            this.panel1.Controls.Add(this.btnCerrSesion);
-            this.panel1.Controls.Add(this.pbAggPaciente);
-            this.panel1.Controls.Add(this.btnAggPaciente);
-            this.panel1.Controls.Add(this.pbAggCita);
-            this.panel1.Location = new System.Drawing.Point(0, 90);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(800, 360);
-            this.panel1.TabIndex = 0;
+            this.pbLogo.Image = global::MedTech.Properties.Resources.Logotipo_medtech;
+            this.pbLogo.Location = new System.Drawing.Point(0, 30);
+            this.pbLogo.Name = "pbLogo";
+            this.pbLogo.Size = new System.Drawing.Size(60, 60);
+            this.pbLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbLogo.TabIndex = 1;
+            this.pbLogo.TabStop = false;
             // 
             // pbAyuda
             // 
@@ -294,16 +304,6 @@
             this.pbAggCita.TabIndex = 3;
             this.pbAggCita.TabStop = false;
             // 
-            // pbLogo
-            // 
-            this.pbLogo.Image = global::MedTech.Properties.Resources.Logotipo_medtech;
-            this.pbLogo.Location = new System.Drawing.Point(0, 30);
-            this.pbLogo.Name = "pbLogo";
-            this.pbLogo.Size = new System.Drawing.Size(60, 60);
-            this.pbLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbLogo.TabIndex = 1;
-            this.pbLogo.TabStop = false;
-            // 
             // MenuFrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -322,16 +322,16 @@
             this.Name = "MenuFrm";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MenuForm_FormClosing);
             this.panel2.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbAyuda)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbCerrar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbExpediente)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbAggPaciente)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbAggCita)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

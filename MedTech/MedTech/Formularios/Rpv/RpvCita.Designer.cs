@@ -29,22 +29,33 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.dsDato = new MedTech.DataSet.DsDato();
-            this.dsDatoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RpvCita));
             this.citaDTBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dsDato = new MedTech.DataSet.DsDato();
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.dsDatoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.citaDTBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsDato)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsDatoBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.citaDTBindingSource)).BeginInit();
             this.SuspendLayout();
+            // 
+            // citaDTBindingSource
+            // 
+            this.citaDTBindingSource.DataMember = "CitaDT";
+            this.citaDTBindingSource.DataSource = this.dsDato;
+            // 
+            // dsDato
+            // 
+            this.dsDato.DataSetName = "DsDato";
+            this.dsDato.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // reportViewer1
             // 
             this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            reportDataSource1.Name = "DataSet1";
-            reportDataSource1.Value = this.citaDTBindingSource;
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
+            reportDataSource2.Name = "DataSet1";
+            reportDataSource2.Value = this.citaDTBindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource2);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "MedTech.Reportes.RptCita.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(20, 60);
             this.reportViewer1.Name = "reportViewer1";
@@ -52,20 +63,10 @@
             this.reportViewer1.Size = new System.Drawing.Size(760, 370);
             this.reportViewer1.TabIndex = 0;
             // 
-            // dsDato
-            // 
-            this.dsDato.DataSetName = "DsDato";
-            this.dsDato.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // dsDatoBindingSource
             // 
             this.dsDatoBindingSource.DataSource = this.dsDato;
             this.dsDatoBindingSource.Position = 0;
-            // 
-            // citaDTBindingSource
-            // 
-            this.citaDTBindingSource.DataMember = "CitaDT";
-            this.citaDTBindingSource.DataSource = this.dsDato;
             // 
             // RpvCita
             // 
@@ -73,11 +74,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.reportViewer1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "RpvCita";
             this.Load += new System.EventHandler(this.RpvCita_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.citaDTBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsDato)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsDatoBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.citaDTBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }

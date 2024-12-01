@@ -48,12 +48,12 @@
             this.lblInstruccion = new MetroFramework.Controls.MetroLabel();
             this.tbAntecedentes = new MetroFramework.Controls.MetroTextBox();
             this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
-            this.pbLogo = new System.Windows.Forms.PictureBox();
             this.lbEnfermedades = new System.Windows.Forms.ListBox();
             this.dgvPaciente = new System.Windows.Forms.DataGridView();
             this.btnReporte = new MetroFramework.Controls.MetroButton();
-            ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
+            this.pbLogo = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPaciente)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
             this.SuspendLayout();
             // 
             // lblNombrePac
@@ -183,7 +183,7 @@
             // 
             // 
             this.tbEnfermedades.CustomButton.Image = null;
-            this.tbEnfermedades.CustomButton.Location = new System.Drawing.Point(128, 1);
+            this.tbEnfermedades.CustomButton.Location = new System.Drawing.Point(180, 1);
             this.tbEnfermedades.CustomButton.Name = "";
             this.tbEnfermedades.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.tbEnfermedades.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -201,7 +201,7 @@
             this.tbEnfermedades.SelectionLength = 0;
             this.tbEnfermedades.SelectionStart = 0;
             this.tbEnfermedades.ShortcutsEnabled = true;
-            this.tbEnfermedades.Size = new System.Drawing.Size(150, 23);
+            this.tbEnfermedades.Size = new System.Drawing.Size(202, 23);
             this.tbEnfermedades.TabIndex = 10;
             this.tbEnfermedades.UseSelectable = true;
             this.tbEnfermedades.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -210,11 +210,14 @@
             // 
             // btnAñadir
             // 
-            this.btnAñadir.Location = new System.Drawing.Point(556, 142);
+            this.btnAñadir.BackgroundImage = global::MedTech.Properties.Resources.anadir;
+            this.btnAñadir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnAñadir.Highlight = true;
+            this.btnAñadir.Location = new System.Drawing.Point(608, 142);
             this.btnAñadir.Name = "btnAñadir";
-            this.btnAñadir.Size = new System.Drawing.Size(75, 23);
+            this.btnAñadir.Size = new System.Drawing.Size(23, 23);
+            this.btnAñadir.Style = MetroFramework.MetroColorStyle.White;
             this.btnAñadir.TabIndex = 11;
-            this.btnAñadir.Text = "Añadir";
             this.btnAñadir.UseSelectable = true;
             this.btnAñadir.Click += new System.EventHandler(this.btnAñadir_Click);
             this.btnAñadir.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.btnAñadir_KeyPress);
@@ -354,16 +357,6 @@
             this.metroPanel1.VerticalScrollbarHighlightOnWheel = false;
             this.metroPanel1.VerticalScrollbarSize = 10;
             // 
-            // pbLogo
-            // 
-            this.pbLogo.Image = global::MedTech.Properties.Resources.Logotipo_medtech;
-            this.pbLogo.Location = new System.Drawing.Point(0, 5);
-            this.pbLogo.Name = "pbLogo";
-            this.pbLogo.Size = new System.Drawing.Size(60, 60);
-            this.pbLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbLogo.TabIndex = 25;
-            this.pbLogo.TabStop = false;
-            // 
             // lbEnfermedades
             // 
             this.lbEnfermedades.FormattingEnabled = true;
@@ -393,6 +386,16 @@
             this.btnReporte.UseCustomForeColor = true;
             this.btnReporte.UseSelectable = true;
             this.btnReporte.Click += new System.EventHandler(this.btnReporte_Click);
+            // 
+            // pbLogo
+            // 
+            this.pbLogo.Image = global::MedTech.Properties.Resources.Logotipo_medtech;
+            this.pbLogo.Location = new System.Drawing.Point(0, 5);
+            this.pbLogo.Name = "pbLogo";
+            this.pbLogo.Size = new System.Drawing.Size(60, 60);
+            this.pbLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbLogo.TabIndex = 25;
+            this.pbLogo.TabStop = false;
             // 
             // AggPacienteFrm
             // 
@@ -427,8 +430,8 @@
             this.MaximizeBox = false;
             this.Name = "AggPacienteFrm";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.AggPacienteForm_FormClosing);
-            ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPaciente)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

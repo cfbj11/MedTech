@@ -34,7 +34,8 @@ namespace MedTech.Servicio
                     flag = false;
                     MostrarMenu();
                 }
-                else MsjError("Usuario o contraseña incorrectos. Inténtelo de nuevo."); //  Mensaje de error
+                else
+                    MsjError("Usuario o contraseña incorrectos. Inténtelo de nuevo."); //  Mensaje de error
             }
             catch (Exception ex)
             {

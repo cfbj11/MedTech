@@ -1,7 +1,16 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\carlo\\OneDrive\\Documentos\\UAM\\IISEMESTRE\\MYPE\\IIICE\\MedTech\\MedTech\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{58520D78-2D81-441B-9F31-3965499CFAC3}|MedTech\\MedTech.csproj|c:\\users\\carlo\\onedrive\\documentos\\uam\\iisemestre\\mype\\iiice\\medtech\\medtech\\medtech\\formularios\\iniciofrm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{58520D78-2D81-441B-9F31-3965499CFAC3}|MedTech\\MedTech.csproj|solutionrelative:medtech\\formularios\\iniciofrm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58520D78-2D81-441B-9F31-3965499CFAC3}|MedTech\\MedTech.csproj|c:\\users\\carlo\\onedrive\\documentos\\uam\\iisemestre\\mype\\iiice\\medtech\\medtech\\medtech\\formularios\\menufrm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{58520D78-2D81-441B-9F31-3965499CFAC3}|MedTech\\MedTech.csproj|solutionrelative:medtech\\formularios\\menufrm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,7 +18,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -22,6 +31,30 @@
             {
               "$type": "Bookmark",
               "Name": "ST:1:0:{e8b06f52-6d01-11d2-aa7d-00c04f990343}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "InicioFrm.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\carlo\\OneDrive\\Documentos\\UAM\\IISEMESTRE\\MYPE\\IIICE\\MedTech\\MedTech\\MedTech\\Formularios\\InicioFrm.cs",
+              "RelativeDocumentMoniker": "MedTech\\Formularios\\InicioFrm.cs",
+              "ToolTip": "C:\\Users\\carlo\\OneDrive\\Documentos\\UAM\\IISEMESTRE\\MYPE\\IIICE\\MedTech\\MedTech\\MedTech\\Formularios\\InicioFrm.cs [Dise\u00F1o]",
+              "RelativeToolTip": "MedTech\\Formularios\\InicioFrm.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-01T18:29:20.156Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MenuFrm.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\carlo\\OneDrive\\Documentos\\UAM\\IISEMESTRE\\MYPE\\IIICE\\MedTech\\MedTech\\MedTech\\Formularios\\MenuFrm.cs",
+              "RelativeDocumentMoniker": "MedTech\\Formularios\\MenuFrm.cs",
+              "ToolTip": "C:\\Users\\carlo\\OneDrive\\Documentos\\UAM\\IISEMESTRE\\MYPE\\IIICE\\MedTech\\MedTech\\MedTech\\Formularios\\MenuFrm.cs [Dise\u00F1o]",
+              "RelativeToolTip": "MedTech\\Formularios\\MenuFrm.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-01T18:29:19.438Z",
+              "EditorCaption": " [Dise\u00F1o]"
             }
           ]
         }
