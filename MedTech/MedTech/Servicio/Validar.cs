@@ -32,7 +32,7 @@ namespace MedTech.Servicio
                 if (ValidarCred(user, password))    //  Valida las credenciales del usuario
                 {
                     flag = false;
-                    MostrarMenu();
+                    MostrarMenu(user);
                 }
                 else
                     MsjError("Usuario o contraseña incorrectos. Inténtelo de nuevo."); //  Mensaje de error
@@ -44,9 +44,9 @@ namespace MedTech.Servicio
         }
 
         //  Muestra el formulario del menú y oculta el formulario de inicio de sesión
-        public void MostrarMenu()
+        public void MostrarMenu(string user)
         {
-            MenuFrm menuForm = new MenuFrm(); //  Instancia del formulario de menú
+            MenuFrm menuForm = new MenuFrm(user); //  Instancia del formulario de menú
             menuForm.Show();
             form.Hide();
         }

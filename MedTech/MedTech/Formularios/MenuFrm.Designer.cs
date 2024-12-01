@@ -40,41 +40,42 @@
             this.btnCerrSesion = new MetroFramework.Controls.MetroButton();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel2 = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.pbLogo = new System.Windows.Forms.PictureBox();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.pbAyuda = new System.Windows.Forms.PictureBox();
             this.pbCerrar = new System.Windows.Forms.PictureBox();
             this.pbExpediente = new System.Windows.Forms.PictureBox();
             this.pbAggPaciente = new System.Windows.Forms.PictureBox();
             this.pbAggCita = new System.Windows.Forms.PictureBox();
+            this.pbLogo = new System.Windows.Forms.PictureBox();
             this.panel2.SuspendLayout();
-            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
+            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbAyuda)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbCerrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbExpediente)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbAggPaciente)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbAggCita)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
             this.SuspendLayout();
             // 
             // lblFechaHora
             // 
+            this.lblFechaHora.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblFechaHora.AutoSize = true;
             this.lblFechaHora.BackColor = System.Drawing.Color.White;
             this.lblFechaHora.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.lblFechaHora.FontWeight = MetroFramework.MetroLabelWeight.Bold;
             this.lblFechaHora.ForeColor = System.Drawing.Color.LightSeaGreen;
-            this.lblFechaHora.Location = new System.Drawing.Point(682, 33);
+            this.lblFechaHora.Location = new System.Drawing.Point(712, 33);
             this.lblFechaHora.Name = "lblFechaHora";
-            this.lblFechaHora.Size = new System.Drawing.Size(118, 25);
+            this.lblFechaHora.Size = new System.Drawing.Size(78, 25);
             this.lblFechaHora.TabIndex = 2;
-            this.lblFechaHora.Text = "Fecha: Hora:";
+            this.lblFechaHora.Text = "FecHor:";
             this.lblFechaHora.UseCustomBackColor = true;
             this.lblFechaHora.UseCustomForeColor = true;
             // 
@@ -95,6 +96,7 @@
             // 
             // lblSeleccion
             // 
+            this.lblSeleccion.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblSeleccion.AutoSize = true;
             this.lblSeleccion.BackColor = System.Drawing.Color.LightSeaGreen;
             this.lblSeleccion.FontSize = MetroFramework.MetroLabelSize.Tall;
@@ -110,6 +112,7 @@
             // 
             // btnAggCita
             // 
+            this.btnAggCita.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnAggCita.BackColor = System.Drawing.Color.White;
             this.btnAggCita.ForeColor = System.Drawing.Color.LightSeaGreen;
             this.btnAggCita.Location = new System.Drawing.Point(240, 200);
@@ -124,6 +127,7 @@
             // 
             // btnAggPaciente
             // 
+            this.btnAggPaciente.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnAggPaciente.BackColor = System.Drawing.Color.White;
             this.btnAggPaciente.ForeColor = System.Drawing.Color.LightSeaGreen;
             this.btnAggPaciente.Location = new System.Drawing.Point(240, 156);
@@ -138,9 +142,10 @@
             // 
             // btnExped
             // 
+            this.btnExped.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnExped.BackColor = System.Drawing.Color.White;
             this.btnExped.ForeColor = System.Drawing.Color.LightSeaGreen;
-            this.btnExped.Location = new System.Drawing.Point(240, 292);
+            this.btnExped.Location = new System.Drawing.Point(240, 202);
             this.btnExped.Name = "btnExped";
             this.btnExped.Size = new System.Drawing.Size(275, 40);
             this.btnExped.TabIndex = 3;
@@ -152,6 +157,7 @@
             // 
             // btnAyuda
             // 
+            this.btnAyuda.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnAyuda.BackColor = System.Drawing.Color.White;
             this.btnAyuda.ForeColor = System.Drawing.Color.LightSeaGreen;
             this.btnAyuda.Location = new System.Drawing.Point(677, 281);
@@ -166,6 +172,7 @@
             // 
             // btnCerrSesion
             // 
+            this.btnCerrSesion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCerrSesion.BackColor = System.Drawing.Color.White;
             this.btnCerrSesion.ForeColor = System.Drawing.Color.LightSeaGreen;
             this.btnCerrSesion.Location = new System.Drawing.Point(677, 312);
@@ -185,30 +192,16 @@
             // 
             // panel2
             // 
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.BackColor = System.Drawing.Color.LightSeaGreen;
             this.panel2.Controls.Add(this.pictureBox4);
             this.panel2.Controls.Add(this.pictureBox5);
             this.panel2.Controls.Add(this.pictureBox6);
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(740, 30);
+            this.panel2.Size = new System.Drawing.Size(712, 30);
             this.panel2.TabIndex = 6;
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.LightSeaGreen;
-            this.panel1.Controls.Add(this.pbAyuda);
-            this.panel1.Controls.Add(this.btnAyuda);
-            this.panel1.Controls.Add(this.pbCerrar);
-            this.panel1.Controls.Add(this.pbExpediente);
-            this.panel1.Controls.Add(this.btnCerrSesion);
-            this.panel1.Controls.Add(this.pbAggPaciente);
-            this.panel1.Controls.Add(this.btnAggPaciente);
-            this.panel1.Controls.Add(this.pbAggCita);
-            this.panel1.Location = new System.Drawing.Point(0, 90);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(800, 360);
-            this.panel1.TabIndex = 0;
             // 
             // pictureBox4
             // 
@@ -240,18 +233,29 @@
             this.pictureBox6.TabIndex = 3;
             this.pictureBox6.TabStop = false;
             // 
-            // pbLogo
+            // panel1
             // 
-            this.pbLogo.Image = global::MedTech.Properties.Resources.Logotipo_medtech;
-            this.pbLogo.Location = new System.Drawing.Point(0, 30);
-            this.pbLogo.Name = "pbLogo";
-            this.pbLogo.Size = new System.Drawing.Size(60, 60);
-            this.pbLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbLogo.TabIndex = 1;
-            this.pbLogo.TabStop = false;
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.panel1.Controls.Add(this.pbAyuda);
+            this.panel1.Controls.Add(this.btnExped);
+            this.panel1.Controls.Add(this.btnAyuda);
+            this.panel1.Controls.Add(this.pbCerrar);
+            this.panel1.Controls.Add(this.pbExpediente);
+            this.panel1.Controls.Add(this.btnCerrSesion);
+            this.panel1.Controls.Add(this.pbAggPaciente);
+            this.panel1.Controls.Add(this.btnAggPaciente);
+            this.panel1.Controls.Add(this.pbAggCita);
+            this.panel1.Location = new System.Drawing.Point(0, 90);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(800, 360);
+            this.panel1.TabIndex = 0;
             // 
             // pbAyuda
             // 
+            this.pbAyuda.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.pbAyuda.BackColor = System.Drawing.Color.White;
             this.pbAyuda.Image = global::MedTech.Properties.Resources.informacion;
             this.pbAyuda.Location = new System.Drawing.Point(678, 282);
@@ -264,6 +268,7 @@
             // 
             // pbCerrar
             // 
+            this.pbCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.pbCerrar.BackColor = System.Drawing.Color.White;
             this.pbCerrar.Image = global::MedTech.Properties.Resources.cerrar_sesion;
             this.pbCerrar.Location = new System.Drawing.Point(678, 313);
@@ -276,6 +281,7 @@
             // 
             // pbExpediente
             // 
+            this.pbExpediente.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pbExpediente.Image = global::MedTech.Properties.Resources.historial_medico;
             this.pbExpediente.Location = new System.Drawing.Point(521, 202);
             this.pbExpediente.Name = "pbExpediente";
@@ -286,6 +292,7 @@
             // 
             // pbAggPaciente
             // 
+            this.pbAggPaciente.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pbAggPaciente.Image = global::MedTech.Properties.Resources.hospitalizacion;
             this.pbAggPaciente.Location = new System.Drawing.Point(521, 156);
             this.pbAggPaciente.Name = "pbAggPaciente";
@@ -296,6 +303,7 @@
             // 
             // pbAggCita
             // 
+            this.pbAggCita.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pbAggCita.Image = global::MedTech.Properties.Resources.cita;
             this.pbAggCita.Location = new System.Drawing.Point(521, 110);
             this.pbAggCita.Name = "pbAggCita";
@@ -304,13 +312,22 @@
             this.pbAggCita.TabIndex = 3;
             this.pbAggCita.TabStop = false;
             // 
+            // pbLogo
+            // 
+            this.pbLogo.Image = global::MedTech.Properties.Resources.Logotipo_medtech;
+            this.pbLogo.Location = new System.Drawing.Point(0, 30);
+            this.pbLogo.Name = "pbLogo";
+            this.pbLogo.Size = new System.Drawing.Size(60, 60);
+            this.pbLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbLogo.TabIndex = 1;
+            this.pbLogo.TabStop = false;
+            // 
             // MenuFrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.btnExped);
             this.Controls.Add(this.lblMedTech);
             this.Controls.Add(this.lblFechaHora);
             this.Controls.Add(this.btnAggCita);
@@ -318,20 +335,19 @@
             this.Controls.Add(this.lblSeleccion);
             this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MaximizeBox = false;
             this.Name = "MenuFrm";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MenuForm_FormClosing);
             this.panel2.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).EndInit();
+            this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbAyuda)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbCerrar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbExpediente)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbAggPaciente)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbAggCita)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

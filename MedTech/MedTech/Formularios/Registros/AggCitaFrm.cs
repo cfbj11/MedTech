@@ -20,11 +20,13 @@ namespace MedTech.Formularios
         private readonly AccForm accForms;
         private readonly GuardarCita guardarCita;
         private List<Cita> listaCitas = new List<Cita>();
+        private string user;
         private bool flag = true;
 
-        public AggCitaFrm()
+        public AggCitaFrm(string user)
         {
             InitializeComponent();
+            this.user = user;
             accForms = new AccForm(this);
             guardarCita = new GuardarCita("CitasRegistradas.txt");
             lblInstruccion.Select();
@@ -72,7 +74,7 @@ namespace MedTech.Formularios
 
         private void btnVolver_Click(object sender, EventArgs e)
         {
-            accForms.Volver(ref flag);
+            accForms.Volver(ref flag, user);
         }
 
         private void AggCitaForm_FormClosing(object sender, FormClosingEventArgs e)

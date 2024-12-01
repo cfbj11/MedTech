@@ -24,30 +24,30 @@ namespace MedTech.Servicio
         //  MÉTODOS RELACIONADOS CON EL FORMULARIO DE MENÚ
 
         //  Muestra formulario de Agregar y Agendar Cita y oculta el formulario actual
-        public void AgregarCita(ref bool flag)
+        public void AgregarCita(ref bool flag, string user)
         {
             flag = false;
-            AggCitaFrm aggCitaFrm = new AggCitaFrm();
+            AggCitaFrm aggCitaFrm = new AggCitaFrm(user);
             aggCitaFrm.Show();
-            form.Hide();
+            form.Close();
         }
 
         //  Muestra el formulario de Agregar Paciente y oculta el formulario actual
-        public void AgregarPaciente(ref bool flag)
+        public void AgregarPaciente(ref bool flag, string user)
         {
             flag = false;
-            AggPacienteFrm aggPacienteFrm = new AggPacienteFrm();
+            AggPacienteFrm aggPacienteFrm = new AggPacienteFrm(user);
             aggPacienteFrm.Show();
-            form.Hide();
+            form.Close();
         }
 
         //  Muestra el formulario de Expediente Médico y oculta el formulario actual
-        public void ExpedMed(ref bool flag)
+        public void ExpedMed(ref bool flag, string user)
         {
             flag = false;
-            ExpedienteFrm expedienteFrm = new ExpedienteFrm();
+            ExpedienteFrm expedienteFrm = new ExpedienteFrm(user);
             expedienteFrm.Show();
-            form.Hide();
+            form.Close();
         }
 
         //  Cierra sesión y muestra el formulario de Inicio de Sesión 
@@ -108,10 +108,14 @@ namespace MedTech.Servicio
         }
 
         //  Vuelve al formulario de menú y cierra el formulario actual
-        public void Volver(ref bool flag)
+        public void Volver(ref bool flag, string user)
         {
             flag = false;
-            MenuFrm menuFrm = new MenuFrm();
+            MenuFrm menuFrm = Application.OpenForms.OfType<MenuFrm>().FirstOrDefault();
+            if (menuFrm == null)
+                menuFrm = new MenuFrm(user);
+            else
+                menuFrm.Actualizar(user);
             menuFrm.Show();
             form.Close();
         }

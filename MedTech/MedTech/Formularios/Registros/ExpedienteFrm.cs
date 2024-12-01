@@ -19,11 +19,13 @@ namespace MedTech.Formularios
         private readonly AccForm accForms;
         private readonly GuardarExpediente guardarExpediente;
         private List<Expediente> listaExpediente = new List<Expediente>();
+        private string user;
         private bool flag = true;
 
-        public ExpedienteFrm()
+        public ExpedienteFrm(string user)
         {
             InitializeComponent();
+            this.user = user;
             accForms = new AccForm(this);
             guardarExpediente = new GuardarExpediente("Expedientes.txt");
             lblInstruccion.Select();
@@ -67,7 +69,7 @@ namespace MedTech.Formularios
 
         private void btnVolver_Click(object sender, EventArgs e)
         {
-            accForms.Volver(ref flag);
+            accForms.Volver(ref flag, user);
         }
 
         private void ExpedForm_FormClosing(object sender, FormClosingEventArgs e)

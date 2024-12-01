@@ -65,7 +65,7 @@
             this.lblNombrePac.Location = new System.Drawing.Point(150, 120);
             this.lblNombrePac.Name = "lblNombrePac";
             this.lblNombrePac.Size = new System.Drawing.Size(157, 19);
-            this.lblNombrePac.TabIndex = 1;
+            this.lblNombrePac.TabIndex = 0;
             this.lblNombrePac.Text = "Nombre del Paciente*";
             // 
             // tbNombrePac
@@ -93,7 +93,7 @@
             this.tbNombrePac.SelectionStart = 0;
             this.tbNombrePac.ShortcutsEnabled = true;
             this.tbNombrePac.Size = new System.Drawing.Size(150, 23);
-            this.tbNombrePac.TabIndex = 2;
+            this.tbNombrePac.TabIndex = 1;
             this.tbNombrePac.UseSelectable = true;
             this.tbNombrePac.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.tbNombrePac.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -106,7 +106,7 @@
             this.lblApellidoPac.Location = new System.Drawing.Point(150, 180);
             this.lblApellidoPac.Name = "lblApellidoPac";
             this.lblApellidoPac.Size = new System.Drawing.Size(158, 19);
-            this.lblApellidoPac.TabIndex = 3;
+            this.lblApellidoPac.TabIndex = 2;
             this.lblApellidoPac.Text = "Apellido del Paciente*";
             // 
             // tbApellidoPac
@@ -134,7 +134,7 @@
             this.tbApellidoPac.SelectionStart = 0;
             this.tbApellidoPac.ShortcutsEnabled = true;
             this.tbApellidoPac.Size = new System.Drawing.Size(150, 23);
-            this.tbApellidoPac.TabIndex = 4;
+            this.tbApellidoPac.TabIndex = 3;
             this.tbApellidoPac.UseSelectable = true;
             this.tbApellidoPac.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.tbApellidoPac.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -147,7 +147,7 @@
             this.lblFechaNac.Location = new System.Drawing.Point(150, 240);
             this.lblFechaNac.Name = "lblFechaNac";
             this.lblFechaNac.Size = new System.Drawing.Size(155, 19);
-            this.lblFechaNac.TabIndex = 5;
+            this.lblFechaNac.TabIndex = 4;
             this.lblFechaNac.Text = "Fecha de Nacimiento*";
             // 
             // dtFechaNac
@@ -156,7 +156,7 @@
             this.dtFechaNac.MinimumSize = new System.Drawing.Size(0, 29);
             this.dtFechaNac.Name = "dtFechaNac";
             this.dtFechaNac.Size = new System.Drawing.Size(150, 29);
-            this.dtFechaNac.TabIndex = 6;
+            this.dtFechaNac.TabIndex = 5;
             this.dtFechaNac.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.dtFechaNac_KeyPress);
             // 
             // lblAntecedentes
@@ -166,7 +166,7 @@
             this.lblAntecedentes.Location = new System.Drawing.Point(150, 300);
             this.lblAntecedentes.Name = "lblAntecedentes";
             this.lblAntecedentes.Size = new System.Drawing.Size(99, 19);
-            this.lblAntecedentes.TabIndex = 7;
+            this.lblAntecedentes.TabIndex = 6;
             this.lblAntecedentes.Text = "Antecedentes";
             // 
             // lblEnfermedades
@@ -176,7 +176,7 @@
             this.lblEnfermedades.Location = new System.Drawing.Point(400, 120);
             this.lblEnfermedades.Name = "lblEnfermedades";
             this.lblEnfermedades.Size = new System.Drawing.Size(104, 19);
-            this.lblEnfermedades.TabIndex = 9;
+            this.lblEnfermedades.TabIndex = 8;
             this.lblEnfermedades.Text = "Enfermedades";
             // 
             // tbEnfermedades
@@ -204,7 +204,7 @@
             this.tbEnfermedades.SelectionStart = 0;
             this.tbEnfermedades.ShortcutsEnabled = true;
             this.tbEnfermedades.Size = new System.Drawing.Size(202, 23);
-            this.tbEnfermedades.TabIndex = 10;
+            this.tbEnfermedades.TabIndex = 9;
             this.tbEnfermedades.UseSelectable = true;
             this.tbEnfermedades.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.tbEnfermedades.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -219,7 +219,7 @@
             this.btnAñadir.Name = "btnAñadir";
             this.btnAñadir.Size = new System.Drawing.Size(23, 23);
             this.btnAñadir.Style = MetroFramework.MetroColorStyle.White;
-            this.btnAñadir.TabIndex = 11;
+            this.btnAñadir.TabIndex = 10;
             this.btnAñadir.UseSelectable = true;
             this.btnAñadir.Click += new System.EventHandler(this.btnAñadir_Click);
             this.btnAñadir.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.btnAñadir_KeyPress);
@@ -231,7 +231,7 @@
             this.lblAlerCir.Location = new System.Drawing.Point(400, 243);
             this.lblAlerCir.Name = "lblAlerCir";
             this.lblAlerCir.Size = new System.Drawing.Size(169, 19);
-            this.lblAlerCir.TabIndex = 14;
+            this.lblAlerCir.TabIndex = 12;
             this.lblAlerCir.Text = "Tiene o le han realizado";
             // 
             // cbxAlergias
@@ -240,7 +240,7 @@
             this.cbxAlergias.Location = new System.Drawing.Point(401, 265);
             this.cbxAlergias.Name = "cbxAlergias";
             this.cbxAlergias.Size = new System.Drawing.Size(65, 15);
-            this.cbxAlergias.TabIndex = 15;
+            this.cbxAlergias.TabIndex = 13;
             this.cbxAlergias.Text = "Alergias";
             this.cbxAlergias.UseSelectable = true;
             this.cbxAlergias.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cbxAlergias_KeyPress);
@@ -251,7 +251,7 @@
             this.cbxCirugias.Location = new System.Drawing.Point(400, 286);
             this.cbxCirugias.Name = "cbxCirugias";
             this.cbxCirugias.Size = new System.Drawing.Size(66, 15);
-            this.cbxCirugias.TabIndex = 16;
+            this.cbxCirugias.TabIndex = 14;
             this.cbxCirugias.Text = "Cirugias";
             this.cbxCirugias.UseSelectable = true;
             this.cbxCirugias.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cbxCirugias_KeyPress);
@@ -260,7 +260,7 @@
             // 
             this.btnGuardar.BackColor = System.Drawing.Color.LightSeaGreen;
             this.btnGuardar.ForeColor = System.Drawing.Color.White;
-            this.btnGuardar.Location = new System.Drawing.Point(520, 384);
+            this.btnGuardar.Location = new System.Drawing.Point(540, 384);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(75, 23);
             this.btnGuardar.TabIndex = 18;
@@ -274,7 +274,7 @@
             // 
             this.btnCancelar.BackColor = System.Drawing.Color.LightSeaGreen;
             this.btnCancelar.ForeColor = System.Drawing.Color.White;
-            this.btnCancelar.Location = new System.Drawing.Point(601, 384);
+            this.btnCancelar.Location = new System.Drawing.Point(621, 384);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(75, 23);
             this.btnCancelar.TabIndex = 19;
@@ -288,7 +288,7 @@
             // 
             this.btnVolver.BackColor = System.Drawing.Color.LightSeaGreen;
             this.btnVolver.ForeColor = System.Drawing.Color.White;
-            this.btnVolver.Location = new System.Drawing.Point(682, 384);
+            this.btnVolver.Location = new System.Drawing.Point(702, 384);
             this.btnVolver.Name = "btnVolver";
             this.btnVolver.Size = new System.Drawing.Size(75, 23);
             this.btnVolver.TabIndex = 20;
@@ -338,7 +338,7 @@
             this.tbAntecedentes.SelectionStart = 0;
             this.tbAntecedentes.ShortcutsEnabled = true;
             this.tbAntecedentes.Size = new System.Drawing.Size(150, 50);
-            this.tbAntecedentes.TabIndex = 8;
+            this.tbAntecedentes.TabIndex = 7;
             this.tbAntecedentes.UseSelectable = true;
             this.tbAntecedentes.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.tbAntecedentes.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -365,14 +365,14 @@
             this.lbEnfermedades.Location = new System.Drawing.Point(400, 171);
             this.lbEnfermedades.Name = "lbEnfermedades";
             this.lbEnfermedades.Size = new System.Drawing.Size(231, 69);
-            this.lbEnfermedades.TabIndex = 12;
+            this.lbEnfermedades.TabIndex = 11;
             // 
             // dgvPaciente
             // 
             this.dgvPaciente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvPaciente.Location = new System.Drawing.Point(23, 413);
             this.dgvPaciente.Name = "dgvPaciente";
-            this.dgvPaciente.Size = new System.Drawing.Size(734, 164);
+            this.dgvPaciente.Size = new System.Drawing.Size(754, 164);
             this.dgvPaciente.TabIndex = 21;
             // 
             // btnReporte
@@ -406,7 +406,7 @@
             this.metroLabel1.Location = new System.Drawing.Point(400, 313);
             this.metroLabel1.Name = "metroLabel1";
             this.metroLabel1.Size = new System.Drawing.Size(96, 19);
-            this.metroLabel1.TabIndex = 26;
+            this.metroLabel1.TabIndex = 15;
             this.metroLabel1.Text = "ID Asignado*";
             // 
             // tbId
@@ -434,7 +434,7 @@
             this.tbId.SelectionStart = 0;
             this.tbId.ShortcutsEnabled = true;
             this.tbId.Size = new System.Drawing.Size(90, 23);
-            this.tbId.TabIndex = 27;
+            this.tbId.TabIndex = 16;
             this.tbId.UseSelectable = true;
             this.tbId.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.tbId.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);

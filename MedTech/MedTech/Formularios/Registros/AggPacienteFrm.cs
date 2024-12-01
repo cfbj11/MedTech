@@ -19,11 +19,13 @@ namespace MedTech.Formularios
         private readonly AccForm accForms;
         private readonly GuardarPaciente guardarPaciente;
         private List<Paciente> listaPaciente = new List<Paciente>();
+        private string user;
         private bool flag = true;
 
-        public AggPacienteFrm()
+        public AggPacienteFrm(string user)
         {
             InitializeComponent();
+            this.user = user;
             accForms = new AccForm(this);
             guardarPaciente = new GuardarPaciente("PacienteRegistrados");
             lblInstruccion.Select();
@@ -83,7 +85,7 @@ namespace MedTech.Formularios
 
         private void btnVolver_Click(object sender, EventArgs e)
         {
-            accForms.Volver(ref flag);
+            accForms.Volver(ref flag, user);
         }
 
         private void AggPacienteForm_FormClosing(object sender, FormClosingEventArgs e)

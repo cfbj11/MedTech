@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(InicioFrm));
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.pbContraseña = new System.Windows.Forms.PictureBox();
             this.btnSiguiente = new MetroFramework.Controls.MetroButton();
             this.tbContraseña = new MetroFramework.Controls.MetroTextBox();
             this.lblContraseña = new MetroFramework.Controls.MetroLabel();
@@ -38,7 +39,6 @@
             this.lblUsuario = new MetroFramework.Controls.MetroLabel();
             this.lblDescripcion = new MetroFramework.Controls.MetroLabel();
             this.lblBienvenida = new MetroFramework.Controls.MetroLabel();
-            this.pbContraseña = new System.Windows.Forms.PictureBox();
             this.pbLogo = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -48,6 +48,9 @@
             // 
             // panel1
             // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.LightSeaGreen;
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Location = new System.Drawing.Point(0, 30);
@@ -57,6 +60,9 @@
             // 
             // panel2
             // 
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.Controls.Add(this.pbContraseña);
             this.panel2.Controls.Add(this.btnSiguiente);
@@ -72,8 +78,21 @@
             this.panel2.Size = new System.Drawing.Size(754, 341);
             this.panel2.TabIndex = 0;
             // 
+            // pbContraseña
+            // 
+            this.pbContraseña.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pbContraseña.Image = global::MedTech.Properties.Resources.show;
+            this.pbContraseña.Location = new System.Drawing.Point(471, 217);
+            this.pbContraseña.Name = "pbContraseña";
+            this.pbContraseña.Size = new System.Drawing.Size(23, 23);
+            this.pbContraseña.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbContraseña.TabIndex = 9;
+            this.pbContraseña.TabStop = false;
+            this.pbContraseña.Click += new System.EventHandler(this.pbContraseña_Click);
+            // 
             // btnSiguiente
             // 
+            this.btnSiguiente.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSiguiente.BackColor = System.Drawing.Color.LightSeaGreen;
             this.btnSiguiente.ForeColor = System.Drawing.Color.White;
             this.btnSiguiente.Location = new System.Drawing.Point(651, 293);
@@ -88,6 +107,7 @@
             // 
             // tbContraseña
             // 
+            this.tbContraseña.Anchor = System.Windows.Forms.AnchorStyles.None;
             // 
             // 
             // 
@@ -119,6 +139,7 @@
             // 
             // lblContraseña
             // 
+            this.lblContraseña.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblContraseña.AutoSize = true;
             this.lblContraseña.Location = new System.Drawing.Point(325, 195);
             this.lblContraseña.Name = "lblContraseña";
@@ -128,6 +149,7 @@
             // 
             // tbUsuario
             // 
+            this.tbUsuario.Anchor = System.Windows.Forms.AnchorStyles.None;
             // 
             // 
             // 
@@ -159,6 +181,7 @@
             // 
             // lblUsuario
             // 
+            this.lblUsuario.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblUsuario.AutoSize = true;
             this.lblUsuario.Location = new System.Drawing.Point(335, 125);
             this.lblUsuario.Name = "lblUsuario";
@@ -168,6 +191,7 @@
             // 
             // lblDescripcion
             // 
+            this.lblDescripcion.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblDescripcion.AutoSize = true;
             this.lblDescripcion.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.lblDescripcion.Location = new System.Drawing.Point(196, 75);
@@ -178,6 +202,7 @@
             // 
             // lblBienvenida
             // 
+            this.lblBienvenida.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblBienvenida.AutoSize = true;
             this.lblBienvenida.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.lblBienvenida.FontWeight = MetroFramework.MetroLabelWeight.Bold;
@@ -187,17 +212,6 @@
             this.lblBienvenida.Style = MetroFramework.MetroColorStyle.Black;
             this.lblBienvenida.TabIndex = 1;
             this.lblBienvenida.Text = "Bienvenido a MedTech";
-            // 
-            // pbContraseña
-            // 
-            this.pbContraseña.Image = global::MedTech.Properties.Resources.show;
-            this.pbContraseña.Location = new System.Drawing.Point(471, 217);
-            this.pbContraseña.Name = "pbContraseña";
-            this.pbContraseña.Size = new System.Drawing.Size(23, 23);
-            this.pbContraseña.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbContraseña.TabIndex = 9;
-            this.pbContraseña.TabStop = false;
-            this.pbContraseña.Click += new System.EventHandler(this.pbContraseña_Click);
             // 
             // pbLogo
             // 
@@ -216,7 +230,6 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MaximizeBox = false;
             this.Name = "InicioFrm";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.InSesForm_FormClosing);
             this.panel1.ResumeLayout(false);

@@ -278,7 +278,7 @@
             // 
             this.btnGuardar.BackColor = System.Drawing.Color.LightSeaGreen;
             this.btnGuardar.ForeColor = System.Drawing.Color.White;
-            this.btnGuardar.Location = new System.Drawing.Point(520, 384);
+            this.btnGuardar.Location = new System.Drawing.Point(540, 384);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(75, 23);
             this.btnGuardar.TabIndex = 13;
@@ -292,7 +292,7 @@
             // 
             this.btnCancelar.BackColor = System.Drawing.Color.LightSeaGreen;
             this.btnCancelar.ForeColor = System.Drawing.Color.White;
-            this.btnCancelar.Location = new System.Drawing.Point(601, 384);
+            this.btnCancelar.Location = new System.Drawing.Point(621, 384);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(75, 23);
             this.btnCancelar.TabIndex = 14;
@@ -306,7 +306,7 @@
             // 
             this.btnVolver.BackColor = System.Drawing.Color.LightSeaGreen;
             this.btnVolver.ForeColor = System.Drawing.Color.White;
-            this.btnVolver.Location = new System.Drawing.Point(682, 384);
+            this.btnVolver.Location = new System.Drawing.Point(702, 384);
             this.btnVolver.Name = "btnVolver";
             this.btnVolver.Size = new System.Drawing.Size(75, 23);
             this.btnVolver.TabIndex = 15;
@@ -365,7 +365,7 @@
             this.dgvExpediente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvExpediente.Location = new System.Drawing.Point(23, 413);
             this.dgvExpediente.Name = "dgvExpediente";
-            this.dgvExpediente.Size = new System.Drawing.Size(734, 164);
+            this.dgvExpediente.Size = new System.Drawing.Size(754, 164);
             this.dgvExpediente.TabIndex = 16;
             // 
             // btnReporte

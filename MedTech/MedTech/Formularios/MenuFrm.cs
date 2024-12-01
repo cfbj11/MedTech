@@ -15,34 +15,60 @@ namespace MedTech.Formularios
     public partial class MenuFrm : MetroFramework.Forms.MetroForm
     {
         private readonly AccForm menu;
+        private string user;
         private bool flag = true;
 
-        public MenuFrm()
+        public MenuFrm(string user)
         {
             InitializeComponent();
             lblMedTech.Select();
+            this.user = user;
+            Ocultar();
             menu = new AccForm(this);
             timer1.Enabled = true;
         }
 
+        public void Actualizar(string user)
+        {
+            this.user = user;
+            Ocultar();
+        }
+
+        private void Ocultar()
+        {
+            if (int.TryParse(user, out int id))
+            {
+                bool visible = id <= 50;
+                btnExped.Visible = visible;
+                pbExpediente.Visible = visible;
+                if (!visible)
+                {
+                    btnAggCita.Location = new Point(btnAggCita.Location.X, 220);
+                    btnAggPaciente.Location = new Point(btnAggPaciente.Location.X, 176);
+                    pbAggCita.Location = new Point(pbAggCita.Location.X, 130);
+                    pbAggPaciente.Location = new Point(pbAggPaciente.Location.X, 176);
+                }
+            }
+        }
+
         private void timer1_Tick(object sender, EventArgs e)
         {
-            lblFechaHora.Text = $"{DateTime.Now.ToShortDateString()}\n{DateTime.Now.ToString("hh:mm:ss")}";
+            lblFechaHora.Text = $"{DateTime.Now:dd/MM/yy}\n{DateTime.Now:HH:mm:ss}";
         }
 
         private void btnAggRegCita_Click(object sender, EventArgs e)
         {
-            menu.AgregarCita(ref flag);
+            menu.AgregarCita(ref flag, user);
         }
 
         private void btnPaciente_Click(object sender, EventArgs e)
         {
-            menu.AgregarPaciente(ref flag);
+            menu.AgregarPaciente(ref flag, user);
         }
 
         private void btnExpedMed_Click(object sender, EventArgs e)
         {
-            menu.ExpedMed(ref flag);
+            menu.ExpedMed(ref flag, user);
         }
 
         private void btnCerrSesion_Click(object sender, EventArgs e)
