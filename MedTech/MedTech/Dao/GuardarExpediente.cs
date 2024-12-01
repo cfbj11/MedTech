@@ -47,13 +47,13 @@ namespace MedTech.Dao
                 || string.IsNullOrWhiteSpace(expediente.FechaCita)
                 || string.IsNullOrWhiteSpace(expediente.Motivo)
                 || string.IsNullOrWhiteSpace(expediente.Diagnostico))
-                throw new Exception("Por favor, complete los campos obligatorios.");
+                throw new Exception("Por favor, complete todos los campos.");
         }
 
         public void Validar(Expediente expediente)
         {
             if (!int.TryParse(expediente.IdExpediente, out _))
-                throw new Exception("Ingrese un valor válido.");
+                throw new Exception("Ingrese un valor válido para el ID Expediente.");
         }
 
         public string Datos(Expediente expediente)

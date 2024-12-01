@@ -50,10 +50,13 @@ namespace MedTech.Formularios
             try
             {
                 string enfermedades = string.Join(", ", lbEnfermedades.Items.Cast<string>());
+                string idPaciente = tbId.Text;
+                string contraseña = guardarPaciente.GenerarContraseña();
                 Paciente paciente = new Paciente()
                 {
                     Nombre = tbNombrePac.Text,
                     Apellido = tbApellidoPac.Text,
+                    IdPaciente = idPaciente,
                     FechaNac = dtFechaNac.Value.ToString("dd/MM/yyyy"),
                     Antecedentes = tbAntecedentes.Text,
                     Enfermedades = enfermedades,
@@ -65,7 +68,7 @@ namespace MedTech.Formularios
                 dgvPaciente.DataSource = null;
                 dgvPaciente.DataSource = listaPaciente;
                 accForms.LimpiarCampos();
-                MetroMessageBox.Show(this, "Paciente registrado exitosamente", "Paciente ingresado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MetroMessageBox.Show(this, $"Paciente registrado exitosamente\nID Asignado: {idPaciente}\nContraseña: {contraseña}", "Paciente ingresado", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)
             {
@@ -163,8 +166,17 @@ namespace MedTech.Formularios
                 if (cbxCirugias != null)
                 {
                     cbxCirugias.Checked = !cbxCirugias.Checked;
-                    btnGuardar.Focus();
+                    tbId.Focus();
                 }
+            }
+        }
+
+        private void tbId_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                e.Handled = true;
+                btnGuardar.Focus();
             }
         }
     }

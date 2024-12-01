@@ -72,14 +72,14 @@ namespace MedTech.Dao
             if (string.IsNullOrWhiteSpace(cita.Nombre)
                 || string.IsNullOrWhiteSpace(cita.Apellido)
                 || string.IsNullOrWhiteSpace(cita.IdPaciente)
-                || string.IsNullOrWhiteSpace(cita.Doctor)
                 || string.IsNullOrWhiteSpace(cita.FechaCita)
                 || string.IsNullOrWhiteSpace(cita.HoraCita)
+                || string.IsNullOrWhiteSpace(cita.Doctor)
                 || string.IsNullOrWhiteSpace(cita.Especialidad)
                 || string.IsNullOrWhiteSpace(cita.Contacto)
                 || string.IsNullOrWhiteSpace(cita.TipoContacto)
                 || string.IsNullOrWhiteSpace(cita.CostoConsulta))
-                throw new Exception("Por favor, complete los campos obligatorios.");
+                throw new Exception("Por favor, complete todos los campos.");
         }
     }
 }

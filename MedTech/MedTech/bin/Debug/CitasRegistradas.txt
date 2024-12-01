@@ -1,0 +1,10 @@
+Nombre: asdsadasd
+Apellido: asdasdasd
+ID Paciente: 123123
+Doctor: sadasdasdasd
+Fecha de Cita: 19/12/2024
+Hora de Cita: 13:00
+Especialidad: Gerontología
+Contacto: 23432424
+Costo de la Consulta: 2123
+---------------------------------

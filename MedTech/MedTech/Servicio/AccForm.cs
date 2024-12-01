@@ -144,6 +144,7 @@ namespace MedTech.Servicio
                 aggPacienteFrm.lbEnfermedades.Items.Clear();
                 aggPacienteFrm.cbxAlergias.Checked = false;
                 aggPacienteFrm.cbxCirugias.Checked = false;
+                aggPacienteFrm.tbId.Clear();
             }
 
             if (form is ExpedienteFrm expedienteFrm)    //  Limpia campos de ExpedForm

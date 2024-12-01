@@ -52,6 +52,8 @@
             this.dgvPaciente = new System.Windows.Forms.DataGridView();
             this.btnReporte = new MetroFramework.Controls.MetroButton();
             this.pbLogo = new System.Windows.Forms.PictureBox();
+            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
+            this.tbId = new MetroFramework.Controls.MetroTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPaciente)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
             this.SuspendLayout();
@@ -62,9 +64,9 @@
             this.lblNombrePac.FontWeight = MetroFramework.MetroLabelWeight.Bold;
             this.lblNombrePac.Location = new System.Drawing.Point(150, 120);
             this.lblNombrePac.Name = "lblNombrePac";
-            this.lblNombrePac.Size = new System.Drawing.Size(151, 19);
+            this.lblNombrePac.Size = new System.Drawing.Size(157, 19);
             this.lblNombrePac.TabIndex = 1;
-            this.lblNombrePac.Text = "Nombre del Paciente";
+            this.lblNombrePac.Text = "Nombre del Paciente*";
             // 
             // tbNombrePac
             // 
@@ -103,9 +105,9 @@
             this.lblApellidoPac.FontWeight = MetroFramework.MetroLabelWeight.Bold;
             this.lblApellidoPac.Location = new System.Drawing.Point(150, 180);
             this.lblApellidoPac.Name = "lblApellidoPac";
-            this.lblApellidoPac.Size = new System.Drawing.Size(152, 19);
+            this.lblApellidoPac.Size = new System.Drawing.Size(158, 19);
             this.lblApellidoPac.TabIndex = 3;
-            this.lblApellidoPac.Text = "Apellido del Paciente";
+            this.lblApellidoPac.Text = "Apellido del Paciente*";
             // 
             // tbApellidoPac
             // 
@@ -144,9 +146,9 @@
             this.lblFechaNac.FontWeight = MetroFramework.MetroLabelWeight.Bold;
             this.lblFechaNac.Location = new System.Drawing.Point(150, 240);
             this.lblFechaNac.Name = "lblFechaNac";
-            this.lblFechaNac.Size = new System.Drawing.Size(149, 19);
+            this.lblFechaNac.Size = new System.Drawing.Size(155, 19);
             this.lblFechaNac.TabIndex = 5;
-            this.lblFechaNac.Text = "Fecha de Nacimiento";
+            this.lblFechaNac.Text = "Fecha de Nacimiento*";
             // 
             // dtFechaNac
             // 
@@ -226,7 +228,7 @@
             // 
             this.lblAlerCir.AutoSize = true;
             this.lblAlerCir.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.lblAlerCir.Location = new System.Drawing.Point(400, 262);
+            this.lblAlerCir.Location = new System.Drawing.Point(400, 243);
             this.lblAlerCir.Name = "lblAlerCir";
             this.lblAlerCir.Size = new System.Drawing.Size(169, 19);
             this.lblAlerCir.TabIndex = 14;
@@ -235,7 +237,7 @@
             // cbxAlergias
             // 
             this.cbxAlergias.AutoSize = true;
-            this.cbxAlergias.Location = new System.Drawing.Point(400, 284);
+            this.cbxAlergias.Location = new System.Drawing.Point(401, 265);
             this.cbxAlergias.Name = "cbxAlergias";
             this.cbxAlergias.Size = new System.Drawing.Size(65, 15);
             this.cbxAlergias.TabIndex = 15;
@@ -246,7 +248,7 @@
             // cbxCirugias
             // 
             this.cbxCirugias.AutoSize = true;
-            this.cbxCirugias.Location = new System.Drawing.Point(400, 305);
+            this.cbxCirugias.Location = new System.Drawing.Point(400, 286);
             this.cbxCirugias.Name = "cbxCirugias";
             this.cbxCirugias.Size = new System.Drawing.Size(66, 15);
             this.cbxCirugias.TabIndex = 16;
@@ -397,12 +399,55 @@
             this.pbLogo.TabIndex = 25;
             this.pbLogo.TabStop = false;
             // 
+            // metroLabel1
+            // 
+            this.metroLabel1.AutoSize = true;
+            this.metroLabel1.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.metroLabel1.Location = new System.Drawing.Point(400, 313);
+            this.metroLabel1.Name = "metroLabel1";
+            this.metroLabel1.Size = new System.Drawing.Size(96, 19);
+            this.metroLabel1.TabIndex = 26;
+            this.metroLabel1.Text = "ID Asignado*";
+            // 
+            // tbId
+            // 
+            // 
+            // 
+            // 
+            this.tbId.CustomButton.Image = null;
+            this.tbId.CustomButton.Location = new System.Drawing.Point(68, 1);
+            this.tbId.CustomButton.Name = "";
+            this.tbId.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.tbId.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.tbId.CustomButton.TabIndex = 1;
+            this.tbId.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.tbId.CustomButton.UseSelectable = true;
+            this.tbId.CustomButton.Visible = false;
+            this.tbId.Lines = new string[0];
+            this.tbId.Location = new System.Drawing.Point(400, 335);
+            this.tbId.MaxLength = 4;
+            this.tbId.Name = "tbId";
+            this.tbId.PasswordChar = '\0';
+            this.tbId.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.tbId.SelectedText = "";
+            this.tbId.SelectionLength = 0;
+            this.tbId.SelectionStart = 0;
+            this.tbId.ShortcutsEnabled = true;
+            this.tbId.Size = new System.Drawing.Size(90, 23);
+            this.tbId.TabIndex = 27;
+            this.tbId.UseSelectable = true;
+            this.tbId.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.tbId.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.tbId.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbId_KeyPress);
+            // 
             // AggPacienteFrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 600);
             this.ControlBox = false;
+            this.Controls.Add(this.tbId);
+            this.Controls.Add(this.metroLabel1);
             this.Controls.Add(this.btnReporte);
             this.Controls.Add(this.dgvPaciente);
             this.Controls.Add(this.lbEnfermedades);
@@ -462,5 +507,7 @@
         internal System.Windows.Forms.ListBox lbEnfermedades;
         internal System.Windows.Forms.DataGridView dgvPaciente;
         private MetroFramework.Controls.MetroButton btnReporte;
+        private MetroFramework.Controls.MetroLabel metroLabel1;
+        internal MetroFramework.Controls.MetroTextBox tbId;
     }
 }
