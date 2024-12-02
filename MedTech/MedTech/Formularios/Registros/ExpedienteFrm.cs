@@ -31,6 +31,36 @@ namespace MedTech.Formularios
             lblInstruccion.Select();
         }
 
+        public DataTable DatosExpediente()
+        {
+            DataTable dt = new DataTable();
+
+            dt.Columns.Add("IdExpediente");
+            dt.Columns.Add("NombrePac");
+            dt.Columns.Add("ApellidoPac");
+            dt.Columns.Add("FechaCita");
+            dt.Columns.Add("Motivo");
+            dt.Columns.Add("Diagnostico");
+
+            foreach (DataGridViewRow fila in dgvExpediente.Rows)
+            {
+                if (!fila.IsNewRow)
+                {
+                    DataRow dr = dt.NewRow();
+
+                    dr["IdExpediente"] = fila.Cells["IdExpediente"].Value.ToString();
+                    dr["NombrePac"] = fila.Cells["NombrePac"].Value.ToString();
+                    dr["ApellidoPac"] = fila.Cells["ApellidoPac"].Value.ToString();
+                    dr["FechaCita"] = fila.Cells["FechaCita"].Value;
+                    dr["Motivo"] = fila.Cells["Motivo"].Value.ToString();
+                    dr["Diagnostico"] = fila.Cells["Diagnostico"].Value.ToString();
+
+                    dt.Rows.Add(dr);
+                }
+            }
+            return dt;
+        }
+
         private void btnReporte_Click(object sender, EventArgs e)
         {
             accForms.VerReporte();

@@ -76,6 +76,9 @@
     <Compile Include="Dao\GuardarCita.cs" />
     <Compile Include="Dao\GuardarExpediente.cs" />
     <Compile Include="Dao\GuardarPaciente.cs" />
+    <Compile Include="DataSet\DsDato.cs">
+      <DependentUpon>DsDato.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DataSet\DsDato.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

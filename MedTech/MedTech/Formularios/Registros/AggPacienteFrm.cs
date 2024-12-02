@@ -31,6 +31,39 @@ namespace MedTech.Formularios
             lblInstruccion.Select();
         }
 
+        public DataTable DatosPaciente()
+        {
+            DataTable dt = new DataTable();
+
+            dt.Columns.Add("Nombre");
+            dt.Columns.Add("Apellido");
+            dt.Columns.Add("IdPaciente");
+            dt.Columns.Add("FechaNac");
+            dt.Columns.Add("Antecedentes");
+            dt.Columns.Add("Enfermedades");
+            dt.Columns.Add("Alergias");
+            dt.Columns.Add("Cirugias");
+
+            foreach (DataGridViewRow fila in dgvPaciente.Rows)
+            {
+                if (!fila.IsNewRow)
+                {
+                    DataRow dr = dt.NewRow();
+                    dr["Nombre"] = fila.Cells["Nombre"].Value.ToString();
+                    dr["Apellido"] = fila.Cells["Apellido"].Value.ToString();
+                    dr["IdPaciente"] = fila.Cells["IdPaciente"].Value.ToString();
+                    dr["FechaNac"] = fila.Cells["FechaNac"].Value;
+                    dr["Antecedentes"] = fila.Cells["Antecedentes"].Value.ToString();
+                    dr["Enfermedades"] = fila.Cells["Enfermedades"].Value.ToString();
+                    dr["Alergias"] = fila.Cells["Alergias"].Value.ToString();
+                    dr["Cirugias"] = fila.Cells["Cirugias"].Value.ToString();
+
+                    dt.Rows.Add(dr);
+                }
+            }
+            return dt;
+        }
+
         private void btnReporte_Click(object sender, EventArgs e)
         {
             accForms.VerReporte();

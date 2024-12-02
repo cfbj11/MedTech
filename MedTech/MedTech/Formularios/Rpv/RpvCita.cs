@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Reporting.WinForms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,15 +13,19 @@ namespace MedTech.Formularios
 {
     public partial class RpvCita : MetroFramework.Forms.MetroForm
     {
-        public RpvCita()
+        private DataTable datosCita;
+        public RpvCita(DataTable data)
         {
             InitializeComponent();
+            datosCita = data;
         }
 
         private void RpvCita_Load(object sender, EventArgs e)
         {
-
-            this.reportViewer1.RefreshReport();
+            reportViewer1.LocalReport.DataSources.Clear();
+            ReportDataSource rds = new ReportDataSource("DataSet1", datosCita);
+            reportViewer1.LocalReport.DataSources.Add(rds);
+            reportViewer1.RefreshReport();
         }
     }
 }

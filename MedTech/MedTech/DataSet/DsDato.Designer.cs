@@ -726,6 +726,8 @@ namespace MedTech.DataSet {
             
             private global::System.Data.DataColumn columnApellido;
             
+            private global::System.Data.DataColumn columnIdPaciente;
+            
             private global::System.Data.DataColumn columnFechaNac;
             
             private global::System.Data.DataColumn columnAntecedentes;
@@ -782,6 +784,14 @@ namespace MedTech.DataSet {
             public global::System.Data.DataColumn ApellidoColumn {
                 get {
                     return this.columnApellido;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn IdPacienteColumn {
+                get {
+                    return this.columnIdPaciente;
                 }
             }
             
@@ -862,11 +872,12 @@ namespace MedTech.DataSet {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public PacienteDTRow AddPacienteDTRow(string Nombre, string Apellido, string FechaNac, string Antecedentes, string Enfermedades, string Alergias, string Cirugias) {
+            public PacienteDTRow AddPacienteDTRow(string Nombre, string Apellido, string IdPaciente, string FechaNac, string Antecedentes, string Enfermedades, string Alergias, string Cirugias) {
                 PacienteDTRow rowPacienteDTRow = ((PacienteDTRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         Nombre,
                         Apellido,
+                        IdPaciente,
                         FechaNac,
                         Antecedentes,
                         Enfermedades,
@@ -896,6 +907,7 @@ namespace MedTech.DataSet {
             internal void InitVars() {
                 this.columnNombre = base.Columns["Nombre"];
                 this.columnApellido = base.Columns["Apellido"];
+                this.columnIdPaciente = base.Columns["IdPaciente"];
                 this.columnFechaNac = base.Columns["FechaNac"];
                 this.columnAntecedentes = base.Columns["Antecedentes"];
                 this.columnEnfermedades = base.Columns["Enfermedades"];
@@ -910,6 +922,8 @@ namespace MedTech.DataSet {
                 base.Columns.Add(this.columnNombre);
                 this.columnApellido = new global::System.Data.DataColumn("Apellido", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnApellido);
+                this.columnIdPaciente = new global::System.Data.DataColumn("IdPaciente", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnIdPaciente);
                 this.columnFechaNac = new global::System.Data.DataColumn("FechaNac", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnFechaNac);
                 this.columnAntecedentes = new global::System.Data.DataColumn("Antecedentes", typeof(string), null, global::System.Data.MappingType.Element);
@@ -1706,6 +1720,22 @@ namespace MedTech.DataSet {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string IdPaciente {
+                get {
+                    try {
+                        return ((string)(this[this.tablePacienteDT.IdPacienteColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'IdPaciente\' de la tabla \'PacienteDT\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablePacienteDT.IdPacienteColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public string FechaNac {
                 get {
                     try {
@@ -1806,6 +1836,18 @@ namespace MedTech.DataSet {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void SetApellidoNull() {
                 this[this.tablePacienteDT.ApellidoColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsIdPacienteNull() {
+                return this.IsNull(this.tablePacienteDT.IdPacienteColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetIdPacienteNull() {
+                this[this.tablePacienteDT.IdPacienteColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]

@@ -32,6 +32,45 @@ namespace MedTech.Formularios
             lblInstruccion.Select();
         }
 
+        public DataTable DatosCita()
+        {
+            DataTable dt = new DataTable();
+
+            dt.Columns.Add("Nombre");
+            dt.Columns.Add("Apellido");
+            dt.Columns.Add("IdPaciente");
+            dt.Columns.Add("FechaCita");
+            dt.Columns.Add("HoraCita");
+            dt.Columns.Add("Doctor");
+            dt.Columns.Add("Especialidad");
+            dt.Columns.Add("TipoContacto");
+            dt.Columns.Add("Contacto");
+            dt.Columns.Add("CostoConsulta");
+
+            foreach (DataGridViewRow fila in dgvCita.Rows)
+            {
+                // Verificar que la fila no sea la fila nueva (que está en blanco)
+                if (!fila.IsNewRow)
+                {
+                    DataRow dr = dt.NewRow();
+
+                    dr["Nombre"] = fila.Cells["Nombre"].Value.ToString();
+                    dr["Apellido"] = fila.Cells["Apellido"].Value.ToString();
+                    dr["IdPaciente"] = fila.Cells["IdPaciente"].Value.ToString();
+                    dr["FechaCita"] = fila.Cells["FechaCita"].Value;
+                    dr["HoraCita"] = fila.Cells["HoraCita"].Value.ToString();
+                    dr["Doctor"] = fila.Cells["Doctor"].Value.ToString();
+                    dr["Especialidad"] = fila.Cells["Especialidad"].Value.ToString();
+                    dr["TipoContacto"] = fila.Cells["TipoContacto"].Value.ToString();
+                    dr["Contacto"] = fila.Cells["Contacto"].Value.ToString();
+                    dr["CostoConsulta"] = fila.Cells["CostoConsulta"].Value;
+
+                    dt.Rows.Add(dr);
+                }
+            }
+            return dt;
+        }
+
         private void btnReporte_Click(object sender, EventArgs e)
         {
             accForms.VerReporte();

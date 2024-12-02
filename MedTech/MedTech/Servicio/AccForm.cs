@@ -3,6 +3,7 @@ using MedTech.Modelos;
 using MetroFramework;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -77,19 +78,22 @@ namespace MedTech.Servicio
 
         public void VerReporte()
         {
-            if (form is AggCitaFrm)
+            if (form is AggCitaFrm aggCitaFrm)
             {
-                RpvCita rpvCita = new RpvCita();
+                DataTable datosCita = aggCitaFrm.DatosCita();
+                RpvCita rpvCita = new RpvCita(datosCita);
                 rpvCita.Show();
             }
-            else if (form is AggPacienteFrm)
+            else if (form is AggPacienteFrm aggPacienteFrm)
             {
-                RpvPaciente rpvPaciente = new RpvPaciente();
+                DataTable datosPaciente = aggPacienteFrm.DatosPaciente();
+                RpvPaciente rpvPaciente = new RpvPaciente(datosPaciente);
                 rpvPaciente.Show();
             }
-            else if (form is ExpedienteFrm)
+            else if (form is ExpedienteFrm expedienteFrm)
             {
-                RpvExpediente rpvExpediente = new RpvExpediente();
+                DataTable datosExpediente = expedienteFrm.DatosExpediente();
+                RpvExpediente rpvExpediente = new RpvExpediente(datosExpediente);
                 rpvExpediente.Show();
             }
         }
