@@ -1,0 +1,33 @@
+ID Paciente: 0501
+Nombre: Lionel
+Apellido: Romero
+Fecha de Nacimiento: 17/06/1994
+Antecedentes:
+En su familia materna algunos sufren de sordera
+Enfermedades:
+Sordera
+Alergias: No
+Cirugias: No
+---------------------------------
+ID Paciente: 0502
+Nombre: Armando
+Apellido: Cárcamo
+Fecha de Nacimiento: 28/02/2001
+Antecedentes:
+Su padre tiene cáncer de páncreas
+Enfermedades:
+Cáncer de páncreas
+Alergias: No
+Cirugias: Sí
+---------------------------------
+ID Paciente: 0503
+Nombre: Rosa
+Apellido: Mejilla
+Fecha de Nacimiento: 22/08/1990
+Antecedentes:
+Ha sufrido problemas cardíacos anteriormente
+Enfermedades:
+
+Alergias: No
+Cirugias: Sí
+---------------------------------

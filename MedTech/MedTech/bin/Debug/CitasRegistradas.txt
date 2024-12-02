@@ -1,0 +1,30 @@
+Nombre: Carmelo
+Apellido: Cabrera
+ID Paciente: 0230
+Doctor: Alberto Martínez
+Fecha de Cita: 10/12/2024
+Hora de Cita: 15:00
+Especialidad: Dermatología
+Contacto: 85860783
+Costo de la Consulta: 80
+---------------------------------
+Nombre: Fabrizio
+Apellido: García
+ID Paciente: 0310
+Doctor: Humberto Paez
+Fecha de Cita: 06/12/2024
+Hora de Cita: 16:00
+Especialidad: Neurología
+Contacto: fabriziog@gmail.com
+Costo de la Consulta: 50
+---------------------------------
+Nombre: Fernando
+Apellido: Zapata
+ID Paciente: 0415
+Doctor: Carlos Ruíz
+Fecha de Cita: 13/12/2024
+Hora de Cita: 12:00
+Especialidad: Cardiología
+Contacto: 89817643
+Costo de la Consulta: 100
+---------------------------------

@@ -1,0 +1,27 @@
+ID Expediente: 0117
+Nombre: Gabriel
+Apellido: Arguello
+Fecha de Cita: 26/11/2024
+Motivo de Consulta: 
+Seguimiento de tratamiento para recuperación de rodilla
+Diagnóstico: 
+El paciente ha presentado mejoría desde la cita anterior. Seguirá con el tratamiento indicado y se programará otra cita.
+---------------------------------
+ID Expediente: 0334
+Nombre: Camila
+Apellido: De Santos
+Fecha de Cita: 26/11/2024
+Motivo de Consulta: 
+Concurrencia de desmayos
+Diagnóstico: 
+Se ha diagnósticado que la paciente sufre de problemas de ansiedad, que le lleva a sufrir desmayos repentinos. Se le hará tratamiento correspondiente
+---------------------------------
+ID Expediente: 0456
+Nombre: Patricio
+Apellido: Rodriguez
+Fecha de Cita: 29/11/2024
+Motivo de Consulta: 
+Seguimiento de tratamiento para influenza
+Diagnóstico: 
+El paciente continúa presentando los síntomas de la enfermedad. Se modificará la receta indicada
+---------------------------------
