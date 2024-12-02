@@ -16,12 +16,13 @@ namespace MedTech.Formularios
 {
     public partial class ExpedienteFrm : MetroFramework.Forms.MetroForm
     {
-        private readonly AccForm accForms;
-        private readonly GuardarExpediente guardarExpediente;
-        private List<Expediente> listaExpediente = new List<Expediente>();
-        private string user;
-        private bool flag = true;
+        private readonly AccForm accForms;  //  Instancia para gestionar acciones comunes del formulario
+        private readonly GuardarExpediente guardarExpediente;   //  Clase encargada de guardar los expedientes en el archivo
+        private List<Expediente> listaExpediente = new List<Expediente>();  //  Lista para gestionar los expedientes
+        private string user;    //  Usuario actual
+        private bool flag = true;   //  Bandera para determinar si se debe cerrar la aplicación
 
+        //  Constructor que inicializa el formulario y los servicios necesarios
         public ExpedienteFrm(string user)
         {
             InitializeComponent();
@@ -31,10 +32,12 @@ namespace MedTech.Formularios
             lblInstruccion.Select();
         }
 
+        //  Genera un DataTable a partir de los datos ingresados
         public DataTable DatosExpediente()
         {
             DataTable dt = new DataTable();
 
+            //  Se define las columnas del DataTable
             dt.Columns.Add("IdExpediente");
             dt.Columns.Add("NombrePac");
             dt.Columns.Add("ApellidoPac");
@@ -42,9 +45,10 @@ namespace MedTech.Formularios
             dt.Columns.Add("Motivo");
             dt.Columns.Add("Diagnostico");
 
+            //  Rellenar el DataTable con los datos de cada fila
             foreach (DataGridViewRow fila in dgvExpediente.Rows)
             {
-                if (!fila.IsNewRow)
+                if (!fila.IsNewRow) //  Ignora la fila nueva vacía
                 {
                     DataRow dr = dt.NewRow();
 
@@ -61,15 +65,18 @@ namespace MedTech.Formularios
             return dt;
         }
 
+        //  Evento del botón para generar un reporte de los expedientes
         private void btnReporte_Click(object sender, EventArgs e)
         {
             accForms.VerReporte();
         }
 
+        //  Evento del botón para guardar un nuevo expediente
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             try
             {
+                //  Crear objeto con los datos ingresados
                 Expediente expediente = new Expediente()
                 {
                     IdExpediente = tbIdExped.Text,
@@ -79,11 +86,11 @@ namespace MedTech.Formularios
                     Motivo = tbMotivoCon.Text,
                     Diagnostico = tbDiagnostico.Text
                 };
-                guardarExpediente.Expediente(expediente);
+                guardarExpediente.Expediente(expediente);   //  Guardar el expediente y actualizar la lista
                 listaExpediente.Add(expediente);
                 dgvExpediente.DataSource = null;
                 dgvExpediente.DataSource = listaExpediente;
-                accForms.LimpiarCampos();
+                accForms.LimpiarCampos();   //  Limpiar los campos del formulario
                 MetroMessageBox.Show(this, "Expediente creado/actualizado exitosamente", "Expediente Creado/Actualizado", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)
@@ -92,20 +99,25 @@ namespace MedTech.Formularios
             }
         }
 
+        //  Evento del botón para cancelar la operación
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             accForms.Cancelar();
         }
 
+        //  Evento del botón para volver al menú anterior
         private void btnVolver_Click(object sender, EventArgs e)
         {
             accForms.Volver(ref flag, user);
         }
 
+        //  Evento de cierre del formulario
         private void ExpedForm_FormClosing(object sender, FormClosingEventArgs e)
         {
             if (flag) Application.Exit();
         }
+
+        //  Métodos para manejar eventos que permiten la navegación por el formulario
 
         private void tbIdExped_KeyPress(object sender, KeyPressEventArgs e)
         {

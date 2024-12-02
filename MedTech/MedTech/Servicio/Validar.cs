@@ -32,7 +32,7 @@ namespace MedTech.Servicio
                 if (ValidarCred(user, password))    //  Valida las credenciales del usuario
                 {
                     flag = false;
-                    MostrarMenu(user);
+                    MostrarMenu(user);  //  Muestra formulario de menú
                 }
                 else
                     MsjError("Usuario o contraseña incorrectos. Inténtelo de nuevo."); //  Mensaje de error

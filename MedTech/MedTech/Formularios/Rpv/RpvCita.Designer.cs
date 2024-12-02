@@ -33,7 +33,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RpvCita));
             this.citaDTBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dsDato = new MedTech.DataSet.DsDato();
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.rptCita = new Microsoft.Reporting.WinForms.ReportViewer();
             this.dsDatoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.citaDTBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsDato)).BeginInit();
@@ -50,18 +50,18 @@
             this.dsDato.DataSetName = "DsDato";
             this.dsDato.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // reportViewer1
+            // rptCita
             // 
-            this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.rptCita.Dock = System.Windows.Forms.DockStyle.Fill;
             reportDataSource1.Name = "DataSet1";
             reportDataSource1.Value = this.citaDTBindingSource;
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
-            this.reportViewer1.LocalReport.ReportEmbeddedResource = "MedTech.Reportes.RptCita.rdlc";
-            this.reportViewer1.Location = new System.Drawing.Point(20, 60);
-            this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(760, 370);
-            this.reportViewer1.TabIndex = 0;
+            this.rptCita.LocalReport.DataSources.Add(reportDataSource1);
+            this.rptCita.LocalReport.ReportEmbeddedResource = "MedTech.Reportes.RptCita.rdlc";
+            this.rptCita.Location = new System.Drawing.Point(20, 60);
+            this.rptCita.Name = "rptCita";
+            this.rptCita.ServerReport.BearerToken = null;
+            this.rptCita.Size = new System.Drawing.Size(760, 370);
+            this.rptCita.TabIndex = 0;
             // 
             // dsDatoBindingSource
             // 
@@ -73,7 +73,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.reportViewer1);
+            this.Controls.Add(this.rptCita);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "RpvCita";
             this.Load += new System.EventHandler(this.RpvCita_Load);
@@ -86,7 +86,7 @@
 
         #endregion
 
-        private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
+        private Microsoft.Reporting.WinForms.ReportViewer rptCita;
         private System.Windows.Forms.BindingSource dsDatoBindingSource;
         private DataSet.DsDato dsDato;
         private System.Windows.Forms.BindingSource citaDTBindingSource;

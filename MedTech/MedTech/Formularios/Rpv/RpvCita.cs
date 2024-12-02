@@ -13,19 +13,22 @@ namespace MedTech.Formularios
 {
     public partial class RpvCita : MetroFramework.Forms.MetroForm
     {
-        private DataTable datosCita;
+        private DataTable datosCita;    //  Tabla de datos de citas para generar el reporte
+
+        //  Constructor que inicializa el formulario con los datos necesarios
         public RpvCita(DataTable data)
         {
             InitializeComponent();
             datosCita = data;
         }
 
+        //  Evento al cargar el formulario
         private void RpvCita_Load(object sender, EventArgs e)
         {
-            reportViewer1.LocalReport.DataSources.Clear();
-            ReportDataSource rds = new ReportDataSource("DataSet1", datosCita);
-            reportViewer1.LocalReport.DataSources.Add(rds);
-            reportViewer1.RefreshReport();
+            rptCita.LocalReport.DataSources.Clear();  //  Limpiar fuentes de datos
+            ReportDataSource rds = new ReportDataSource("DataSet1", datosCita); //  Crear nueva fuente de datos
+            rptCita.LocalReport.DataSources.Add(rds); //  Agregar fuente de datos al ReportViewer
+            rptCita.RefreshReport();  //  Refrescar reporte actualizado
         }
     }
 }

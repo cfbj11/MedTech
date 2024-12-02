@@ -14,10 +14,11 @@ namespace MedTech.Formularios
 {
     public partial class InicioFrm : MetroFramework.Forms.MetroForm
     {
-        private readonly Validar validar;
-        private bool flag = true;
-        private bool enseñar = false;
-
+        private readonly Validar validar;   //  Clase para validar el acceso al sistema
+        private bool flag = true;   //  Bandera para controlar si la aplicación debe cerrarse
+        private bool enseñar = false;   //  Indica si la contraseña debe mostrarse o debe estar oculta
+        
+        //  Constructor que inicializa formulario
         public InicioFrm()
         {
             InitializeComponent();
@@ -25,9 +26,10 @@ namespace MedTech.Formularios
             validar = new Validar(this, "usuarios.txt");
         }
 
+        //  Evento que maneja si se muestra o se oculta la contraseña
         private void pbContraseña_Click(object sender, EventArgs e)
         {
-            enseñar = !enseñar;
+            enseñar = !enseñar; //  Alternar entre mostrar y ocultar
             if (enseñar)
             {
                 tbContraseña.PasswordChar = '\0';
@@ -40,15 +42,19 @@ namespace MedTech.Formularios
             }
         }
 
+        //  Evento que maneja la validación de las credenciales
         private void btnSiguiente_Click(object sender, EventArgs e)
         {
             validar.AccederMenu(tbUsuario.Text.Trim(), tbContraseña.Text.Trim(), ref flag);
         }
 
+        //  Evento de cierre del formulario
         private void InSesForm_FormClosing(object sender, FormClosingEventArgs e)
         {
             if (flag) Application.Exit();
         }
+
+        //  Métodos para manejar eventos que permiten la navegación por el formulario
 
         private void tbUsuario_KeyPress(object sender, KeyPressEventArgs e)
         {

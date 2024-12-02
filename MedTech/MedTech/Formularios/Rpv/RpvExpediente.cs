@@ -13,19 +13,22 @@ namespace MedTech.Formularios
 {
     public partial class RpvExpediente : MetroFramework.Forms.MetroForm
     {
-        private DataTable datosExpediente;
+        private DataTable datosExpediente;  //  Tabla de datos de expedientes para generar reporte
+
+        //  Constructor que inicializa el formulario con los datos necesarios
         public RpvExpediente(DataTable data)
         {
             InitializeComponent();
             datosExpediente = data;
         }
 
+        //  Evento al cargar el formulario
         private void RpvExpediente_Load(object sender, EventArgs e)
         {
-            reportViewer1.LocalReport.DataSources.Clear();
-            ReportDataSource rds = new ReportDataSource("DataSet1", datosExpediente);
-            reportViewer1.LocalReport.DataSources.Add(rds);
-            reportViewer1.RefreshReport();
+            rptExpediente.LocalReport.DataSources.Clear();  //  Limpiar fuente de datos
+            ReportDataSource rds = new ReportDataSource("DataSet1", datosExpediente);   //  Crear nueva fuente de datos
+            rptExpediente.LocalReport.DataSources.Add(rds); //  Agregar fuente de datos
+            rptExpediente.RefreshReport();  //  Refrescar reporte actualizado
         }
     }
 }

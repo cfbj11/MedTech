@@ -17,12 +17,13 @@ namespace MedTech.Formularios
 {
     public partial class AggCitaFrm : MetroFramework.Forms.MetroForm
     {
-        private readonly AccForm accForms;
-        private readonly GuardarCita guardarCita;
-        private List<Cita> listaCitas = new List<Cita>();
-        private string user;
-        private bool flag = true;
+        private readonly AccForm accForms;  //  Instancia para gestionar acciones comunes del formulario
+        private readonly GuardarCita guardarCita;   //  Clase encargada de guardar citas en el archivo
+        private List<Cita> listaCitas = new List<Cita>();   //  Lista para gestionar las citas
+        private string user;    //  Usuario actual
+        private bool flag = true;   //  Bandera para determinar si se debe cerrar la aplicación
 
+        //  Constructor que inicializa los componentes del formulario y las dependencias
         public AggCitaFrm(string user)
         {
             InitializeComponent();
@@ -32,10 +33,12 @@ namespace MedTech.Formularios
             lblInstruccion.Select();
         }
 
+        //  Genera un DataTable basado en los datos ingresados
         public DataTable DatosCita()
         {
             DataTable dt = new DataTable();
 
+            //  Se define las columnas del DataTable que coinciden con los campos de la cita
             dt.Columns.Add("Nombre");
             dt.Columns.Add("Apellido");
             dt.Columns.Add("IdPaciente");
@@ -47,10 +50,10 @@ namespace MedTech.Formularios
             dt.Columns.Add("Contacto");
             dt.Columns.Add("CostoConsulta");
 
+            //  Rellena el DataTable con los datos de cada fila
             foreach (DataGridViewRow fila in dgvCita.Rows)
             {
-                // Verificar que la fila no sea la fila nueva (que está en blanco)
-                if (!fila.IsNewRow)
+                if (!fila.IsNewRow) //  Ignora la fila nueva vacía
                 {
                     DataRow dr = dt.NewRow();
 
@@ -71,15 +74,18 @@ namespace MedTech.Formularios
             return dt;
         }
 
+        //  Evento del botón para generar un reporte
         private void btnReporte_Click(object sender, EventArgs e)
         {
             accForms.VerReporte();
         }
 
+        //  Evento del botón para guardar una nueva cita
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             try
             {
+                //  Crear nuevo objeto con los datos del formulario
                 Cita cita = new Cita()
                 {
                     Nombre = tbNombrePac.Text,
@@ -93,11 +99,11 @@ namespace MedTech.Formularios
                     TipoContacto = cbxTelefono.Checked ? "Teléfono" : cbxCorreo.Checked ? "Correo" : null,
                     CostoConsulta = tbCosto.Text,
                 };
-                guardarCita.Guardar(cita);
-                listaCitas.Add(cita);
+                guardarCita.Guardar(cita);  //  Guardar la cita utilizando la clase GuardarCita
+                listaCitas.Add(cita);   //  Actualiza la lista de citas
                 dgvCita.DataSource = null;
                 dgvCita.DataSource = listaCitas;
-                accForms.LimpiarCampos();
+                accForms.LimpiarCampos();   //  Limpia los campos después de guardar la cita
                 MetroMessageBox.Show(this, "Cita registrada exitosamente", "Cita agregada", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)
@@ -106,20 +112,25 @@ namespace MedTech.Formularios
             }
         }   
 
+        //  Evento del botón para cancelar la operación
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             accForms.Cancelar();
         }
 
+        //  Evento para volver al menú anterior
         private void btnVolver_Click(object sender, EventArgs e)
         {
             accForms.Volver(ref flag, user);
         }
 
+        //  Evento de cierre del formulario
         private void AggCitaForm_FormClosing(object sender, FormClosingEventArgs e)
         {
             if (flag) Application.Exit();
         }
+
+        //  Métodos para manejar eventos que permiten la navegación por el formulario
 
         private void tbNombrePac_KeyPress(object sender, KeyPressEventArgs e)
         {

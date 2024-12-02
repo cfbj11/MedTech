@@ -10,13 +10,15 @@ namespace MedTech.Dao
 {
     internal class GuardarExpediente
     {
-        private readonly string filePath;
+        private readonly string filePath;   //  Ruta del archivo donde se almacenarán los expedientes
 
+        //  Constructor que inicializa la ruta del archivo
         public GuardarExpediente(string filePath)
         {
             this.filePath = filePath;
         }
 
+        //  Guarda un expediente médico en el archivo
         public void Expediente(Expediente expediente)
         {
             try
@@ -27,6 +29,7 @@ namespace MedTech.Dao
 
                 string datosExped = Datos(expediente);
 
+                //  Escribir los datos del expediente en el archivo
                 using (FileStream fs = new FileStream(filePath, FileMode.Append, FileAccess.Write))
                 {
                     byte[] datos = Encoding.UTF8.GetBytes(datosExped);
@@ -39,6 +42,7 @@ namespace MedTech.Dao
             }
         }
 
+        //  Verifica que todos los campos requeridos del expediente están llenos
         public void CamposLlenos(Expediente expediente)
         {
             if (string.IsNullOrWhiteSpace(expediente.IdExpediente)
@@ -50,12 +54,14 @@ namespace MedTech.Dao
                 throw new Exception("Por favor, complete todos los campos.");
         }
 
+        //  Valida los campos específicos del expediente para asegurarse que cumplen los formatos esperados
         public void Validar(Expediente expediente)
         {
             if (!int.TryParse(expediente.IdExpediente, out _))
                 throw new Exception("Ingrese un valor válido para el ID Expediente.");
         }
 
+        //  Genera una representación de los datos del expediente médico
         public string Datos(Expediente expediente)
         {
             return $"ID Expediente: {expediente.IdExpediente}\n"

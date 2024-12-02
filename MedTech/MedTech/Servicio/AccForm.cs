@@ -76,6 +76,7 @@ namespace MedTech.Servicio
         //****************************************************************
         //  MÉTODOS RELACIONADOS CON LOS FORMULARIOS AGREGAR CITA / AGREGAR PACIENTE / EXPEDIENTE MEDICO
 
+        //  Muestra el reporte correspondiente al formulario actual
         public void VerReporte()
         {
             if (form is AggCitaFrm aggCitaFrm)

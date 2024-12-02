@@ -10,13 +10,15 @@ namespace MedTech.Dao
 {
     internal class GuardarCita
     {
-        private readonly string filePath;
+        private readonly string filePath;   //  Ruta del archivo donde se almacenarán las citas
 
+        //  Constructor que inicializa la ruta del archivo
         public GuardarCita(string filePath)
         {
             this.filePath = filePath;
         }
 
+        //  Método principal para guardar una cita en el archivo
         public void Guardar(Cita cita)
         {
             try
@@ -27,6 +29,7 @@ namespace MedTech.Dao
 
                 string datosCita = Datos(cita);
 
+                //  Escribir los datos de la cita en el archivo
                 using (FileStream fs = new FileStream(filePath, FileMode.Append, FileAccess.Write))
                 {
                     byte[] datos = Encoding.UTF8.GetBytes(datosCita);
@@ -39,6 +42,7 @@ namespace MedTech.Dao
             }
         }
 
+        //  Valida los campos de una cita para asegurarse que cumplen los formatos esperados
         public void Validar(Cita cita)
         {
             if (!TimeSpan.TryParseExact(cita.HoraCita, @"hh\:mm", null, out TimeSpan _))
@@ -53,6 +57,7 @@ namespace MedTech.Dao
                 throw new Exception("Ingrese un valor válido para el costo.");
         }
 
+        //  Genera una representación de los datos de la cita
         public string Datos(Cita cita)
         {
             return $"Nombre: {cita.Nombre}\n"
@@ -67,6 +72,7 @@ namespace MedTech.Dao
                    + "---------------------------------\n";
         }
 
+        //  Verifica que todos los campos requeridos de la cita están llenos
         public void CamposLlenos(Cita cita)
         {
             if (string.IsNullOrWhiteSpace(cita.Nombre)

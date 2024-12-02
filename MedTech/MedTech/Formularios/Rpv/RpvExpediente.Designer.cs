@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RpvExpediente));
             this.expedienteDTBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dsDato = new MedTech.DataSet.DsDato();
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.rptExpediente = new Microsoft.Reporting.WinForms.ReportViewer();
             ((System.ComponentModel.ISupportInitialize)(this.expedienteDTBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsDato)).BeginInit();
             this.SuspendLayout();
@@ -48,25 +48,25 @@
             this.dsDato.DataSetName = "DsDato";
             this.dsDato.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // reportViewer1
+            // rptExpediente
             // 
-            this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            reportDataSource2.Name = "DataSet1";
-            reportDataSource2.Value = this.expedienteDTBindingSource;
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource2);
-            this.reportViewer1.LocalReport.ReportEmbeddedResource = "MedTech.Reportes.RptExpediente.rdlc";
-            this.reportViewer1.Location = new System.Drawing.Point(20, 60);
-            this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(760, 370);
-            this.reportViewer1.TabIndex = 0;
+            this.rptExpediente.Dock = System.Windows.Forms.DockStyle.Fill;
+            reportDataSource1.Name = "DataSet1";
+            reportDataSource1.Value = this.expedienteDTBindingSource;
+            this.rptExpediente.LocalReport.DataSources.Add(reportDataSource1);
+            this.rptExpediente.LocalReport.ReportEmbeddedResource = "MedTech.Reportes.RptExpediente.rdlc";
+            this.rptExpediente.Location = new System.Drawing.Point(20, 60);
+            this.rptExpediente.Name = "rptExpediente";
+            this.rptExpediente.ServerReport.BearerToken = null;
+            this.rptExpediente.Size = new System.Drawing.Size(760, 370);
+            this.rptExpediente.TabIndex = 0;
             // 
             // RpvExpediente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.reportViewer1);
+            this.Controls.Add(this.rptExpediente);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "RpvExpediente";
             this.Load += new System.EventHandler(this.RpvExpediente_Load);
@@ -78,7 +78,7 @@
 
         #endregion
 
-        private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
+        private Microsoft.Reporting.WinForms.ReportViewer rptExpediente;
         private System.Windows.Forms.BindingSource expedienteDTBindingSource;
         private DataSet.DsDato dsDato;
     }
